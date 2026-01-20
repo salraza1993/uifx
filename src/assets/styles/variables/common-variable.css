@@ -1,0 +1,5 @@
+:root {
+  --sr-border-width: 1px;
+  --sr-border-type: solid;
+  --sr-border-color: var(--sr-border-default);
+}

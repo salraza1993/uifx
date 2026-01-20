@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-elements',
+  selector: 'sr-elements',
   imports: [],
   templateUrl: './elements.html',
   styleUrl: './elements.css',
 })
-export class Elements {
-
-}
+export class Elements {}

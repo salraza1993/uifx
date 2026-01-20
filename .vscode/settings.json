@@ -1,0 +1,89 @@
+{
+  "angular-schematics.schematicsDefaultOptions": {
+    "angular-*": {
+      "style": "css"
+    }
+  },
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "eslint.validate": ["javascript", "typescript", "html"],
+  "cSpell.words": [
+    "metatags",
+    "easepick",
+    "ngneat",
+    "preconnect",
+    "preload",
+    "crossorigin",
+    "fontdisplay",
+    "fontawesome",
+    "autofill",
+    "autocompletions",
+    "iconify",
+    "svgicon",
+    "svgicons",
+    "csvg",
+    "cpath",
+    "signalr",
+    "ngrx",
+    "luxon",
+    "tailwindcss",
+    "ngtailwind",
+    "ngtailwindcss",
+    "Salman",
+    "Raza",
+    "describedby",
+    "aria-labelledby",
+    "mcpServers",
+    "MCP",
+    "ngcc",
+    "tap",
+    "ndcx",
+    "ndc-x",
+    "testem",
+    "libpeerconnection",
+    "tabindex",
+    "salraza",
+    "contenteditable"
+  ],
+  "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#14447d",
+    "activityBar.background": "#14447d",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#1b040f",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#14447d",
+    "statusBar.background": "#0d2c51",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#14447d",
+    "statusBarItem.remoteBackground": "#0d2c51",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#0d2c51",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#0d2c5199",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#0d2c51",
+  "editor.fontSize": 16
+}

@@ -13,7 +13,28 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@env/*": ["./src/environments/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@auth/*": ["./src/app/auth/*"],
+      "@pages/*": ["./src/app/pages/*"],
+      "@core/*": ["./src/app/core/*"],
+      "@pipes/*": ["./src/app/core/pipes/*"],
+      "@directives/*": ["./src/app/core/directives/*"],
+      "@features/*": ["./src/app/core/features/*"],
+      "@utils/*": ["./src/app/core/utils/*"],
+      "@guards/*": ["./src/app/core/guards/*"],
+      "@interceptors/*": ["./src/app/core/interceptors/*"],
+      "@models/*": ["./src/app/shared/models/*"],
+      "@shared/*": ["./src/app/shared/*"],
+      "@components/*": ["./src/app/shared/components/*"],
+      "@layouts/*": ["./src/app/shared/layouts/*"],
+      "@services/*": ["./src/app/shared/services/*"],
+      "@client/*": ["./src/client-configs/*"],
+      "@stores/*": ["./src/stores/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

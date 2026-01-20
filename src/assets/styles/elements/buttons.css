@@ -1,0 +1,28 @@
+/* https://www.youtube.com/watch?v=TWqpa-hfIdw */
+/* Base styles for anything starting with 'button-' */
+[class|="button"] {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Specific variant styles */
+.button-primary {
+  background-color: blue;
+  color: white;
+}
+
+.button-accent {
+  background-color: green;
+  color: white;
+}
+
+/* <!-- Applies base styles + primary styles -->
+<button class="button-primary">Primary Button</button>
+
+<!-- Applies base styles + accent styles -->
+<button class="button-accent">Accent Button</button>
+
+<!-- Applies *only* base styles (if your prefix allows) -->
+<button class="button">Base Button</button> */

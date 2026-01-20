@@ -1,0 +1,62 @@
+:root {
+  /* radius */
+  --sr-radius-none: 0;
+  --sr-radius-xs: calc(var(--sr-base-radius) * 1);
+  --sr-radius-sm: calc(var(--sr-base-radius) * 2);
+  --sr-radius-md: calc(var(--sr-base-radius) * 3);
+  --sr-radius-lg: calc(var(--sr-base-radius) * 4);
+  --sr-radius-xl: calc(var(--sr-base-radius) * 6);
+
+  /* padding */
+  --sr-padding-xs: calc(var(--sr-base-padding) * 1);
+  --sr-padding-sm: calc(var(--sr-base-padding) * 1.25);
+  --sr-padding-md: calc(var(--sr-base-padding) * 1.5);
+  --sr-padding-lg: calc(var(--sr-base-padding) * 1.75);
+  --sr-padding-xl: calc(var(--sr-base-padding) * 2);
+  --sr-padding-2xl: calc(var(--sr-base-padding) * 2.25);
+  --sr-padding-3xl: calc(var(--sr-base-padding) * 2.5);
+  --sr-padding-4xl: calc(var(--sr-base-padding) * 2.75);
+  --sr-padding-5xl: calc(var(--sr-base-padding) * 3);
+
+  /* spacing */
+  --sr-spacing-xs: calc(var(--sr-base-spacing) * 1);
+  --sr-spacing-sm: calc(var(--sr-base-spacing) * 1.25);
+  --sr-spacing-md: calc(var(--sr-base-spacing) * 1.5);
+  --sr-spacing-lg: calc(var(--sr-base-spacing) * 1.75);
+  --sr-spacing-xl: calc(var(--sr-base-spacing) * 2);
+  --sr-spacing-2xl: calc(var(--sr-base-spacing) * 2.25);
+  --sr-spacing-3xl: calc(var(--sr-base-spacing) * 2.5);
+  --sr-spacing-4xl: calc(var(--sr-base-spacing) * 2.75);
+  --sr-spacing-5xl: calc(var(--sr-base-spacing) * 3);
+
+  /* gaps */
+  --sr-gap-xs: calc(var(--sr-base-gap) * 1);
+  --sr-gap-sm: calc(var(--sr-base-gap) * 1.25);
+  --sr-gap-md: calc(var(--sr-base-gap) * 1.5);
+  --sr-gap-lg: calc(var(--sr-base-gap) * 1.75);
+  --sr-gap-xl: calc(var(--sr-base-gap) * 2);
+  --sr-gap-2xl: calc(var(--sr-base-gap) * 2.25);
+  --sr-gap-3xl: calc(var(--sr-base-gap) * 2.5);
+  --sr-gap-4xl: calc(var(--sr-base-gap) * 2.75);
+  --sr-gap-5xl: calc(var(--sr-base-gap) * 3);
+
+  --sr-surface-50: var(--sr-zinc-50);
+  --sr-surface-100: var(--sr-zinc-100);
+  --sr-surface-200: var(--sr-zinc-200);
+  --sr-surface-300: var(--sr-zinc-300);
+  --sr-surface-400: var(--sr-zinc-400);
+  --sr-surface-500: var(--sr-zinc-500);
+  --sr-surface-600: var(--sr-zinc-600);
+  --sr-surface-700: var(--sr-zinc-700);
+  --sr-surface-800: var(--sr-zinc-800);
+  --sr-surface-900: var(--sr-zinc-900);
+  --sr-surface-950: var(--sr-zinc-950);
+
+  --sr-border-color: var(--sr-border-default);
+
+  --sr-button-size-sm: calc(var(--sr-button-size) * 1); /* 32px */
+  --sr-button-size-md: calc(var(--sr-button-size) * 1.33); /* 40px */
+  --sr-button-size-lg: calc(var(--sr-button-size) * 1.5); /* 48px */
+  --sr-button-size-xl: calc(var(--sr-button-size) * 1.75); /* 56px */
+  --sr-button-size-2xl: calc(var(--sr-button-size) * 2); /* 64px */
+}

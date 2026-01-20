@@ -1,0 +1,11 @@
+:host {
+  position: sticky;
+  inset-block-start: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: var(--sr-header-height);
+  background-color: light-dark(var(--sr-surface-0), var(--sr-surface-950));
+  border-block-end: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+}

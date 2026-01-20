@@ -1,0 +1,37 @@
+<!-- https://motion-tabs.vercel.app/ -->
+<!-- https://x.com/raul_dronca/status/1996134668916216000 -->
+<!-- https://codepen.io/wesbos/pen/OPXpJvK -->
+<!-- <tabs-wrapper class="tabs-wrapper" ngTabs>
+  <div class="tab-items" selectionMode="explicit" selectedTab="movie">
+    <div ngTab class="tab-item" value="movie">Movie</div>
+    <div ngTab class="tab-item" value="theatres">Cast</div>
+    <div ngTab class="tab-item" value="showTimes">Reviews</div>
+  </div>
+  <div class="sliding-window">
+    <div ngTabPanel [preserveContent]="true" value="movie">
+      <ng-template ngTabContent>Panel 1</ng-template>
+    </div>
+    <div ngTabPanel [preserveContent]="true" value="theatres">
+      <ng-template ngTabContent>Panel 2</ng-template>
+    </div>
+    <div ngTabPanel [preserveContent]="true" value="showTimes">
+      <ng-template ngTabContent>Panel 3</ng-template>
+    </div>
+  </div>
+</tabs-wrapper> -->
+<div class="nav-wrap">
+  <div class="bubble active"></div>
+  <div class="bubble hover"></div>
+  <nav class="nav">
+    @for (tab of tabs(); track tab.id) {
+      <div
+        [class.active]="tab.selected"
+        (click)="selectTab(tab.id)"
+        tabindex="0"
+        (keydown.enter)="selectTab(tab.id)"
+      >
+        {{ tab.label }}
+      </div>
+    }
+  </nav>
+</div>

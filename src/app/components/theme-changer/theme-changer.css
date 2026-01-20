@@ -1,0 +1,4 @@
+:host {
+  width: var(--sr-button-size-md);
+  aspect-ratio: 1 / 1;
+}

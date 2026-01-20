@@ -1,12 +1,19 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Header } from '@app/components/header/header';
+import { AppConfigService } from '../stores/browser-store/app-config-service/app-config-service';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
+  selector: 'sr-root',
+  imports: [RouterOutlet, Header],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  providers: [AppConfigService],
 })
-export class App {
-  protected readonly title = signal('ifg-ui');
+export class App implements OnInit {
+  protected readonly _appConfigService = inject(AppConfigService);
+
+  ngOnInit(): void {
+    this._appConfigService.initializeAppConfig();
+  }
 }

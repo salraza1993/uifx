@@ -1,0 +1,94 @@
+:root {
+  --sr-font-system-ui: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --sr-fs-base-min: 0.725rem;  /* 11.6px */
+  --sr-fs-base-max: 1rem;  /* 16px */
+  --sr-fs-ratio: 1.25;
+  --sr-fs-fluid-step: 0.6vw;
+  --sr-base-leading: 1.6;
+  --sr-leading-ratio: 0.92;
+
+  /* Font Weights */
+  --sr-fw--100: 100;
+  --sr-fw--200: 200;
+  --sr-fw--300: 300;
+  --sr-fw--400: 400;
+  --sr-fw--500: 500;
+  --sr-fw--600: 600;
+  --sr-fw--700: 700;
+  --sr-fw--800: 800;
+  --sr-fw--900: 900;
+  /* ===========[ FONT SIZE INTERNAL SCALE ]=========== */
+  --step-0-min: var(--sr-fs-base-min);
+  --step-0-max: var(--sr-fs-base-max);
+
+  /* Scale up */
+  --step-1-min: calc(var(--step-0-min) * var(--sr-fs-ratio));
+  --step-1-max: calc(var(--step-0-max) * var(--sr-fs-ratio));
+  --step-2-min: calc(var(--step-1-min) * var(--sr-fs-ratio));
+  --step-2-max: calc(var(--step-1-max) * var(--sr-fs-ratio));
+  --step-3-min: calc(var(--step-2-min) * var(--sr-fs-ratio));
+  --step-3-max: calc(var(--step-2-max) * var(--sr-fs-ratio));
+  --step-4-min: calc(var(--step-3-min) * var(--sr-fs-ratio));
+  --step-4-max: calc(var(--step-3-max) * var(--sr-fs-ratio));
+  --step-5-min: calc(var(--step-4-min) * var(--sr-fs-ratio));
+  --step-5-max: calc(var(--step-4-max) * var(--sr-fs-ratio));
+  --step-6-min: calc(var(--step-5-min) * calc(var(--sr-fs-ratio) / 1.35));
+  --step-6-max: 3.75rem; /* h1 cap = 60px */
+
+  /* Scale down */
+  --step--1-min: calc(var(--step-0-min) / var(--sr-fs-ratio));
+  --step--1-max: calc(var(--step-0-max) / var(--sr-fs-ratio));
+  --step--2-min: calc(var(--step--1-min) / var(--sr-fs-ratio));
+  --step--2-max: calc(var(--step--1-max) / var(--sr-fs-ratio));
+
+  /* Clamp fluid */
+  --step--2: clamp(var(--step--2-min), calc(var(--step--2-min) + var(--sr-fs-fluid-step)), var(--step--2-max));
+  --step--1: clamp(var(--step--1-min), calc(var(--step--1-min) + var(--sr-fs-fluid-step)), var(--step--1-max));
+  --step-0:  clamp(var(--step-0-min),  calc(var(--step-0-min)  + var(--sr-fs-fluid-step)), var(--step-0-max));
+  --step-1:  clamp(var(--step-1-min),  calc(var(--step-1-min)  + var(--sr-fs-fluid-step)), var(--step-1-max));
+  --step-2:  clamp(var(--step-2-min),  calc(var(--step-2-min)  + var(--sr-fs-fluid-step)), var(--step-2-max));
+  --step-3:  clamp(var(--step-3-min),  calc(var(--step-3-min)  + var(--sr-fs-fluid-step)), var(--step-3-max));
+  --step-4:  clamp(var(--step-4-min),  calc(var(--step-4-min)  + var(--sr-fs-fluid-step)), var(--step-4-max));
+  --step-5:  clamp(var(--step-5-min),  calc(var(--step-5-min)  + var(--sr-fs-fluid-step)), var(--step-5-max));
+  --step-6:  clamp(var(--step-6-min),  calc(var(--step-6-min)  + var(--sr-fs-fluid-step)), var(--step-6-max));
+
+  /* ===========[ LINE HEIGHT INTERNAL SCALE ]=========== */
+  --lh-step-0: var(--sr-base-leading);
+  --lh-step-1: calc(var(--lh-step-0) * var(--sr-leading-ratio));
+  --lh-step-2: calc(var(--lh-step-1) * var(--sr-leading-ratio));
+  --lh-step-3: calc(var(--lh-step-2) * var(--sr-leading-ratio));
+  --lh-step-4: calc(var(--lh-step-3) * calc(var(--sr-leading-ratio) * 1.1));
+  --lh-step-5: calc(var(--lh-step-4) * calc(var(--sr-leading-ratio) * 1.15));
+
+  --lh-step--1: calc(var(--lh-step-0) / var(--sr-leading-ratio));
+  --lh-step--2: calc(var(--lh-step--1) / var(--sr-leading-ratio));
+}
+
+/* ===========[ PUBLIC FONT SIZE TOKENS (SEMANTIC) ]=========== */
+:root {
+  --sr-fs--1: var(--step-6);   /* h1 */
+  --sr-fs--2: var(--step-5);   /* h2 */
+  --sr-fs--3: var(--step-4);   /* h3 */
+  --sr-fs--4: var(--step-3);   /* h4 */
+  --sr-fs--5: var(--step-2);   /* h5 */
+  --sr-fs--6: var(--step-1);   /* h6 */
+  --sr-fs--lg: var(--step-1);
+  --sr-fs--md: var(--step-0);
+  --sr-fs--sm: var(--step--1);
+  --sr-fs--xs: var(--step--2);
+
+  /* ===========[ PUBLIC LINE HEIGHT TOKENS ]=========== */
+  /* Headings */
+  --sr-lh--1: var(--lh-step-5);
+  --sr-lh--2: var(--lh-step-4);
+  --sr-lh--3: var(--lh-step-3);
+  --sr-lh--4: var(--lh-step-2);
+  --sr-lh--5: var(--lh-step-1);
+  --sr-lh--6: var(--lh-step-1);
+
+  /* Body */
+  --sr-lh--lg: var(--lh-step-0);
+  --sr-lh--md: var(--lh-step-0);
+  --sr-lh--sm: var(--lh-step--1);
+  --sr-lh--xs: var(--lh-step--2);
+}
