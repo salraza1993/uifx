@@ -1,4 +1,11 @@
 :host {
-  width: var(--sr-button-size-md);
+  width: var(--sr-button-size-lg);
   aspect-ratio: 1 / 1;
+  font-size: var(--sr-fs--lg);
+  background-color: light-dark(var(--sr-primary-50), var(--sr-primary-500));
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: light-dark(var(--sr-primary-500), var(--sr-primary-500));
+    color: light-dark(var(--sr-surface-0), var(--sr-surface-100));
+  }
 }

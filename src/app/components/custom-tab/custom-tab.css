@@ -1,0 +1,107 @@
+:host {
+  --tabHeaderBg: light-dark(var(--sr-surface-0), var(--sr-surface-700));
+  --tabRadius: var(--sr-radius-sm);
+  --activeTabBg: light-dark(var(--sr-primary-500), var(--sr-primary-500));
+  --hoverTabBg: light-dark(var(--sr-surface-100), var(--sr-surface-600));
+  --activeTabColor: light-dark(var(--sr-surface-0), var(--sr-surface-0));
+
+  display: block;
+  width: max-content;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  & .tabs-header {
+    position: relative;
+    background-color: var(--tabs-header-bg, var(--tabHeaderBg));
+    padding-block: var(--tabs-header-pad-y, calc(var(--sr-padding-sm) / 2));
+    padding-inline: var(--tabs-header-pad-x, calc(var(--sr-padding-sm) / 2));
+    border-radius: var(--tabs-header-radius, var(--tabRadius));
+    width: fit-content;
+
+    & .tablist {
+      width: fit-content;
+      anchor-name: --nav;
+      position: relative;
+      border-radius: inherit;
+      gap: var(--tabs-header-gap, 0);
+
+      & .tablist__item {
+        position: relative;
+        cursor: pointer;
+        background-color: var(--tab-item-bg, transparent);
+        color: var(--tab-item-color, inherit);
+        padding-block: var(--tabs-header-item-pad, var(--sr-padding-sm));
+        padding-inline: var(--tabs-header-item-pad, var(--sr-padding-sm));
+        border-radius: var(--tabs-header-item-radius, var(--sr-radius-xs));
+        width: var(--tab-width, auto);
+        min-width: var(--tab-min-width, auto);
+        max-width: var(--tab-min-width, auto);
+        text-align: center;
+        z-index: 3;
+
+        &:before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &[aria-disabled='true']:focus {
+          outline-offset: 0rem;
+          outline: none;
+        }
+        &:not([aria-disabled='true']):hover {
+          &:before {
+            anchor-name: --nav;
+          }
+        }
+        &[aria-disabled='true'] {
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+        &[aria-selected='true']:not([aria-disabled='true']) {
+          --outline-color: var(--tab-active-bg, var(--activeTabBg));
+          color: var(--tab-active-color, var(--activeTabColor));
+          font-weight: var(--tab-active-fw, var(--sr-fw--700));
+          anchor-name: --active;
+        }
+      }
+    }
+    .bubble {
+      top: anchor(top);
+      right: anchor(right);
+      bottom: anchor(bottom);
+      left: anchor(left);
+      position: absolute;
+      transition: all 0.2s ease-in-out;
+      border-radius: var(--tabs-header-item-radius, var(--sr-radius-xs));
+      pointer-events: none;
+      &.active {
+        @supports (position-anchor: --active) {
+          position-anchor: --active;
+        }
+        z-index: 2;
+        background-color: var(--tab-active-bg, var(--activeTabBg));
+      }
+      &.hover {
+        @supports (position-anchor: --nav) {
+          position-anchor: --nav;
+        }
+        z-index: 1;
+        background-color: var(--tab-hover-bg, var(--hoverTabBg));
+      }
+    }
+    .tab-panels {
+      position: relative;
+    }
+  }
+}

@@ -1,3 +1,43 @@
 <sr-content-wrapper>
-  <sr-tabs />
+  <custom-tab [tabs]="tabsPlaceholder()" tabsInLoop>
+    <ng-template #tabs let-tab="tab">
+      <span class="sr-only">{{ tab.label }}</span>
+    </ng-template>
+
+    <ng-template #tabsContent let-tab="tab">
+      @switch (tab.value) {
+        @case ('home') {
+          <div class="tab-panel-content" animate.enter="enter-animation">
+            <h3>Welcome Home!</h3>
+            <p>This is your home dashboard with an overview of your account.</p>
+            <ul>
+              <li>Total visits: 1,234</li>
+              <li>Last login: Today at 9:30 AM</li>
+            </ul>
+          </div>
+        }
+        @case ('profile') {
+          <div class="tab-panel-content" animate.enter="enter-animation">
+            <h3>User Profile</h3>
+            <p>Manage your personal information and settings.</p>
+            <form>
+              <label>Name: <input type="text" value="John Doe" /></label>
+              <label>Email: <input type="email" value="john@example.com" /></label>
+            </form>
+          </div>
+        }
+        @case ('messages') {
+          <div class="tab-panel-content" animate.enter="enter-animation">
+            <h3>Messages</h3>
+            <p>You have 3 unread messages.</p>
+            <ul>
+              <li>Message from Alice - "Hey, how are you?"</li>
+              <li>Message from Bob - "Meeting at 3 PM"</li>
+              <li>Message from Carol - "Check out this link"</li>
+            </ul>
+          </div>
+        }
+      }
+    </ng-template>
+  </custom-tab>
 </sr-content-wrapper>

@@ -2,4 +2,7 @@
   --sr-border-width: 1px;
   --sr-border-type: solid;
   --sr-border-color: var(--sr-border-default);
+  --transition-duration: 0.35s;
+  --sr-outline-offset-focus: 0.15rem;
+  --sr-outline-offset-color: light-dark(var(--sr-primary-500), var(--sr-blue-300));
 }

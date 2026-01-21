@@ -1,0 +1,34 @@
+.app-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app-tablist {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.app-tab {
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 3px solid transparent;
+}
+
+.app-tab[aria-selected='true'] {
+  border-color: #3f51b5;
+  font-weight: bold;
+}
+
+.app-tab[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.app-tabpanel {
+  padding: 1rem;
+}

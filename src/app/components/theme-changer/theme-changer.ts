@@ -10,7 +10,7 @@ import {
   template: ` <i class="fa-solid fa-{{ iconType() }}"></i> `,
   styleUrl: './theme-changer.css',
   host: {
-    class: 'sr-theme-changer flex--center cursor--pointer',
+    class: 'sr-theme-changer flex--center cursor--pointer radius--sm',
     '(click)': 'toggleIcon()',
     '(keydown.enter)': 'toggleIcon()',
   },

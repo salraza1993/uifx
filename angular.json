@@ -6,12 +6,12 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "my-ui": {
+    "uifx": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "sr",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-ui:build:production"
+              "buildTarget": "uifx:build:production"
             },
             "development": {
-              "buildTarget": "my-ui:build:development"
+              "buildTarget": "uifx:build:development"
             }
           },
           "defaultConfiguration": "development"

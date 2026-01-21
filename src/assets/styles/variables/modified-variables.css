@@ -6,6 +6,7 @@
   --sr-radius-md: calc(var(--sr-base-radius) * 3);
   --sr-radius-lg: calc(var(--sr-base-radius) * 4);
   --sr-radius-xl: calc(var(--sr-base-radius) * 6);
+  --sr-radius-2xl: calc(var(--sr-base-radius) * 8);
 
   /* padding */
   --sr-padding-xs: calc(var(--sr-base-padding) * 1);
@@ -40,6 +41,12 @@
   --sr-gap-4xl: calc(var(--sr-base-gap) * 2.75);
   --sr-gap-5xl: calc(var(--sr-base-gap) * 3);
 
+  --sr-shadow-sm: var(--sr-shadow-range);
+  --sr-shadow-md: calc(var(--sr-shadow-range) * 1.5);
+  --sr-shadow-lg: calc(var(--sr-shadow-range) * 2);
+
+  /* surfaces */
+  --sr-surface-0: #ffffff;
   --sr-surface-50: var(--sr-zinc-50);
   --sr-surface-100: var(--sr-zinc-100);
   --sr-surface-200: var(--sr-zinc-200);

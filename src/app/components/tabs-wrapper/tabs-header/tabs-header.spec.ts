@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomTabs } from './custom-tabs';
+import { TabsHeader } from './tabs-header';
 
-describe('CustomTabs', () => {
-  let component: CustomTabs;
-  let fixture: ComponentFixture<CustomTabs>;
+describe('TabsHeader', () => {
+  let component: TabsHeader;
+  let fixture: ComponentFixture<TabsHeader>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CustomTabs],
-    }).compileComponents();
+      imports: [TabsHeader]
+    })
+    .compileComponents();
 
-    fixture = TestBed.createComponent(CustomTabs);
+    fixture = TestBed.createComponent(TabsHeader);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

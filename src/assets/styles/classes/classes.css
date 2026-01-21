@@ -1,3 +1,17 @@
+.relative {
+  position: relative !important;
+}
+.absolute {
+  position: absolute !important;
+}
+.fixed {
+  position: fixed !important;
+}
+.sticky {
+  position: sticky !important;
+}
+
+
 .block {
   display: block !important;
 }
@@ -59,6 +73,9 @@
 .cursor--pointer {
   cursor: pointer !important;
 }
+.pointer-events--none {
+  pointer-events: none !important;
+}
 .cursor--default {
   cursor: default !important;
 }
@@ -111,4 +128,56 @@
 
 :where(.w-full) {
   width: 100% !important;
+}
+
+
+[class|="radius"] {
+  border-radius: var(--sr-radius-md) !important;
+}
+.radius--xs {
+  border-radius: var(--sr-radius-xs) !important;
+}
+.radius--sm {
+  border-radius: var(--sr-radius-sm) !important;
+}
+.radius--md {
+  border-radius: var(--sr-radius-md) !important;
+}
+.radius--lg {
+  border-radius: var(--sr-radius-lg) !important;
+}
+.radius--xl {
+  border-radius: var(--sr-radius-xl) !important;
+}
+.radius--2xl {
+  border-radius: var(--sr-radius-2xl) !important;
+}
+.radius--2xl {
+  border-radius: var(--sr-radius-2xl) !important;
+}
+
+
+.gap--sm {
+  gap: var(--sr-gap-sm) !important;
+}
+.gap--md {
+  gap: var(--sr-gap-md) !important;
+}
+.gap--lg {
+  gap: var(--sr-gap-lg) !important;
+}
+.gap--xl {
+  gap: var(--sr-gap-xl) !important;
+}
+.gap--2xl {
+  gap: var(--sr-gap-2xl) !important;
+}
+.gap--3xl {
+  gap: var(--sr-gap-3xl) !important;
+}
+.gap--4xl {
+  gap: var(--sr-gap-4xl) !important;
+}
+.gap--5xl {
+  gap: var(--sr-gap-5xl) !important;
 }

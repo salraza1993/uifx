@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ContentWrapper } from '@app/components/content-wrapper/content-wrapper';
-import { CustomTabs } from '@app/components/tabs/custom-tabs';
+import { CustomTab, TabItem } from '../../components/custom-tab/custom-tab';
 
 @Component({
   selector: 'sr-home',
-  imports: [ContentWrapper, CustomTabs],
+  imports: [ContentWrapper, CustomTab],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+  activeTab = signal('profile');
+  protected tabsPlaceholder = signal<TabItem[]>([
+    { id: 'home', label: 'Home', value: 'home', selected: false, icon: 'fa-solid fa-house' },
+    { id: 'profile', label: 'Profile', value: 'profile', selected: false, icon: 'fa-solid fa-user' },
+    { id: 'messages', label: 'Messages', value: 'messages', selected: false, icon: 'fa-solid fa-envelope' },
+  ]);
+}

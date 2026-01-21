@@ -51,7 +51,8 @@
     "libpeerconnection",
     "tabindex",
     "salraza",
-    "contenteditable"
+    "contenteditable",
+    "uifx"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {

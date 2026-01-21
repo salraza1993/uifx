@@ -12,5 +12,8 @@ import { Component } from '@angular/core';
       padding: var(--sr-padding-md);
     }
   `,
+  host: {
+    class: 'content-wrapper-host',
+  },
 })
 export class ContentWrapper {}

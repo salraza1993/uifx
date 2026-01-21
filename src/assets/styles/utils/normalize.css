@@ -17,7 +17,7 @@
 		transition: outline-offset 145ms var(--ease-2);
 	}
 	:where(:not(:active):focus-visible) {
-		transition-duration: 0.25s;
+		transition-duration: var(--transition-duration);
 	}
 }
 :where(:not(dialog)) {
@@ -30,10 +30,10 @@
 	color: var(--link-visited);
 }
 :focus-visible {
-	outline-color: var(--brand, var(--link));
+	outline-color: var(--sr-outline-offset-color);
 }
 :where(:not(:active):focus-visible) {
-	outline-offset: 5px;
+	outline-offset: var(--sr-outline-offset-focus);
 }
 :where(body) {
 	min-block-size: 100%;
@@ -330,4 +330,33 @@
 	::placeholder {
 		color: var(--gray-6);
 	}
+}
+
+
+*:focus-visible,
+.focus-visible:is(:focus-visible, .active),
+.focus-within:is(:focus-within, .active) {
+  --outline-bg-fallback: light-dark(var(--sr-surface-700), var(--sr-surface-700));
+  --outline-color-fallback: light-dark(var(--sr-surface-500), var(--sr-surface-500));
+  background-color: var(--outline-bg, var(--outline-bg-fallback));
+  color: var(--outline-text-color, inherit);
+  border-color: var(--outline-border, var(--border-color));
+  outline-width: var(--outline-width, 0.15rem);
+  outline-style: var(--outline-style, solid);
+  outline-color: var(--outline-color, var(--outline-color-fallback));
+  outline-offset: var(--outline-offset, 0.2rem);
+  border-radius: var(--outline-radius, var(--border-radius));
+}
+
+.focus-none, .not-focused, .no-focused, .no-focus {
+  &:focus-within, &:focus-visible, &:focus {
+    --outline-bg: none;
+    --outline-text-color: none;
+    --outline-border-color: none;
+    --outline-width: 0;
+    --outline-style: none;
+    --outline-color: transparent;
+    --outline-offset: 0;
+    --outline-radius: 0;
+  }
 }

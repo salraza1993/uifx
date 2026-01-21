@@ -11,11 +11,24 @@
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": true,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ],
     "overrides": [
       {
         "files": "*.html",
         "options": {
-          "parser": "angular"
+          "parser": "angular",
+          "htmlWhitespaceSensitivity": "ignore",
+          "bracketSameLine": false,
+          "singleAttributePerLine": false,
+          "printWidth": 130
         }
       }
     ]
