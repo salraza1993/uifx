@@ -7,13 +7,9 @@ import {
 @Component({
   selector: 'sr-theme-changer',
   imports: [],
-  template: ` <i class="fa-solid fa-{{ iconType() }}"></i> `,
+  templateUrl: './theme-changer.html',
   styleUrl: './theme-changer.css',
-  host: {
-    class: 'sr-theme-changer flex--center cursor--pointer radius--sm',
-    '(click)': 'toggleIcon()',
-    '(keydown.enter)': 'toggleIcon()',
-  },
+  host: { class: 'sr-theme-changer flex--center cursor--pointer' }
 })
 export class ThemeChanger {
   private _appConfig = inject(AppConfigService);
@@ -25,12 +21,6 @@ export class ThemeChanger {
   readonly isDark = computed(() => {
     return this.mode() === 'auto' ? this.systemDark() : !this.systemDark();
   });
-
-  // constructor() {
-  //   this._media.addEventListener('change', (e) => {
-  //     this.systemDark.set(e.matches);
-  //   });
-  // }
 
   readonly resolvedDark = computed(() => {
     if (this.mode() === 'auto') {
@@ -55,7 +45,7 @@ export class ThemeChanger {
     root.setAttribute('data-theme', this.mode());
   }
 
-  protected toggleIcon(): void {
+  public toggleIcon(): void {
     let next: AppearanceType;
     if (this.mode() === 'auto') {
       next = this.systemDark() ? 'light' : 'dark';

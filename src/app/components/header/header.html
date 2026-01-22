@@ -1,6 +1,12 @@
 <sr-content-wrapper class="w-full">
-  <div class="sub-header flex justify--between items--center w-full radius--md">
-    <sr-logo />
-    <sr-theme-changer />
+  <div class="sub-header flex justify--between items--center w-full radius--sm">
+    <sr-logo class="radius-sm-y--start radius-sm-x--start" />
+    <div class="flex gap--xs">
+      <sr-header-menu />
+      <sr-theme-changer />
+      <button class="more header-square-element flex--center cursor--pointer radius--xs">
+        <i class="fa-solid fa-ellipsis-v"></i>
+      </button>
+    </div>
   </div>
 </sr-content-wrapper>

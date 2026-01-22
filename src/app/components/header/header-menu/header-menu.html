@@ -1,0 +1,15 @@
+<!-- https://codepen.io/salraza1993/pen/WbxEvGp -->
+<button
+  type="button"
+  class="menu-button flex--center cursor--pointer radius--xs"
+  popoverTrigger
+  popoverTriggerFor="components-menus"
+  popovertarget="components-menus">Components
+</button>
+<div class="menu-list-wrapper" popover id="components-menus">
+  <div class="menu-lists">
+    @for(menu of menus(); track menu.label) {
+      <a [routerLink]="menu.link" ngMenu routerLinkActive="active" routerExactActive="active" class="menu-item cursor--pointer radius--xs">{{ menu.label }}</a>
+    }
+  </div>
+</div>

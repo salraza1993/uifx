@@ -41,6 +41,7 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+    // "strictMetadataEmit": false
   },
   "files": [],
   "references": [

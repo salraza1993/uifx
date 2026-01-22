@@ -25,6 +25,7 @@ import { TabConfig, TabItem } from './custom-tab-model';
   },
 })
 export class CustomTab {
+
   private TAB_PLACEHOLDER = signal<TabItem[]>(TAB_PLACEHOLDER);
   private DEFAULT_CONFIGS = signal<TabConfig>(DEFAULT_CONFIGS);
 
@@ -35,7 +36,9 @@ export class CustomTab {
   tabsTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabs');
   tabsContentTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabsContent');
 
-  protected configs = computed(() => this.tabConfigs() || this.DEFAULT_CONFIGS());
+  protected configs = computed(() => {
+    return this.tabConfigs() || this.DEFAULT_CONFIGS();
+  });
   protected resolvedTabs = computed(() => {
     const tabsList = this.tabs();
     if (tabsList?.length) {

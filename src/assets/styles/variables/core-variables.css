@@ -6,7 +6,7 @@
   --sr-body-color: light-dark(var(--sr-surface-800), var(--sr-surface-200));
   --sr-border-default: light-dark(var(--sr-surface-200), var(--sr-surface-600));
 
-  --sr-header-height: 4.5rem; /* 4.5rem * 16px = 72px */
+  --sr-header-height: 3.5rem; /* 3.5rem * 16px = 56px */
   --sr-content-wrapper-width: 80rem; /* 80rem * 16px = 1280px */
   --sr-base-radius: 0.25rem; /* 0.25rem * 16px = 4px */
   --sr-base-padding: 0.5rem; /* 0.5rem * 16px = 8px */

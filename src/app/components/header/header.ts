@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ContentWrapper } from '../content-wrapper/content-wrapper';
-import { ThemeChanger } from "../theme-changer/theme-changer";
 import { Logo } from "../logo/logo";
+import { ThemeChanger } from "../theme-changer/theme-changer";
+import { HeaderMenu } from "./header-menu/header-menu";
 
 @Component({
   selector: 'sr-header',
-  imports: [ContentWrapper, ThemeChanger, Logo],
+  imports: [ContentWrapper, ThemeChanger, Logo, HeaderMenu],
   templateUrl: './header.html',
   styleUrl: './header.css',
   host: { class: 'sr-header border' },

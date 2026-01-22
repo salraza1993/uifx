@@ -1,0 +1,69 @@
+:host {
+  display: block;
+  .menu-button {
+    position: relative;
+    anchor-name: --menu-anchor;
+    height: var(--sr-header-elements-height);
+    padding-inline: 1rem;
+    font-size: var(--sr-fs--md);
+    background-color: light-dark(var(--sr-primary-50), var(--sr-surface-700));
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline-color: none;
+    &:hover {
+      background-color: light-dark(var(--sr-primary-500), var(--sr-primary-500));
+      color: light-dark(var(--sr-surface-0), var(--sr-surface-100));
+    }
+    &[aria-expanded="true"] {
+      background-color: light-dark(var(--sr-primary-700), var(--sr-primary-500));
+      color: light-dark(var(--sr-surface-0), var(--sr-surface-100));
+    }
+  }
+
+  .menu-list-wrapper {
+    display: none;
+    --menu-position: calc(anchor(top) + var(--sr-header-elements-height) + var(--sr-header-padding) + var(--sr-border-width) + 0.5rem);
+    position: absolute;
+    position-anchor: --menu-anchor;
+    inset: auto;
+    flex-wrap: wrap;
+    inset-block-start: var(--menu-position);
+    inset-inline-end: anchor(right);
+    width: min(500px, 100%);
+    opacity: 0;
+    transition: all 0.35s ease-in-out;
+    transition-behavior: allow-discrete;
+    border: none;
+    background-color: light-dark(oklch(var(--sr-surface-0) l c h / 0.25), oklch(from var(--sr-surface-800) l c h / 0.25));
+    backdrop-filter: blur(0.85rem) brightness(110%);
+    padding: var(--sr-padding-md);
+    border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+    border-radius: var(--sr-radius-sm);
+
+    .menu-lists {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sr-padding-xs);
+      .menu-item {
+        background-color: light-dark(var(--sr-surface-50), var(--sr-surface-600));
+        padding-block: calc(var(--sr-padding-xs) / 1.5);
+        padding-inline: var(--sr-padding-sm);
+        border-radius: var(--sr-radius-xs);
+        border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+      }
+    }
+
+    &:popover-open {
+      display: flex;
+      opacity: 1;
+      inset-block-start: var(--menu-position);
+      @starting-style {
+        display: flex;
+        opacity: 0;
+        inset-block-start: calc(var(--sr-header-height) * 1.55);
+      }
+    }
+  }
+
+}

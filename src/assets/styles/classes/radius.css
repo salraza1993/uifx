@@ -1,0 +1,40 @@
+/* radius */
+/* [class|="radius"] {
+  border-radius: var(--sr-radius-md) !important;
+} */
+.radius--xs { border-radius: var(--sr-radius-xs) !important; }
+.radius--sm { border-radius: var(--sr-radius-sm) !important; }
+.radius--md { border-radius: var(--sr-radius-md) !important; }
+.radius--lg { border-radius: var(--sr-radius-lg) !important; }
+.radius--xl { border-radius: var(--sr-radius-xl) !important; }
+.radius--2xl { border-radius: var(--sr-radius-2xl) !important; }
+
+.radius-xs-y--start { border-start-start-radius: var(--sr-radius-xs) !important; }
+.radius-xs-y--end { border-start-end-radius: var(--sr-radius-xs) !important; }
+.radius-xs-x--start { border-end-start-radius: var(--sr-radius-xs) !important; }
+.radius-xs-x--end { border-end-end-radius: var(--sr-radius-xs) !important; }
+
+.radius-sm-y--start { border-start-start-radius: var(--sr-radius-sm) !important; }
+.radius-sm-y--end { border-start-end-radius: var(--sr-radius-sm) !important; }
+.radius-sm-x--start { border-end-start-radius: var(--sr-radius-sm) !important; }
+.radius-sm-x--end { border-end-end-radius: var(--sr-radius-sm) !important; }
+
+.radius-md-y--start { border-start-start-radius: var(--sr-radius-md) !important; }
+.radius-md-y--end { border-start-end-radius: var(--sr-radius-md) !important; }
+.radius-md-x--start { border-end-start-radius: var(--sr-radius-md) !important; }
+.radius-md-x--end { border-end-end-radius: var(--sr-radius-md) !important; }
+
+.radius-lg-y--start { border-start-start-radius: var(--sr-radius-lg) !important; }
+.radius-lg-y--end { border-start-end-radius: var(--sr-radius-lg) !important; }
+.radius-lg-x--start { border-end-start-radius: var(--sr-radius-lg) !important; }
+.radius-lg-x--end { border-end-end-radius: var(--sr-radius-lg) !important; }
+
+.radius-xl-y--start { border-start-start-radius: var(--sr-radius-xl) !important; }
+.radius-xl-y--end { border-start-end-radius: var(--sr-radius-xl) !important; }
+.radius-xl-x--start { border-end-start-radius: var(--sr-radius-xl) !important; }
+.radius-xl-x--end { border-end-end-radius: var(--sr-radius-xl) !important; }
+
+.radius-2xl-y--start { border-start-start-radius: var(--sr-radius-2xl) !important; }
+.radius-2xl-y--end { border-start-end-radius: var(--sr-radius-2xl) !important; }
+.radius-2xl-x--start { border-end-start-radius: var(--sr-radius-2xl) !important; }
+.radius-2xl-x--end { border-end-end-radius: var(--sr-radius-2xl) !important; }

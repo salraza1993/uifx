@@ -31,15 +31,15 @@
   --sr-spacing-5xl: calc(var(--sr-base-spacing) * 3);
 
   /* gaps */
-  --sr-gap-xs: calc(var(--sr-base-gap) * 1);
-  --sr-gap-sm: calc(var(--sr-base-gap) * 1.25);
-  --sr-gap-md: calc(var(--sr-base-gap) * 1.5);
-  --sr-gap-lg: calc(var(--sr-base-gap) * 1.75);
-  --sr-gap-xl: calc(var(--sr-base-gap) * 2);
-  --sr-gap-2xl: calc(var(--sr-base-gap) * 2.25);
-  --sr-gap-3xl: calc(var(--sr-base-gap) * 2.5);
-  --sr-gap-4xl: calc(var(--sr-base-gap) * 2.75);
-  --sr-gap-5xl: calc(var(--sr-base-gap) * 3);
+  --sr-gap--xs: calc(var(--sr-base-gap) * 1);
+  --sr-gap--sm: calc(var(--sr-base-gap) * 1.25);
+  --sr-gap--md: calc(var(--sr-base-gap) * 1.5);
+  --sr-gap--lg: calc(var(--sr-base-gap) * 1.75);
+  --sr-gap--xl: calc(var(--sr-base-gap) * 2);
+  --sr-gap--2xl: calc(var(--sr-base-gap) * 2.25);
+  --sr-gap--3xl: calc(var(--sr-base-gap) * 2.5);
+  --sr-gap--4xl: calc(var(--sr-base-gap) * 2.75);
+  --sr-gap--5xl: calc(var(--sr-base-gap) * 3);
 
   --sr-shadow-sm: var(--sr-shadow-range);
   --sr-shadow-md: calc(var(--sr-shadow-range) * 1.5);

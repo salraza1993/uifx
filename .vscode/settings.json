@@ -52,7 +52,8 @@
     "tabindex",
     "salraza",
     "contenteditable",
-    "uifx"
+    "uifx",
+    "popovertarget"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {
@@ -87,4 +88,6 @@
   },
   "peacock.color": "#0d2c51",
   "editor.fontSize": 16
+  // "angular.log": "off",
+  // "angular.enable-strict-mode-prompt": false
 }
