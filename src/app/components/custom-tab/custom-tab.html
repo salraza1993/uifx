@@ -2,18 +2,18 @@
   <!-- TAB HEADERS -->
   <div
     ngTabList
-    class="tabs-header flex"
+    class="tabs-header flex {{ configs().tablistClass }}"
     role="tablist"
-    [wrap]="tabsInLoop()"
+    [wrap]="configs().tabsInLoop"
     [(selectedTab)]="selectedTab"
-    [orientation]="orientation()"
-    [selectionMode]="selectionMode()"
-    [softDisabled]="softDisabled()"
-    [attr.aria-orientation]="orientation()"
-    [attr.aria-wrap]="tabsInLoop()"
-    [attr.aria-selection-mode]="selectionMode()"
+    [orientation]="configs().orientation"
+    [selectionMode]="configs().selectionMode"
+    [softDisabled]="configs().softDisabled"
+    [attr.aria-orientation]="configs().orientation"
+    [attr.aria-wrap]="configs().tabsInLoop"
+    [attr.aria-selection-mode]="configs().selectionMode"
   >
-    <div class="tablist flex relative">
+    <div class="tablist flex relative {{ configs().tablistClass }}">
       @for (tab of resolvedTabs(); track tab.id) {
         <div
           ngTab
@@ -21,15 +21,22 @@
           role="tablist-button"
           [disabled]="tab.disabled"
           [class.disabled]="tab.disabled"
-          class="tablist__item flex items--center justify--center gap--sm"
+          class="tablist__item flex {{ configs().tabItemClass }}"
           (click)="onSelectTab(tab)"
         >
         {{ tab.disabled ? '(Disabled) ' : '' }}
           @if (tabsTemplate(); as template) {
-            <!-- @if(tab.icon) {
-              <span class="icon"><i class="fa-solid fa-{{tab.icon}}"></i></span>
-            } -->
+            @if((configs().showIcon && configs().iconPosition !== 'end') && tab.icon) {
+              <span class="icon">
+                <i class="{{tab.icon}}"></i>
+              </span>
+            }
             <ng-container *ngTemplateOutlet="template; context: { tab: tab }"></ng-container>
+            @if((configs().showIcon && configs().iconPosition === 'end') && tab.icon) {
+              <span class="icon">
+                <i class="{{tab.icon}}"></i>
+              </span>
+            }
           } @else {
             <span class="tab-label pointer-events--none">{{ tab.label }}</span>
           }
@@ -47,14 +54,14 @@
         ngTabPanel
         [value]="tab.value"
         role="tabpanel"
-        [preserveContent]="preserveContent()"
+        [preserveContent]="configs().preserveContent"
         class="tab-panel"
       >
         <ng-template ngTabContent>
           @if (tabsContentTemplate(); as template) {
             <ng-container *ngTemplateOutlet="template; context: { tab: tab }"></ng-container>
           } @else {
-            @if (showDefaultContent()) {
+            @if (configs().showDefaultContent) {
               <div class="tab-default-content" role="tabpanel">{{ tab.label }} Content</div>
             }
           }

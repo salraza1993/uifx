@@ -1,7 +1,6 @@
 import { Tab, TabContent, TabList, TabPanel, Tabs } from '@angular/aria/tabs';
 import { NgTemplateOutlet } from '@angular/common';
 import {
-  booleanAttribute,
   ChangeDetectionStrategy,
   Component,
   computed,
@@ -10,18 +9,10 @@ import {
   input,
   model,
   signal,
-  TemplateRef,
+  TemplateRef
 } from '@angular/core';
-
-export interface TabItem {
-  id: any;
-  label: string;
-  value: string;
-  selected?: boolean;
-  icon?: string;
-  disabled?: boolean;
-  command?: () => void;
-}
+import { DEFAULT_CONFIGS, TAB_PLACEHOLDER } from './custom-tab-helper';
+import { TabConfig, TabItem } from './custom-tab-model';
 
 @Component({
   selector: 'custom-tab',
@@ -34,30 +25,23 @@ export interface TabItem {
   },
 })
 export class CustomTab {
-  protected tabsPlaceholder = signal<TabItem[]>([
-    { id: 'home', label: 'Home', value: 'home', icon: 'home' },
-    { id: 'profile', label: 'Profile', value: 'profile', icon: 'user' },
-    { id: 'messages', label: 'Messages', value: 'messages', icon: 'envelope' },
-  ]);
-  // configs
-  orientation = input<'horizontal' | 'vertical'>('horizontal');
-  tabsInLoop = input(false, { transform: booleanAttribute });
-  selectionMode = input<'follow' | 'explicit'>('follow');
-  softDisabled = input(true, { transform: booleanAttribute });
+  private TAB_PLACEHOLDER = signal<TabItem[]>(TAB_PLACEHOLDER);
+  private DEFAULT_CONFIGS = signal<TabConfig>(DEFAULT_CONFIGS);
 
-  tabs = input<TabItem[]>();
+  // -------- Inputs from parent -------- //
+  tabConfigs = input<TabConfig>();
+  tabs = input.required<TabItem[]>();
+  selectedTab = model<string | undefined>();
   tabsTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabs');
   tabsContentTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabsContent');
-  selectedTab = model<string | undefined>();
-  showDefaultContent = input(true, { transform: booleanAttribute });
-  preserveContent = input(false, { transform: booleanAttribute });
 
+  protected configs = computed(() => this.tabConfigs() || this.DEFAULT_CONFIGS());
   protected resolvedTabs = computed(() => {
     const tabsList = this.tabs();
     if (tabsList?.length) {
       return tabsList;
     }
-    return this.tabsPlaceholder();
+    return this.TAB_PLACEHOLDER();
   });
 
   protected defaultActiveTab = computed(() => {
@@ -69,7 +53,7 @@ export class CustomTab {
   });
 
   protected onSelectTab(tabItem: TabItem): void {
-    if(this.selectionMode() === 'explicit' && !tabItem.disabled) {
+    if(this.configs().selectionMode === 'explicit' && !tabItem.disabled) {
       this.selectedTab.set(tabItem.value);
     }
   }
@@ -80,4 +64,25 @@ export class CustomTab {
       this.selectedTab.set(defaultTab);
     }
   });
+
+  protected tabStyleTypeClasses(): { [key: string]: boolean } {
+    return {
+      'tab-variant--box': this.configs().variant === 'boxed',
+      'tab-variant--underline': this.configs().variant === 'underline',
+      'tab-variant--pill': this.configs().variant === 'pills',
+      'tab-variant--basic': this.configs().variant === 'basic',
+    };
+  }
+
+  protected tabItemDynamicClasses(tab: TabItem): { [key: string]: boolean } {
+    return {
+      'tab-item--box': this.configs().variant === 'boxed',
+      'tab-item--underline': this.configs().variant === 'underline',
+      'tab-item--pill': this.configs().variant === 'pills',
+      'tab-item--basic': this.configs().variant === 'basic',
+      'tab-item--selected': this.selectedTab() === tab.value,
+      [this.configs().activeTabClass || '']: this.selectedTab() === tab.value,
+      [this.configs().disabledTabClass || '']: !!tab.disabled,
+    };
+  }
 }
