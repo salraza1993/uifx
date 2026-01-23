@@ -52,6 +52,8 @@
     "@angular/cli": "^21.1.1",
     "@angular/compiler-cli": "^21.1.1",
     "jsdom": "^27.1.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }

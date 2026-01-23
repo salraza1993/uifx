@@ -3,4 +3,9 @@
 @import './gaps.css';
 @import './radius.css';
 @import './flex.css';
+@import './bg-dark-mode.css';
+@import './bg-light-mode.css';
+@import './paddings.css';
+@import './margins.css';
+@import './borders.css';
 

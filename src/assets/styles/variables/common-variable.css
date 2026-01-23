@@ -1,8 +1,19 @@
 :root {
+  --grid-border-light: oklch(from var(--sr-surface--950) l c h / 0.09);
+  --grid-border-dark: oklch(from var(--sr-surface--0) l c h / 0.09);
+  --grid-colors: light-dark(var(--grid-border-light), var(--grid-border-dark));
+  /* --sr-border-color: light-dark(oklch(0% 0 0 / 0.09), oklch(100% 0.00011 271.152 / 0.09)); */
+  --grid-size: 40px;
   --sr-border-width: 1px;
   --sr-border-type: solid;
-  --sr-border-color: var(--sr-border-default);
   --transition-duration: 0.35s;
   --sr-outline-offset-focus: 0.15rem;
-  --sr-outline-offset-color: light-dark(var(--sr-primary-500), var(--sr-blue-300));
+  --sr-outline-offset-color: light-dark(var(--sr-surface--500), var(--sr-blue--300));
+  --sr-img-fit-type: contain;
+  --sr-aspect-ratio: initial;
+  --sr-transition-duration: 0.35s;
+  --sr-transition-property: all;
+  --sr-transition-type: ease-in-out;
+  --sr-max-z-index: 10;
+  --sr-opacity: 1;
 }

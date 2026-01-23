@@ -1,0 +1,142 @@
+@media (prefers-color-scheme: light) {
+  .bg-neutral--50 { background-color: var(--sr-neutral--50); }
+  .hover\:bg-neutral--50:hover { background-color: var(--sr-neutral--50); }
+
+  .bg-neutral--100 { background-color: var(--sr-neutral--100); }
+  .hover\:bg-neutral--100:hover { background-color: var(--sr-neutral--100); }
+
+  .bg-neutral--200 { background-color: var(--sr-neutral--200); }
+  .hover\:bg-neutral--200:hover { background-color: var(--sr-neutral--200); }
+
+  .bg-neutral--300 { background-color: var(--sr-neutral--300); }
+  .hover\:bg-neutral--300:hover { background-color: var(--sr-neutral--300); }
+
+  .bg-neutral--400 { background-color: var(--sr-neutral--400); }
+  .hover\:bg-neutral--400:hover { background-color: var(--sr-neutral--400); }
+
+  .bg-neutral--500 { background-color: var(--sr-neutral--500); }
+  .hover\:bg-neutral--500:hover { background-color: var(--sr-neutral--500); }
+
+  .bg-neutral--600 { background-color: var(--sr-neutral--600); }
+  .hover\:bg-neutral--600:hover { background-color: var(--sr-neutral--600); }
+
+  .bg-neutral--700 { background-color: var(--sr-neutral--700); }
+  .hover\:bg-neutral--700:hover { background-color: var(--sr-neutral--700); }
+
+  .bg-neutral--800 { background-color: var(--sr-neutral--800); }
+  .hover\:bg-neutral--800:hover { background-color: var(--sr-neutral--800); }
+
+  .bg-neutral--900 { background-color: var(--sr-neutral--900); }
+  .hover\:bg-neutral--900:hover { background-color: var(--sr-neutral--900); }
+
+  .bg-neutral--950 { background-color: var(--sr-neutral--950); }
+  .hover\:bg-neutral--950:hover { background-color: var(--sr-neutral--950); }
+
+
+  .bg-surface--0 { background-color: var(--sr-surface--0); }
+  .hover\:bg-surface--0:hover { background-color: var(--sr-surface--0); }
+
+  .bg-surface--50 { background-color: var(--sr-surface--50); }
+  .hover\:bg-surface--50:hover { background-color: var(--sr-surface--50); }
+
+  .bg-surface--100 { background-color: var(--sr-surface--100); }
+  .hover\:bg-surface--100:hover { background-color: var(--sr-surface--100); }
+
+  .bg-surface--200 { background-color: var(--sr-surface--200); }
+  .hover\:bg-surface--200:hover { background-color: var(--sr-surface--200); }
+
+  .bg-surface--300 { background-color: var(--sr-surface--300); }
+  .hover\:bg-surface--300:hover { background-color: var(--sr-surface--300); }
+
+  .bg-surface--400 { background-color: var(--sr-surface--400); }
+  .hover\:bg-surface--400:hover { background-color: var(--sr-surface--400); }
+
+  .bg-surface--500 { background-color: var(--sr-surface--500); }
+  .hover\:bg-surface--500:hover { background-color: var(--sr-surface--500); }
+
+  .bg-surface--600 { background-color: var(--sr-surface--600); }
+  .hover\:bg-surface--600:hover { background-color: var(--sr-surface--600); }
+
+  .bg-surface--700 { background-color: var(--sr-surface--700); }
+  .hover\:bg-surface--700:hover { background-color: var(--sr-surface--700); }
+
+  .bg-surface--800 { background-color: var(--sr-surface--800); }
+  .hover\:bg-surface--800:hover { background-color: var(--sr-surface--800); }
+
+  .bg-surface--900 { background-color: var(--sr-surface--900); }
+  .hover\:bg-surface--900:hover { background-color: var(--sr-surface--900); }
+
+  .bg-surface--950 { background-color: var(--sr-surface--950); }
+  .hover\:bg-surface--950:hover { background-color: var(--sr-surface--950); }
+}
+[data-theme="light"] {
+  .bg-neutral--50 { background-color: var(--sr-neutral--50); }
+  .hover\:bg-neutral--50:hover { background-color: var(--sr-neutral--50); }
+
+  .bg-neutral--100 { background-color: var(--sr-neutral--100); }
+  .hover\:bg-neutral--100:hover { background-color: var(--sr-neutral--100); }
+
+  .bg-neutral--200 { background-color: var(--sr-neutral--200); }
+  .hover\:bg-neutral--200:hover { background-color: var(--sr-neutral--200); }
+
+  .bg-neutral--300 { background-color: var(--sr-neutral--300); }
+  .hover\:bg-neutral--300:hover { background-color: var(--sr-neutral--300); }
+
+  .bg-neutral--400 { background-color: var(--sr-neutral--400); }
+  .hover\:bg-neutral--400:hover { background-color: var(--sr-neutral--400); }
+
+  .bg-neutral--500 { background-color: var(--sr-neutral--500); }
+  .hover\:bg-neutral--500:hover { background-color: var(--sr-neutral--500); }
+
+  .bg-neutral--600 { background-color: var(--sr-neutral--600); }
+  .hover\:bg-neutral--600:hover { background-color: var(--sr-neutral--600); }
+
+  .bg-neutral--700 { background-color: var(--sr-neutral--700); }
+  .hover\:bg-neutral--700:hover { background-color: var(--sr-neutral--700); }
+
+  .bg-neutral--800 { background-color: var(--sr-neutral--800); }
+  .hover\:bg-neutral--800:hover { background-color: var(--sr-neutral--800); }
+
+  .bg-neutral--900 { background-color: var(--sr-neutral--900); }
+  .hover\:bg-neutral--900:hover { background-color: var(--sr-neutral--900); }
+
+  .bg-neutral--950 { background-color: var(--sr-neutral--950); }
+  .hover\:bg-neutral--950:hover { background-color: var(--sr-neutral--950); }
+
+
+  .bg-surface--0 { background-color: var(--sr-surface--0); }
+  .hover\:bg-surface--0:hover { background-color: var(--sr-surface--0); }
+
+  .bg-surface--50 { background-color: var(--sr-surface--50); }
+  .hover\:bg-surface--50:hover { background-color: var(--sr-surface--50); }
+
+  .bg-surface--100 { background-color: var(--sr-surface--100); }
+  .hover\:bg-surface--100:hover { background-color: var(--sr-surface--100); }
+
+  .bg-surface--200 { background-color: var(--sr-surface--200); }
+  .hover\:bg-surface--200:hover { background-color: var(--sr-surface--200); }
+
+  .bg-surface--300 { background-color: var(--sr-surface--300); }
+  .hover\:bg-surface--300:hover { background-color: var(--sr-surface--300); }
+
+  .bg-surface--400 { background-color: var(--sr-surface--400); }
+  .hover\:bg-surface--400:hover { background-color: var(--sr-surface--400); }
+
+  .bg-surface--500 { background-color: var(--sr-surface--500); }
+  .hover\:bg-surface--500:hover { background-color: var(--sr-surface--500); }
+
+  .bg-surface--600 { background-color: var(--sr-surface--600); }
+  .hover\:bg-surface--600:hover { background-color: var(--sr-surface--600); }
+
+  .bg-surface--700 { background-color: var(--sr-surface--700); }
+  .hover\:bg-surface--700:hover { background-color: var(--sr-surface--700); }
+
+  .bg-surface--800 { background-color: var(--sr-surface--800); }
+  .hover\:bg-surface--800:hover { background-color: var(--sr-surface--800); }
+
+  .bg-surface--900 { background-color: var(--sr-surface--900); }
+  .hover\:bg-surface--900:hover { background-color: var(--sr-surface--900); }
+
+  .bg-surface--950 { background-color: var(--sr-surface--950); }
+  .hover\:bg-surface--950:hover { background-color: var(--sr-surface--950); }
+}

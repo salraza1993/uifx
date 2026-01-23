@@ -3,13 +3,13 @@
     width: var(--sr-header-elements-height);
     aspect-ratio: 1 / 1;
     font-size: var(--sr-fs--md);
-    background-color: light-dark(var(--sr-primary-50), var(--sr-surface-700));
+    background-color: light-dark(var(--sr-primary--50), var(--sr-surface--700));
     transition: all 0.3s ease-in-out;
     border: none;
     /* outline-color: none; */
     &:hover {
-      background-color: light-dark(var(--sr-primary-500), var(--sr-primary-500));
-      color: light-dark(var(--sr-surface-0), var(--sr-surface-100));
+      background-color: light-dark(var(--sr-primary--500), var(--sr-primary--500));
+      color: light-dark(var(--sr-surface--0), var(--sr-surface--100));
     }
   }
 }

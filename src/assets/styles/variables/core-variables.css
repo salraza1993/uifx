@@ -2,19 +2,21 @@
 /* http://betterstack.com/community/ */
 :root {
   /* Core Variables */
-  --sr-body-bg: light-dark(var(--sr-surface-100), var(--sr-surface-800));
-  --sr-body-color: light-dark(var(--sr-surface-800), var(--sr-surface-200));
-  --sr-border-default: light-dark(var(--sr-surface-200), var(--sr-surface-600));
+  --sr-body-bg: light-dark(var(--sr-surface--100), var(--sr-surface--800));
+  --sr-body-color: light-dark(var(--sr-surface--800), var(--sr-surface--200));
+  --sr-border-default: light-dark(var(--sr-surface--200), var(--sr-surface--600));
 
   --sr-header-height: 3.5rem; /* 3.5rem * 16px = 56px */
   --sr-content-wrapper-width: 80rem; /* 80rem * 16px = 1280px */
   --sr-base-radius: 0.25rem; /* 0.25rem * 16px = 4px */
   --sr-base-padding: 0.5rem; /* 0.5rem * 16px = 8px */
   --sr-base-margin: 0.5rem; /* 0.5rem * 16px = 8px */
-  --sr-base-spacing: .25rem;
+  --sr-base-spacing: 0.5rem; /* 0.5rem * 16px = 8px */
   --sr-base-gap: 0.5rem;
-  --sr-button-size: 1.9rem; /* 1.9rem * 16px = 30.4px */
-  --sr-shadow-range: 0.25rem; /* 0.25rem * 16px = 4px */
+  --sr-base-button-size: 1.9rem; /* 1.9rem * 16px = 30.4px */
+  --sr-base-icon-size: 1.9rem; /* 1.9rem * 16px = 30.4px */
+  --sr-base-shadow-range: 0.25rem; /* 0.25rem * 16px = 4px */
+  --sr-color-mode: oklch;
 
   --sr-container-sm: 24rem; /* 384px */
   --sr-container-md: 28rem; /* 448px */

@@ -62,3 +62,7 @@
     margin-block-end: var(--sr-spacing-md);
   }
 }
+
+:where(.line-height--normal) {
+  line-height: normal;
+}

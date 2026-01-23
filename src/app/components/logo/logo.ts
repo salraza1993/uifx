@@ -30,7 +30,7 @@ import { RouterLink } from '@angular/router';
       aspect-ratio: 159.471 / 89.111;
       height: calc(var(--sr-header-height) - var(--sr-border-width) * 2);
       color: var(--sr-text-primary);
-      background-color: light-dark(var(--sr-primary-600), var(--sr-primary-700));
+      background-color: light-dark(var(--sr-primary--600), var(--sr-primary--700));
       portion: relative;
       /* margin-block-start: calc(0px - var(--sr-header-padding) * 2); */
       margin-inline-start: calc(0px - var(--sr-header-padding));
@@ -41,12 +41,12 @@ import { RouterLink } from '@angular/router';
       }
 
       .primary-fill {
-        fill: light-dark(var(--sr-surface-0), var(--sr-surface-300));
+        fill: light-dark(var(--sr-surface--0), var(--sr-surface-300));
       }
       .accent-fill {
-        fill: var(--sr-accent-500);
+        fill: var(--sr-accent--500);
       }
     }
-  `,
+  `
 })
 export class Logo {}

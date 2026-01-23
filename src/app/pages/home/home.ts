@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
 import { CustomTab } from '@components/custom-tab/custom-tab';
 import { TabItem } from '@components/custom-tab/custom-tab-model';
+import { Dropdown } from "@app/components/dropdown/dropdown";
 
 @Component({
   selector: 'sr-home',
-  imports: [ContentWrapper, CustomTab],
+  imports: [ContentWrapper, CustomTab, Dropdown],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

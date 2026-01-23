@@ -41,29 +41,23 @@
   --sr-gap--4xl: calc(var(--sr-base-gap) * 2.75);
   --sr-gap--5xl: calc(var(--sr-base-gap) * 3);
 
-  --sr-shadow-sm: var(--sr-shadow-range);
-  --sr-shadow-md: calc(var(--sr-shadow-range) * 1.5);
-  --sr-shadow-lg: calc(var(--sr-shadow-range) * 2);
-
-  /* surfaces */
-  --sr-surface-0: #ffffff;
-  --sr-surface-50: var(--sr-zinc-50);
-  --sr-surface-100: var(--sr-zinc-100);
-  --sr-surface-200: var(--sr-zinc-200);
-  --sr-surface-300: var(--sr-zinc-300);
-  --sr-surface-400: var(--sr-zinc-400);
-  --sr-surface-500: var(--sr-zinc-500);
-  --sr-surface-600: var(--sr-zinc-600);
-  --sr-surface-700: var(--sr-zinc-700);
-  --sr-surface-800: var(--sr-zinc-800);
-  --sr-surface-900: var(--sr-zinc-900);
-  --sr-surface-950: var(--sr-zinc-950);
-
+  --sr-shadow-sm: var(--sr-base-shadow-range);
+  --sr-shadow-md: calc(var(--sr-base-shadow-range) * 1.5);
+  --sr-shadow-lg: calc(var(--sr-base-shadow-range) * 2);
   --sr-border-color: var(--sr-border-default);
+  /* buttons */
+  --sr-button--sm: calc(var(--sr-base-button-size) * 1); /* 32px */
+  --sr-button--md: calc(var(--sr-base-button-size) * 1.33); /* 40px */
+  --sr-button--lg: calc(var(--sr-base-button-size) * 1.5); /* 48px */
+  --sr-button--xl: calc(var(--sr-base-button-size) * 1.75); /* 56px */
+  --sr-button--2xl: calc(var(--sr-base-button-size) * 2); /* 64px */
 
-  --sr-button-size-sm: calc(var(--sr-button-size) * 1); /* 32px */
-  --sr-button-size-md: calc(var(--sr-button-size) * 1.33); /* 40px */
-  --sr-button-size-lg: calc(var(--sr-button-size) * 1.5); /* 48px */
-  --sr-button-size-xl: calc(var(--sr-button-size) * 1.75); /* 56px */
-  --sr-button-size-2xl: calc(var(--sr-button-size) * 2); /* 64px */
+  /* icons */
+  --sr-icon--xs: calc(var(--sr-base-icon-size) / 1.15); /*  */
+  --sr-icon--sm: calc(var(--sr-base-icon-size) * 1); /* 32px */
+  --sr-icon--md: calc(var(--sr-base-icon-size) * 1.33); /* 40px */
+  --sr-icon--lg: calc(var(--sr-base-icon-size) * 1.5); /* 48px */
+  --sr-icon--xl: calc(var(--sr-base-icon-size) * 1.75); /* 56px */
+  --sr-icon--2xl: calc(var(--sr-base-icon-size) * 2); /* 64px */
+
 }

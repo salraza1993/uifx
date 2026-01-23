@@ -1,4 +1,13 @@
-import { Directive, ElementRef, HostBinding, inject, input, OnDestroy, OnInit, signal } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostBinding,
+  inject,
+  input,
+  OnDestroy,
+  OnInit,
+  signal
+} from '@angular/core';
 
 @Directive({
   selector: '[popoverTrigger]',
@@ -29,9 +38,7 @@ export class PopoverTriggerDirective implements OnInit, OnDestroy {
     this.popoverElement = document.getElementById(this.popoverTriggerFor()!)!;
 
     if (!this.popoverElement) {
-      throw new Error(
-        `popoverTriggerFor="${this.popoverTriggerFor}" not found`
-      );
+      throw new Error(`popoverTriggerFor="${this.popoverTriggerFor}" not found`);
     }
 
     this.popoverElement.addEventListener('toggle', this.onToggle);

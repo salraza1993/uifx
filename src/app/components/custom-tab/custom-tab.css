@@ -1,9 +1,9 @@
 :host {
-  --tabHeaderBg: light-dark(var(--sr-surface-0), var(--sr-surface-700));
+  --tabHeaderBg: light-dark(var(--sr-surface--0), var(--sr-surface--700));
   --tabRadius: var(--sr-radius-sm);
-  --activeTabBg: light-dark(var(--sr-primary-500), var(--sr-primary-500));
-  --hoverTabBg: light-dark(var(--sr-surface-100), var(--sr-surface-600));
-  --activeTabColor: light-dark(var(--sr-surface-0), var(--sr-surface-0));
+  --activeTabBg: light-dark(var(--sr-primary--500), var(--sr-primary--500));
+  --hoverTabBg: light-dark(var(--sr-surface--100), var(--sr-surface--600));
+  --activeTabColor: light-dark(var(--sr-surface--0), var(--sr-surface--0));
 
   display: block;
   width: max-content;

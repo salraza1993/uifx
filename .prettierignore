@@ -3,12 +3,10 @@ build
 coverage
 dist
 out
-public
-styles
 node_modules
 .vscode
 .angular
-*.md
-*.yml
-/tsconfig.json
-*.json
+
+# Ignore specific config files
+package-lock.json
+tsconfig*.json

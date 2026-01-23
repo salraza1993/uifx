@@ -1,15 +1,35 @@
 <!-- https://codepen.io/salraza1993/pen/WbxEvGp -->
 <button
   type="button"
-  class="menu-button flex--center cursor--pointer radius--xs"
+  class="menu-button px--lg fs--md flex--center cursor--pointer radius--xs"
   popoverTrigger
   popoverTriggerFor="components-menus"
-  popovertarget="components-menus">Components
+  popovertarget="components-menus"
+>
+  Components
 </button>
-<div class="menu-list-wrapper" popover id="components-menus">
-  <div class="menu-lists">
-    @for(menu of menus(); track menu.label) {
-      <a [routerLink]="menu.link" ngMenu routerLinkActive="active" routerExactActive="active" class="menu-item cursor--pointer radius--xs">{{ menu.label }}</a>
+<dialog
+  class="menu-list-wrapper transition--all border radius--lg absolute inset--auto p--lg"
+  popover
+  id="components-menus"
+>
+  <div class="menu-lists gap--xs" focusGrid [focusGridColumns]="3">
+    @for (menu of menus(); track menu.label) {
+      <a
+        focusGridItem
+        [routerLink]="menu.link"
+        class="menu-item cursor--pointer bg--transparent radius--sm flex gap--xs p--xs"
+      >
+        <div
+          class="icon icon--2xl img-fit--contain flex--center aspect--square w-h-100 radius--xs bg-surface--100 margin-bottom--sm dark:bg-surface--600 hover:bg-surface--950 dark:hover:bg-surface--500 p--xs"
+        >
+          <img src="assets/images/icons/small/icon-tabs-stroke.svg" alt="Tabs Icon" />
+        </div>
+        <div class="content grid gap--xs/2">
+          <strong class="block">{{ menu.label }}</strong>
+          <small class="fs--xs line-height--normal">{{ menu.description }}</small>
+        </div>
+      </a>
     }
   </div>
-</div>
+</dialog>

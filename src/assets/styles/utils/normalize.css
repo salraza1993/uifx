@@ -336,8 +336,8 @@
 *:focus-visible,
 .focus-visible:is(:focus-visible, .active),
 .focus-within:is(:focus-within, .active) {
-  --outline-bg-fallback: light-dark(var(--sr-surface-700), var(--sr-surface-700));
-  --outline-color-fallback: light-dark(var(--sr-surface-500), var(--sr-surface-500));
+  --outline-bg-fallback: light-dark(var(--sr-surface--700), var(--sr-surface--700));
+  --outline-color-fallback: light-dark(var(--sr-surface--500), var(--sr-surface--500));
   background-color: var(--outline-bg, var(--outline-bg-fallback));
   color: var(--outline-text-color, inherit);
   border-color: var(--outline-border, var(--border-color));

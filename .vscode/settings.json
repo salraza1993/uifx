@@ -53,7 +53,8 @@
     "salraza",
     "contenteditable",
     "uifx",
-    "popovertarget"
+    "popovertarget",
+    "ultrawide"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {

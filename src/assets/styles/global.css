@@ -13,14 +13,12 @@ body {
   font-family: var(--sr-font-system-ui);
 
   &::before {
-    --sr-border-color: light-dark(oklch(0% 0 0 / 0.09), oklch(100% 0.00011 271.152 / 0.09));
-    --size: 45px;
     content: '';
     background:
-      linear-gradient(90deg, var(--sr-border-color) 1px, transparent 1px var(--size)) 50% 50% / var(--size)
-        var(--size),
-      linear-gradient(var(--sr-border-color) 1px, transparent 1px var(--size)) 50% 50% / var(--size)
-        var(--size);
+      linear-gradient(90deg, var(--grid-colors) 1px, transparent 1px var(--grid-size)) 50% 50% / var(--grid-size)
+        var(--grid-size),
+      linear-gradient(var(--grid-colors) 1px, transparent 1px var(--grid-size)) 50% 50% / var(--grid-size)
+        var(--grid-size);
     transform-style: flat;
     pointer-events: none;
     z-index: -1;
@@ -32,3 +30,4 @@ body {
     mask: linear-gradient(-20deg, #0000 35%, #fff);
   }
 }
+
