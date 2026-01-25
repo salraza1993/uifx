@@ -4,8 +4,9 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'sr-logo',
   imports: [RouterLink],
+  host: { class: 'focus-within transition' },
   template: `
-    <a [routerLink]="['/']" class="logo-link block w-h-100">
+    <a [routerLink]="['/']" class="logo-link transition block w-h-100 focus--none">
       <svg id="uifx-log" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.471 89.111">
         <path
           id="Path_1"
@@ -26,13 +27,13 @@ import { RouterLink } from '@angular/router';
   `,
   styles: `
     :host {
+      --logo-bg: light-dark(var(--sr-primary--600), var(--sr-primary--700));
+      --sr-outline-offset--bg: var(--logo-bg);
+      --sr-outline-offset--color: var(--logo-bg);
       display: inline-block;
       aspect-ratio: 159.471 / 89.111;
       height: calc(var(--sr-header-height) - var(--sr-border-width) * 2);
-      color: var(--sr-text-primary);
-      background-color: light-dark(var(--sr-primary--600), var(--sr-primary--700));
-      portion: relative;
-      /* margin-block-start: calc(0px - var(--sr-header-padding) * 2); */
+      background-color: var(--logo-bg);
       margin-inline-start: calc(0px - var(--sr-header-padding));
       padding: calc(var(--sr-header-padding) * 1.15);
       svg {
@@ -41,7 +42,7 @@ import { RouterLink } from '@angular/router';
       }
 
       .primary-fill {
-        fill: light-dark(var(--sr-surface--0), var(--sr-surface-300));
+        fill: light-dark(var(--sr-surface--0), var(--sr-surface--300));
       }
       .accent-fill {
         fill: var(--sr-accent--500);

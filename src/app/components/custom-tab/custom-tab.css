@@ -1,6 +1,6 @@
 :host {
   --tabHeaderBg: light-dark(var(--sr-surface--0), var(--sr-surface--700));
-  --tabRadius: var(--sr-radius-sm);
+  --tabRadius: var(--sr-radius--sm);
   --activeTabBg: light-dark(var(--sr-primary--500), var(--sr-primary--500));
   --hoverTabBg: light-dark(var(--sr-surface--100), var(--sr-surface--600));
   --activeTabColor: light-dark(var(--sr-surface--0), var(--sr-surface--0));
@@ -21,8 +21,8 @@
   & .tabs-header {
     position: relative;
     background-color: var(--tabs-header-bg, var(--tabHeaderBg));
-    padding-block: var(--tabs-header-pad-y, calc(var(--sr-padding-sm) / 2));
-    padding-inline: var(--tabs-header-pad-x, calc(var(--sr-padding-sm) / 2));
+    padding-block: var(--tabs-header-pad-y, calc(var(--sr-padding--sm) / 2));
+    padding-inline: var(--tabs-header-pad-x, calc(var(--sr-padding--sm) / 2));
     border-radius: var(--tabs-header-radius, var(--tabRadius));
     width: fit-content;
 
@@ -38,9 +38,9 @@
         cursor: pointer;
         background-color: var(--tab-item-bg, transparent);
         color: var(--tab-item-color, inherit);
-        padding-block: var(--tabs-header-item-pad, var(--sr-padding-sm));
-        padding-inline: var(--tabs-header-item-pad, var(--sr-padding-sm));
-        border-radius: var(--tabs-header-item-radius, var(--sr-radius-xs));
+        padding-block: var(--tabs-header-item-pad, var(--sr-padding--xs));
+        padding-inline: var(--tabs-header-item-pad, var(--sr-padding--lg));
+        border-radius: var(--tabs-header-item-radius, var(--sr-radius--xs));
         width: var(--tab-width, auto);
         min-width: var(--tab-min-width, auto);
         max-width: var(--tab-min-width, auto);
@@ -83,7 +83,7 @@
       left: anchor(left);
       position: absolute;
       transition: all 0.2s ease-in-out;
-      border-radius: var(--tabs-header-item-radius, var(--sr-radius-xs));
+      border-radius: var(--tabs-header-item-radius, var(--sr-radius--xs));
       pointer-events: none;
       &.active {
         @supports (position-anchor: --active) {

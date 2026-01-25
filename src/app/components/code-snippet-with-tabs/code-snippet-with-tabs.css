@@ -1,0 +1,32 @@
+.tabs-container {
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  background: #0d1117;
+}
+
+.tabs-header {
+  display: flex;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 0 10px;
+}
+
+.tabs-header button {
+  padding: 10px 15px;
+  background: transparent;
+  color: #8b949e;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs-header button.active {
+  color: #58a6ff;
+  border-bottom-color: #58a6ff;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+}

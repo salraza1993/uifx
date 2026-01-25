@@ -1,0 +1,329 @@
+@layer utilities {
+  /* System preference */
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-neutral--50 {
+      background-color: var(--sr-neutral--50);
+    }
+    .dark\:hover\:bg-neutral--50:hover {
+      background-color: var(--sr-neutral--50);
+    }
+
+    .dark\:bg-neutral--100 {
+      background-color: var(--sr-neutral--100);
+    }
+    .dark\:hover\:bg-neutral--100:hover {
+      background-color: var(--sr-neutral--100);
+    }
+
+    .dark\:bg-neutral--200 {
+      background-color: var(--sr-neutral--200);
+    }
+    .dark\:hover\:bg-neutral--200:hover {
+      background-color: var(--sr-neutral--200);
+    }
+
+    .dark\:bg-neutral--300 {
+      background-color: var(--sr-neutral--300);
+    }
+    .dark\:hover\:bg-neutral--300:hover {
+      background-color: var(--sr-neutral--300);
+    }
+
+    .dark\:bg-neutral--400 {
+      background-color: var(--sr-neutral--400);
+    }
+    .dark\:hover\:bg-neutral--400:hover {
+      background-color: var(--sr-neutral--400);
+    }
+
+    .dark\:bg-neutral--500 {
+      background-color: var(--sr-neutral--500);
+    }
+    .dark\:hover\:bg-neutral--500:hover {
+      background-color: var(--sr-neutral--500);
+    }
+
+    .dark\:bg-neutral--600 {
+      background-color: var(--sr-neutral--600);
+    }
+    .dark\:hover\:bg-neutral--600:hover {
+      background-color: var(--sr-neutral--600);
+    }
+
+    .dark\:bg-neutral--700 {
+      background-color: var(--sr-neutral--700);
+    }
+    .dark\:hover\:bg-neutral--700:hover {
+      background-color: var(--sr-neutral--700);
+    }
+
+    .dark\:bg-neutral--800 {
+      background-color: var(--sr-neutral--800);
+    }
+    .dark\:hover\:bg-neutral--800:hover {
+      background-color: var(--sr-neutral--800);
+    }
+
+    .dark\:bg-neutral--900 {
+      background-color: var(--sr-neutral--900);
+    }
+    .dark\:hover\:bg-neutral--900:hover {
+      background-color: var(--sr-neutral--900);
+    }
+
+    .dark\:bg-neutral--950 {
+      background-color: var(--sr-neutral--950);
+    }
+    .dark\:hover\:bg-neutral--950:hover {
+      background-color: var(--sr-neutral--950);
+    }
+
+    .dark\:bg-surface--0 {
+      background-color: var(--sr-surface--0);
+    }
+    .dark\:hover\:bg-surface--0:hover {
+      background-color: var(--sr-surface--0);
+    }
+
+    .dark\:bg-surface--50 {
+      background-color: var(--sr-surface--50);
+    }
+    .dark\:hover\:bg-surface--50:hover {
+      background-color: var(--sr-surface--50);
+    }
+
+    .dark\:bg-surface--100 {
+      background-color: var(--sr-surface--100);
+    }
+    .dark\:hover\:bg-surface--100:hover {
+      background-color: var(--sr-surface--100);
+    }
+
+    .dark\:bg-surface--200 {
+      background-color: var(--sr-surface--200);
+    }
+    .dark\:hover\:bg-surface--200:hover {
+      background-color: var(--sr-surface--200);
+    }
+
+    .dark\:bg-surface--300 {
+      background-color: var(--sr-surface--300);
+    }
+    .dark\:hover\:bg-surface--300:hover {
+      background-color: var(--sr-surface--300);
+    }
+
+    .dark\:bg-surface--400 {
+      background-color: var(--sr-surface--400);
+    }
+    .dark\:hover\:bg-surface--400:hover {
+      background-color: var(--sr-surface--400);
+    }
+
+    .dark\:bg-surface--500 {
+      background-color: var(--sr-surface--500);
+    }
+    .dark\:hover\:bg-surface--500:hover {
+      background-color: var(--sr-surface--500);
+    }
+
+    .dark\:bg-surface--600 {
+      background-color: var(--sr-surface--600);
+    }
+    .dark\:hover\:bg-surface--600:hover {
+      background-color: var(--sr-surface--600);
+    }
+
+    .dark\:bg-surface--700 {
+      background-color: var(--sr-surface--700);
+    }
+    .dark\:hover\:bg-surface--700:hover {
+      background-color: var(--sr-surface--700);
+    }
+
+    .dark\:bg-surface--800 {
+      background-color: var(--sr-surface--800);
+    }
+    .dark\:hover\:bg-surface--800:hover {
+      background-color: var(--sr-surface--800);
+    }
+
+    .dark\:bg-surface--900 {
+      background-color: var(--sr-surface--900);
+    }
+    .dark\:hover\:bg-surface--900:hover {
+      background-color: var(--sr-surface--900);
+    }
+
+    .dark\:bg-surface--950 {
+      background-color: var(--sr-surface--950);
+    }
+    .dark\:hover\:bg-surface--950:hover {
+      background-color: var(--sr-surface--950);
+    }
+  }
+
+  /* Manual override */
+  [data-theme='dark'] {
+    .dark\:bg-neutral--50 {
+      background-color: var(--sr-neutral--50);
+    }
+    .dark\:hover\:bg-neutral--50:hover {
+      background-color: var(--sr-neutral--50);
+    }
+
+    .dark\:bg-neutral--100 {
+      background-color: var(--sr-neutral--100);
+    }
+    .dark\:hover\:bg-neutral--100:hover {
+      background-color: var(--sr-neutral--100);
+    }
+
+    .dark\:bg-neutral--200 {
+      background-color: var(--sr-neutral--200);
+    }
+    .dark\:hover\:bg-neutral--200:hover {
+      background-color: var(--sr-neutral--200);
+    }
+
+    .dark\:bg-neutral--300 {
+      background-color: var(--sr-neutral--300);
+    }
+    .dark\:hover\:bg-neutral--300:hover {
+      background-color: var(--sr-neutral--300);
+    }
+
+    .dark\:bg-neutral--400 {
+      background-color: var(--sr-neutral--400);
+    }
+    .dark\:hover\:bg-neutral--400:hover {
+      background-color: var(--sr-neutral--400);
+    }
+
+    .dark\:bg-neutral--500 {
+      background-color: var(--sr-neutral--500);
+    }
+    .dark\:hover\:bg-neutral--500:hover {
+      background-color: var(--sr-neutral--500);
+    }
+
+    .dark\:bg-neutral--600 {
+      background-color: var(--sr-neutral--600);
+    }
+    .dark\:hover\:bg-neutral--600:hover {
+      background-color: var(--sr-neutral--600);
+    }
+
+    .dark\:bg-neutral--700 {
+      background-color: var(--sr-neutral--700);
+    }
+    .dark\:hover\:bg-neutral--700:hover {
+      background-color: var(--sr-neutral--700);
+    }
+
+    .dark\:bg-neutral--800 {
+      background-color: var(--sr-neutral--800);
+    }
+    .dark\:hover\:bg-neutral--800:hover {
+      background-color: var(--sr-neutral--800);
+    }
+
+    .dark\:bg-neutral--900 {
+      background-color: var(--sr-neutral--900);
+    }
+    .dark\:hover\:bg-neutral--900:hover {
+      background-color: var(--sr-neutral--900);
+    }
+
+    .dark\:bg-neutral--950 {
+      background-color: var(--sr-neutral--950);
+    }
+    .dark\:hover\:bg-neutral--950:hover {
+      background-color: var(--sr-neutral--950);
+    }
+
+    .dark\:bg-surface--0 {
+      background-color: var(--sr-surface--0);
+    }
+    .dark\:hover\:bg-surface--950:hover {
+      background-color: var(--sr-surface--950);
+    }
+
+    .dark\:bg-surface--50 {
+      background-color: var(--sr-surface--50);
+    }
+    .dark\:hover\:bg-surface--50:hover {
+      background-color: var(--sr-surface--50);
+    }
+
+    .dark\:bg-surface--100 {
+      background-color: var(--sr-surface--100);
+    }
+    .dark\:hover\:bg-surface--100:hover {
+      background-color: var(--sr-surface--100);
+    }
+
+    .dark\:bg-surface--200 {
+      background-color: var(--sr-surface--200);
+    }
+    .dark\:hover\:bg-surface--200:hover {
+      background-color: var(--sr-surface--200);
+    }
+
+    .dark\:bg-surface--300 {
+      background-color: var(--sr-surface--300);
+    }
+    .dark\:hover\:bg-surface--300:hover {
+      background-color: var(--sr-surface--300);
+    }
+
+    .dark\:bg-surface--400 {
+      background-color: var(--sr-surface--400);
+    }
+    .dark\:hover\:bg-surface--400:hover {
+      background-color: var(--sr-surface--400);
+    }
+
+    .dark\:bg-surface--500 {
+      background-color: var(--sr-surface--500);
+    }
+    .dark\:hover\:bg-surface--500:hover {
+      background-color: var(--sr-surface--500);
+    }
+
+    .dark\:bg-surface--600 {
+      background-color: var(--sr-surface--600);
+    }
+    .dark\:hover\:bg-surface--600:hover {
+      background-color: var(--sr-surface--600);
+    }
+
+    .dark\:bg-surface--700 {
+      background-color: var(--sr-surface--700);
+    }
+    .dark\:hover\:bg-surface--700:hover {
+      background-color: var(--sr-surface--700);
+    }
+
+    .dark\:bg-surface--800 {
+      background-color: var(--sr-surface--800);
+    }
+    .dark\:hover\:bg-surface--800:hover {
+      background-color: var(--sr-surface--800);
+    }
+
+    .dark\:bg-surface--900 {
+      background-color: var(--sr-surface--900);
+    }
+    .dark\:hover\:bg-surface--900:hover {
+      background-color: var(--sr-surface--900);
+    }
+
+    .dark\:bg-surface--950 {
+      background-color: var(--sr-surface--950);
+    }
+    .dark\:hover\:bg-surface--950:hover {
+      background-color: var(--sr-surface--950);
+    }
+  }
+}

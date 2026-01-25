@@ -1,0 +1,48 @@
+@layer base {
+  body {
+    background-color: var(--sr-canvas);
+    color: var(--sr-canvas-text);
+    font-family: var(--sr-font-system-ui);
+
+    &::before {
+      content: '';
+      background:
+        linear-gradient(90deg, var(--sr-grid-colors) 1px, transparent 1px var(--sr-grid-size)) 50% 50% / var(--sr-grid-size)
+          var(--sr-grid-size),
+        linear-gradient(var(--sr-grid-colors) 1px, transparent 1px var(--sr-grid-size)) 50% 50% / var(--sr-grid-size)
+          var(--sr-grid-size);
+      transform-style: flat;
+      pointer-events: none;
+      z-index: -1;
+      width: 100vw;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      -webkit-mask: linear-gradient(-20deg, #0000 35%, #fff);
+      mask: linear-gradient(-20deg, #0000 25%, #fff);
+    }
+
+    &::after, &::before {
+      content: '';
+      position: fixed;
+      inset-block: 0;
+      width: 50%;
+      height: 100%;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, var(--sr-grid-colors) 1px, transparent 1px var(--sr-grid-size)) 50% 50% / var(--sr-grid-size)
+          var(--sr-grid-size),
+        linear-gradient(var(--sr-grid-colors) 1px, transparent 1px var(--sr-grid-size)) 50% 50% / var(--sr-grid-size)
+          var(--sr-grid-size);
+    }
+    &::before {
+      top: 0;
+      inset-inline-start: 0;
+      mask: linear-gradient(to left, #0000 55%, oklch(100% 0.00011 271.152 / 0.65));
+    }
+    &::after {
+      inset-inline-end: 0;
+      mask: linear-gradient(to right, #0000 55%, oklch(100% 0.00011 271.152 / 0.65));
+    }
+  }
+}

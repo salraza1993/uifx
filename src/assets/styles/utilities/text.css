@@ -1,0 +1,23 @@
+@layer utilities {
+  .text--center { text-align: center; }
+  .text--end { text-align: end; }
+  .text--justify { text-align: justify; }
+  .text--left { text-align: left; }
+  .text--right { text-align: right; }
+  .text--start { text-align: start; }
+
+  .hover\:text--no-inherit:hover { color: initial; }
+  .hover\:not-active\:text--no-inherit:not(.active):hover { color: initial; }
+  .focus\:text--no-inherit:focus { color: initial; }
+  .focus\:not-focused\:text--no-inherit:not(.active):focus { color: initial; }
+  .focus\:not-active-focused\:text--no-inherit:not(.active, :focus) { color: initial; }
+
+  .align--baseline { vertical-align: baseline; }
+  .align--bottom { vertical-align: bottom; }
+  .align--middle { vertical-align: middle; }
+  .align--sub { vertical-align: sub; }
+  .align--super { vertical-align: super; }
+  .align--text-bottom { vertical-align: text-bottom; }
+  .align--text-top { vertical-align: text-top; }
+  .align--top { vertical-align: top; }
+}

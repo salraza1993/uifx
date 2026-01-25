@@ -9,6 +9,6 @@ import { HeaderMenu } from './header-menu/header-menu';
   imports: [ContentWrapper, ThemeChanger, Logo, HeaderMenu],
   templateUrl: './header.html',
   styleUrl: './header.css',
-  host: { class: 'sr-header' }
+  host: { class: 'sr-header py--3xl' }
 })
 export class Header {}

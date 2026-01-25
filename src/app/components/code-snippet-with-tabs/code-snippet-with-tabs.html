@@ -1,0 +1,22 @@
+<div class="tabs-container">
+  <div class="tabs-header">
+    @for (tab of tabsLabels(); track tab + $index) {
+      <button [class.active]="activeTab() === tab" (click)="activeTab.set(tab)">
+        {{ tab | uppercase }}
+      </button>
+    }
+  </div>
+  <div class="tabs-content">
+    @switch (activeTab()) {
+      @case ('HTML') {
+        <code-snippet [code]="html()" language="markup" height="300px"></code-snippet>
+      }
+      @case ('TypeScript') {
+        <code-snippet [code]="ts()" language="typescript" height="300px"></code-snippet>
+      }
+      @case ('CSS') {
+        <code-snippet [code]="css()" language="css" height="300px"></code-snippet>
+      }
+    }
+  </div>
+</div>

@@ -1,19 +1,78 @@
-:root {
-  --grid-border-light: oklch(from var(--sr-surface--950) l c h / 0.09);
-  --grid-border-dark: oklch(from var(--sr-surface--0) l c h / 0.09);
-  --grid-colors: light-dark(var(--grid-border-light), var(--grid-border-dark));
-  /* --sr-border-color: light-dark(oklch(0% 0 0 / 0.09), oklch(100% 0.00011 271.152 / 0.09)); */
-  --grid-size: 40px;
-  --sr-border-width: 1px;
-  --sr-border-type: solid;
-  --transition-duration: 0.35s;
-  --sr-outline-offset-focus: 0.15rem;
-  --sr-outline-offset-color: light-dark(var(--sr-surface--500), var(--sr-blue--300));
-  --sr-img-fit-type: contain;
-  --sr-aspect-ratio: initial;
-  --sr-transition-duration: 0.35s;
-  --sr-transition-property: all;
-  --sr-transition-type: ease-in-out;
-  --sr-max-z-index: 10;
-  --sr-opacity: 1;
+@layer theme {
+  :root {
+    --sr-grid-border-light: oklch(from var(--sr-surface--950) l c h / 0.09);
+    --sr-grid-border-dark: oklch(from var(--sr-surface--0) l c h / 0.09);
+    --sr-grid-colors: light-dark(var(--sr-grid-border-light), var(--sr-grid-border-dark));
+    --sr-grid-size: 40px;
+    --sr-link: light-dark(var(--sr-surface--600), var(--sr-surface--400));
+    --sr-link-visited: light-dark(var(--sr-blue--600), var(--sr-blue--400));
+    --sr-border-width: 1px;
+    --sr-border-type: solid;
+    --sr-outline-offset--width: 0.18rem;
+    --sr-outline-offset--gap: 0.2rem;
+    --sr-outline-offset--color: light-dark(var(--sr-surface--500), var(--sr-blue--300));
+    --sr-img-fit-type: contain;
+    --sr-aspect-ratio: initial;
+    --sr-transition-duration: 0.35s;
+    --sr-transition-property: all;
+    --sr-transition-type: ease-in-out;
+    --sr-max-z-index: 10;
+    --sr-opacity: 1;
+    --sr-container--sm: 24rem; /* 384px */
+    --sr-container--md: 28rem; /* 448px */
+    --sr-container--lg: 32rem; /* 512px */
+    --sr-container--xl: 36rem; /* 576px */
+    --sr-container--2xl: 42rem; /* 672px */
+    --sr-container--4xl: 56rem; /* 896px */
+    --sr-container--5xl: 80rem; /* 1280px */
+    --sr-remained-viewport-width--sm: calc((100% - var(--sr-container--sm)) / 2);
+    --sr-remained-viewport-width--md: calc((100% - var(--sr-container--md)) / 2);
+    --sr-remained-viewport-width--lg: calc((100% - var(--sr-container--lg)) / 2);
+    --sr-remained-viewport-width--xl: calc((100% - var(--sr-container--xl)) / 2);
+    --sr-remained-viewport-width--2xl: calc((100% - var(--sr-container--2xl)) / 2);
+    --sr-remained-viewport-width--4xl: calc((100% - var(--sr-container--4xl)) / 2);
+    --sr-remained-viewport-width--5xl: calc((100% - var(--sr-container--5xl)) / 2);
+    --sr-content-size--1: 20ch;
+    --sr-content-size--2: 45ch;
+    --sr-content-size--3: 60ch;
+    --sr-header-size--1: 20ch;
+    --sr-header-size--2: 25ch;
+    --sr-header-size--3: 35ch;
+
+    --sr-ease--1: cubic-bezier(0.25, 0, 0.5, 1);
+    --sr-ease--2: cubic-bezier(0.25, 0, 0.4, 1);
+    --sr-ease--3: cubic-bezier(0.25, 0, 0.3, 1);
+    --sr-ease--4: cubic-bezier(0.25, 0, 0.2, 1);
+    --sr-ease--5: cubic-bezier(0.25, 0, 0.1, 1);
+    --sr-ease-in--1: cubic-bezier(0.25, 0, 1, 1);
+    --sr-ease-in--2: cubic-bezier(0.5, 0, 1, 1);
+    --sr-ease-in--3: cubic-bezier(0.7, 0, 1, 1);
+    --sr-ease-in--4: cubic-bezier(0.9, 0, 1, 1);
+    --sr-ease-in--5: cubic-bezier(1, 0, 1, 1);
+    --sr-ease-out--1: cubic-bezier(0, 0, 0.75, 1);
+    --sr-ease-out--2: cubic-bezier(0, 0, 0.5, 1);
+    --sr-ease-out--3: cubic-bezier(0, 0, 0.3, 1);
+    --sr-ease-out--4: cubic-bezier(0, 0, 0.1, 1);
+    --sr-ease-out--5: cubic-bezier(0, 0, 0, 1);
+    --sr-ease-in-out--1: cubic-bezier(0.1, 0, 0.9, 1);
+    --sr-ease-in-out--2: cubic-bezier(0.3, 0, 0.7, 1);
+    --sr-ease-in-out--3: cubic-bezier(0.5, 0, 0.5, 1);
+    --sr-ease-in-out--4: cubic-bezier(0.7, 0, 0.3, 1);
+    --sr-ease-in-out--5: cubic-bezier(0.9, 0, 0.1, 1);
+    --sr-ease-elastic-out--1: cubic-bezier(0.5, 0.75, 0.75, 1.25);
+    --sr-ease-elastic-out--2: cubic-bezier(0.5, 1, 0.75, 1.25);
+    --sr-ease-elastic-out--3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+    --sr-ease-elastic-out--4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+    --sr-ease-elastic-out--5: cubic-bezier(0.5, 1.75, 0.75, 1.25);
+    --sr-ease-elastic-in--1: cubic-bezier(0.5, -0.25, 0.75, 1);
+    --sr-ease-elastic-in--2: cubic-bezier(0.5, -0.5, 0.75, 1);
+    --sr-ease-elastic-in--3: cubic-bezier(0.5, -0.75, 0.75, 1);
+    --sr-ease-elastic-in--4: cubic-bezier(0.5, -1, 0.75, 1);
+    --sr-ease-elastic-in--5: cubic-bezier(0.5, -1.25, 0.75, 1);
+    --sr-ease-elastic-in-out--1: cubic-bezier(0.5, -0.1, 0.1, 1.5);
+    --sr-ease-elastic-in-out--2: cubic-bezier(0.5, -0.3, 0.1, 1.5);
+    --sr-ease-elastic-in-out--3: cubic-bezier(0.5, -0.5, 0.1, 1.5);
+    --sr-ease-elastic-in-out--4: cubic-bezier(0.5, -0.7, 0.1, 1.5);
+    --sr-ease-elastic-in-out--5: cubic-bezier(0.5, -0.9, 0.1, 1.5);
+  }
 }

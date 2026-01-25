@@ -1,0 +1,123 @@
+@layer utilities {
+  /* padding */
+  /* =====[ globally (x-start, x-end, y-start, y-end)] ===== */
+  .p-0, .p-none { padding: 0; }
+  .p--xs { padding: var(--sr-padding--xs); }
+  .p--sm { padding: var(--sr-padding--sm); }
+  .p--md { padding: var(--sr-padding--md); }
+  .p--lg { padding: var(--sr-padding--lg); }
+  .p--xl { padding: var(--sr-padding--xl); }
+  .p--2xl { padding: var(--sr-padding--2xl); }
+  .p--3xl { padding: var(--sr-padding--3xl); }
+  .p--4xl { padding: var(--sr-padding--4xl); }
+  .p--5xl { padding: var(--sr-padding--5xl); }
+  .p--6xl { padding: var(--sr-padding--6xl); }
+  .p--7xl { padding: var(--sr-padding--7xl); }
+  .p--8xl { padding: var(--sr-padding--8xl); }
+  .p--9xl { padding: var(--sr-padding--9xl); }
+  .p--10xl { padding: var(--sr-padding--10xl); }
+
+  /* =====[ y-axis (y-start, y-end)] ===== */
+  .py--0, .py--none { padding-block: 0; }
+  .py--xs { padding-block: var(--sr-padding--xs); }
+  .py--sm { padding-block: var(--sr-padding--sm); }
+  .py--md { padding-block: var(--sr-padding--md); }
+  .py--lg { padding-block: var(--sr-padding--lg); }
+  .py--xl { padding-block: var(--sr-padding--xl); }
+  .py--2xl { padding-block: var(--sr-padding--2xl); }
+  .py--3xl { padding-block: var(--sr-padding--3xl); }
+  .py--4xl { padding-block: var(--sr-padding--4xl); }
+  .py--5xl { padding-block: var(--sr-padding--5xl); }
+  .py--6xl { padding-block: var(--sr-padding--6xl); }
+  .py--7xl { padding-block: var(--sr-padding--7xl); }
+  .py--8xl { padding-block: var(--sr-padding--8xl); }
+  .py--9xl { padding-block: var(--sr-padding--9xl); }
+  .py--10xl { padding-block: var(--sr-padding--10xl); }
+
+  /* =====[ y-axis (y-start)] ===== */
+  .py-start--0, .py-start--none { padding-block-start: 0; }
+  .py-start--xs { padding-block-start: var(--sr-padding--xs); }
+  .py-start--sm { padding-block-start: var(--sr-padding--sm); }
+  .py-start--md { padding-block-start: var(--sr-padding--md); }
+  .py-start--lg { padding-block-start: var(--sr-padding--lg); }
+  .py-start--xl { padding-block-start: var(--sr-padding--xl); }
+  .py-start--2xl { padding-block-start: var(--sr-padding--2xl); }
+  .py-start--3xl { padding-block-start: var(--sr-padding--3xl); }
+  .py-start--4xl { padding-block-start: var(--sr-padding--4xl); }
+  .py-start--5xl { padding-block-start: var(--sr-padding--5xl); }
+  .py-start--6xl { padding-block-start: var(--sr-padding--6xl); }
+  .py-start--7xl { padding-block-start: var(--sr-padding--7xl); }
+  .py-start--8xl { padding-block-start: var(--sr-padding--8xl); }
+  .py-start--9xl { padding-block-start: var(--sr-padding--9xl); }
+  .py-start--10xl { padding-block-start: var(--sr-padding--10xl); }
+
+  /* =====[ y-axis (y-end)] ===== */
+  .py-end--0, .py-end--none { padding-block-end: 0; }
+  .py-end--xs { padding-block-end: var(--sr-padding--xs); }
+  .py-end--sm { padding-block-end: var(--sr-padding--sm); }
+  .py-end--md { padding-block-end: var(--sr-padding--md); }
+  .py-end--lg { padding-block-end: var(--sr-padding--lg); }
+  .py-end--xl { padding-block-end: var(--sr-padding--xl); }
+  .py-end--2xl { padding-block-end: var(--sr-padding--2xl); }
+  .py-end--3xl { padding-block-end: var(--sr-padding--3xl); }
+  .py-end--4xl { padding-block-end: var(--sr-padding--4xl); }
+  .py-end--5xl { padding-block-end: var(--sr-padding--5xl); }
+  .py-end--6xl { padding-block-end: var(--sr-padding--6xl); }
+  .py-end--7xl { padding-block-end: var(--sr-padding--7xl); }
+  .py-end--8xl { padding-block-end: var(--sr-padding--8xl); }
+  .py-end--9xl { padding-block-end: var(--sr-padding--9xl); }
+  .py-end--10xl { padding-block-end: var(--sr-padding--10xl); }
+
+
+  /* =====[ x-axis (x-start, x-end)] ===== */
+  .px--0, .px--none { padding-inline: 0; }
+  .px--xs { padding-inline: var(--sr-padding--xs); }
+  .px--sm { padding-inline: var(--sr-padding--sm); }
+  .px--md { padding-inline: var(--sr-padding--md); }
+  .px--lg { padding-inline: var(--sr-padding--lg); }
+  .px--xl { padding-inline: var(--sr-padding--xl); }
+  .px--2xl { padding-inline: var(--sr-padding--2xl); }
+  .px--3xl { padding-inline: var(--sr-padding--3xl); }
+  .px--4xl { padding-inline: var(--sr-padding--4xl); }
+  .px--5xl { padding-inline: var(--sr-padding--5xl); }
+  .px--6xl { padding-inline: var(--sr-padding--6xl); }
+  .px--7xl { padding-inline: var(--sr-padding--7xl); }
+  .px--8xl { padding-inline: var(--sr-padding--8xl); }
+  .px--9xl { padding-inline: var(--sr-padding--9xl); }
+  .px--10xl { padding-inline: var(--sr-padding--10xl); }
+
+
+  /* =====[ x-axis (x-start)] ===== */
+  .px-start--0, .px-start--none { padding-inline-start: 0; }
+  .px-start--xs { padding-inline-start: var(--sr-padding--xs); }
+  .px-start--sm { padding-inline-start: var(--sr-padding--sm); }
+  .px-start--md { padding-inline-start: var(--sr-padding--md); }
+  .px-start--lg { padding-inline-start: var(--sr-padding--lg); }
+  .px-start--xl { padding-inline-start: var(--sr-padding--xl); }
+  .px-start--2xl { padding-inline-start: var(--sr-padding--2xl); }
+  .px-start--3xl { padding-inline-start: var(--sr-padding--3xl); }
+  .px-start--4xl { padding-inline-start: var(--sr-padding--4xl); }
+  .px-start--5xl { padding-inline-start: var(--sr-padding--5xl); }
+  .px-start--6xl { padding-inline-start: var(--sr-padding--6xl); }
+  .px-start--7xl { padding-inline-start: var(--sr-padding--7xl); }
+  .px-start--8xl { padding-inline-start: var(--sr-padding--8xl); }
+  .px-start--9xl { padding-inline-start: var(--sr-padding--9xl); }
+  .px-start--10xl { padding-inline-start: var(--sr-padding--10xl); }
+
+  /* =====[ x-axis (x-end)] ===== */
+  .px-end--0, .px-end--none { padding-inline-end: 0; }
+  .px-end--xs { padding-inline-end: var(--sr-padding--xs); }
+  .px-end--sm { padding-inline-end: var(--sr-padding--sm); }
+  .px-end--md { padding-inline-end: var(--sr-padding--md); }
+  .px-end--lg { padding-inline-end: var(--sr-padding--lg); }
+  .px-end--xl { padding-inline-end: var(--sr-padding--xl); }
+  .px-end--2xl { padding-inline-end: var(--sr-padding--2xl); }
+  .px-end--3xl { padding-inline-end: var(--sr-padding--3xl); }
+  .px-end--4xl { padding-inline-end: var(--sr-padding--4xl); }
+  .px-end--5xl { padding-inline-end: var(--sr-padding--5xl); }
+  .px-end--6xl { padding-inline-end: var(--sr-padding--6xl); }
+  .px-end--7xl { padding-inline-end: var(--sr-padding--7xl); }
+  .px-end--8xl { padding-inline-end: var(--sr-padding--8xl); }
+  .px-end--9xl { padding-inline-end: var(--sr-padding--9xl); }
+  .px-end--10xl { padding-inline-end: var(--sr-padding--10xl); }
+}

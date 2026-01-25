@@ -1,8 +1,12 @@
 import { Component, computed, DOCUMENT, effect, inject, signal } from '@angular/core';
 import {
   AppConfigService,
-  AppearanceType,
-} from '../../stores/browser-store/app-config-service/app-config-service';
+  AppearanceType
+} from '@app/stores/browser-store/app-config-service/app-config-service';
+// import {
+//   AppConfigService,
+//   AppearanceType
+// } from '@stores/browser-store/app-config-service/app-config-service';
 
 @Component({
   selector: 'sr-theme-changer',

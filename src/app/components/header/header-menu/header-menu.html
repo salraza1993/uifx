@@ -1,7 +1,7 @@
 <!-- https://codepen.io/salraza1993/pen/WbxEvGp -->
 <button
   type="button"
-  class="menu-button px--lg fs--md flex--center cursor--pointer radius--xs"
+  class="menu-button px--lg fs--md flex--center focus-inherit--color cursor--pointer radius--xs"
   popoverTrigger
   popoverTriggerFor="components-menus"
   popovertarget="components-menus"
@@ -9,25 +9,29 @@
   Components
 </button>
 <dialog
-  class="menu-list-wrapper transition--all border radius--lg absolute inset--auto p--lg"
+  #menuDialogElement
+  class="menu-list-wrapper border radius--lg absolute inset--auto p--lg"
   popover
   id="components-menus"
 >
-  <div class="menu-lists gap--xs" focusGrid [focusGridColumns]="3">
+  <div class="menu-lists gap--xs" focusGrid [focusGridColumns]="gridCols()">
     @for (menu of menus(); track menu.label) {
       <a
         focusGridItem
+        (click)="onSelectMenu(menu)"
         [routerLink]="menu.link"
-        class="menu-item cursor--pointer bg--transparent radius--sm flex gap--xs p--xs"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="menu-item cursor--pointer text-decoration--none radius--sm transition flex items--center gap--sm p--xs"
       >
         <div
-          class="icon icon--2xl img-fit--contain flex--center aspect--square w-h-100 radius--xs bg-surface--100 margin-bottom--sm dark:bg-surface--600 hover:bg-surface--950 dark:hover:bg-surface--500 p--xs"
+          class="icon icon--2xl img-fit--contain flex--center aspect--square w-h-100 radius--xs p--xs"
         >
           <img src="assets/images/icons/small/icon-tabs-stroke.svg" alt="Tabs Icon" />
         </div>
         <div class="content grid gap--xs/2">
           <strong class="block">{{ menu.label }}</strong>
-          <small class="fs--xs line-height--normal">{{ menu.description }}</small>
+          <small class="fs--xs hover:text--no-inherit px-end--xs">{{ menu.description }}</small>
         </div>
       </a>
     }

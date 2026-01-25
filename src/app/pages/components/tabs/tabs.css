@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  --line-opacity: .15;
+  --line-color: rgba(0, 0, 0, var(--line-opacity));
+  --line-offset: 150px;
+  --line-width: 1px;
+  --line-gap: 5px;
+  --line-fade-stop: 93%;
+  --line-color: rgba(255, 255, 255, calc(var(--line-opacity) * 3));
+  --geist-background: #000;
+
+  .detail-page-wrapper {
+    /* background-color: var(--sr-surface--0);
+    border-radius: var(--sr-radius--md); */
+
+    .page-title {
+      position: relative;
+
+      &:after {
+        position: relative;
+        height: var(--line-width);
+        background: linear-gradient(to right, var(--line-color), var(--line-color) 50%, transparent 0, transparent);
+        background-size: var(--line-gap) var(--line-width);
+        -webkit-mask: linear-gradient(to left, var(--geist-background) var(--line-fade-stop), transparent), linear-gradient(to right, var(--geist-background) var(--line-fade-stop), transparent), linear-gradient(black, black);
+        -webkit-mask-composite: destination-in;
+      }
+    }
+  }
+}

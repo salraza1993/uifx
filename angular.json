@@ -30,7 +30,9 @@
               }
             ],
             "styles": [
-              "src/assets/styles/global.css"
+              "src/assets/styles/global.css",
+              "node_modules/prism-code-editor/dist/layout.css",
+              "node_modules/prism-code-editor/dist/themes/github-dark.css"
             ]
           },
           "configurations": {
