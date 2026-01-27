@@ -38,24 +38,21 @@
   }
 
   /* Body text */
-  :where(.fs--xs, .text--extra-small) {
-    font-size: var(--sr-fs--xs);
-    line-height: var(--sr-lh--xs);
-  }
-
-  :where(.fs--sm, .text--small, small) {
-    font-size: var(--sr-fs--sm);
-    line-height: var(--sr-lh--sm);
-  }
-
   :where(p, .fs--md, .text--medium, .text-body, .text--p, .paragraph, .paragraph-text) {
     font-size: var(--sr-fs--md);
     line-height: var(--sr-lh--md);
   }
-
   :where(.fs--lg, .text--large) {
     font-size: var(--sr-fs--lg);
     line-height: var(--sr-lh--lg);
+  }
+  :where(.fs--sm, .text--small, small) {
+    font-size: var(--sr-fs--sm);
+    line-height: var(--sr-lh--sm);
+  }
+  :where(.fs--xs, .text--extra-small) {
+    font-size: var(--sr-fs--xs);
+    line-height: var(--sr-lh--xs);
   }
 
   :where(h1, h2, h3, h4, h5, h6) {
@@ -65,7 +62,20 @@
     }
   }
 
-  :where(.line-height--normal) {
-    line-height: normal;
-  }
+  :where(.line-height--normal) { line-height: normal; }
+  :where(.line-height--none) { line-height: 1; }
+  :where(.line-height--sm) { line-height: 1.25; }
+  :where(.line-height--md) { line-height: 1.5; }
+  :where(.line-height--lg) { line-height: 1.75; }
+  :where(.line-height--xl) { line-height: 2; }
+
+  :where(.fw--thin, .fw--\/[\100]) { font-weight: var(--sr-fw--100); }
+  :where(.fw--extra-light, .fw--xs, .fw--\/[\200]) { font-weight: var(--sr-fw--200); }
+  :where(.fw--light, .fw--\/[\300]) { font-weight: var(--sr-fw--300); }
+  :where(.fw--normal, .fw--sm, .fw--\/[\400]) { font-weight: var(--sr-fw--400); }
+  :where(.fw--medium, .fw--md, .fw--\/[\500]) { font-weight: var(--sr-fw--500); }
+  :where(.fw--semi-bold, .fw--lg, .fw--\/[\600]) { font-weight: var(--sr-fw--600); }
+  :where(.fw--bold, .fw--xl, .fw--\/[\700]) { font-weight: var(--sr-fw--700); }
+  :where(.fw--extra-bold, .fw--2xl, .fw--\/[\800]) { font-weight: var(--sr-fw--800); }
+  :where(.fw--black, .fw--3xl, .fw--\/[\900]) { font-weight: var(--sr-fw--900); }
 }

@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   host: { class: 'focus-within transition' },
   template: `
-    <a [routerLink]="['/']" class="logo-link transition block w-h-100 focus--none">
+    <a [routerLink]="['/']" class="logo-link transition block wh--100% focus--none">
       <svg id="uifx-log" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.471 89.111">
         <path
           id="Path_1"

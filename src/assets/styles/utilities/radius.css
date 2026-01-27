@@ -1,8 +1,8 @@
 @layer utilities {
   /* radius */
-  /* [class|="radius"] {
+  [class~="radius"] {
     border-radius: var(--sr-radius--md) !important;
-  } */
+  }
   .radius--xs { border-radius: var(--sr-radius--xs); }
   .radius--sm { border-radius: var(--sr-radius--sm); }
   .radius--md { border-radius: var(--sr-radius--md); }

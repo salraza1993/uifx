@@ -1,0 +1,19 @@
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+.inset--0 { inset: 0; }
+.inset--auto { inset: auto; }
+
+:where(.inset-x--auto, .left-right--auto) { inset-inline: auto; }
+:where(.inset-x-start--auto, .left--auto) { inset-inline-start: auto; }
+:where(.inset-x-end--auto, .right--auto) { inset-inline-end: auto; }
+:where(.inset-x-start--0, .left--0) { inset-inline-start: 0; }
+:where(.inset-x-end--0, .right--0) { inset-inline-end: 0; }
+
+:where(.inset-y--auto, .top-bottom--auto) { inset-block: auto; }
+:where(.inset-y-start--auto, .top--auto) { inset-block-start: auto; }
+:where(.inset-y-end--auto, .bottom--auto) { inset-block-end: auto; }
+:where(.inset-y-start--0, .top--0) { inset-block-start: 0; }
+:where(.inset-y-end--0, .bottom--0) { inset-block-end: 0; }

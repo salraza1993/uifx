@@ -1,0 +1,39 @@
+:host {
+  --grid-cell-size: 100px;
+  --sr-grid-size: var(--grid-cell-size);
+  position: relative;
+  display: block;
+  /* height: 500px; */
+  /* background-color: rgb(236, 236, 236); */
+
+  .layout-grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    background-color: transparent;
+    list-style: none;
+    border-inline-end: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+    border-block-end: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+    max-width: var(--sr-container--5xl);
+    container-type: inline-size;
+
+    .layout-grid-item {
+
+      aspect-ratio: 1 / 1;
+      border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+      border-block-end: 0;
+      border-inline-end: 0;
+
+      &.content-child {
+        aspect-ratio: auto;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-block-start: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+        border-inline-start: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+      }
+    }
+  }
+}

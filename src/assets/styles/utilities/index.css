@@ -1,12 +1,20 @@
+@layer darkModes, lightModes;
 @import './classes.css';
 @import './font-classes.css';
 @import './gaps.css';
 @import './radius.css';
 @import './flex.css';
-@import './bg-dark-mode.css';
-@import './bg-light-mode.css';
 @import './paddings.css';
 @import './margins.css';
 @import './borders.css';
 @import './text.css';
+@import './z-indexes.css';
+@import './widths.css';
+@import './cursors.css';
+@import './positions.css';
 
+
+@import './bg-dark-mode.css' layer(darkModes);
+@import './bg-light-mode.css' layer(lightModes);
+@import './text-color-dark-mode.css' layer(darkModes);
+@import './text-color-light-mode.css' layer(lightModes);

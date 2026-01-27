@@ -3,7 +3,7 @@
     --sr-grid-border-light: oklch(from var(--sr-surface--950) l c h / 0.09);
     --sr-grid-border-dark: oklch(from var(--sr-surface--0) l c h / 0.09);
     --sr-grid-colors: light-dark(var(--sr-grid-border-light), var(--sr-grid-border-dark));
-    --sr-grid-size: 40px;
+    --sr-grid-size: 25px;
     --sr-link: light-dark(var(--sr-surface--600), var(--sr-surface--400));
     --sr-link-visited: light-dark(var(--sr-blue--600), var(--sr-blue--400));
     --sr-border-width: 1px;
@@ -32,12 +32,26 @@
     --sr-remained-viewport-width--2xl: calc((100% - var(--sr-container--2xl)) / 2);
     --sr-remained-viewport-width--4xl: calc((100% - var(--sr-container--4xl)) / 2);
     --sr-remained-viewport-width--5xl: calc((100% - var(--sr-container--5xl)) / 2);
-    --sr-content-size--1: 20ch;
-    --sr-content-size--2: 45ch;
-    --sr-content-size--3: 60ch;
+    --sr-content-wrapper-width: var(--sr-container--5xl);
+    --sr-svg-stroke-width: 2.5;
+    --sr-svg-stroke-primary: light-dark(var(--sr-primary--500), var(--sr-primary--600));
+    --sr-svg-stroke-secondary: light-dark(var(--sr-surface--300), var(--sr-surface--700));
+    --sr-svg-stroke-accent: light-dark(var(--sr-accent--500), var(--sr-accent--400));
+    --sr-svg-stroke-color: light-dark(var(--sr-surface--700), var(--sr-surface--200));
+
+    --sr-content-card-bg: light-dark(var(--sr-surface--50), var(--sr-surface--700));
+    --sr-pattern-foreground: color-mix(in oklab, var(--sr-border-color), transparent);
+    --sr-pattern-width: auto;
+
+    --sr-content-size--1: 18ch;
+    --sr-content-size--2: 30ch;
+    --sr-content-size--3: 45ch;
+    --sr-content-size--4: 55ch;
+    --sr-content-size--5: 70ch;
     --sr-header-size--1: 20ch;
     --sr-header-size--2: 25ch;
     --sr-header-size--3: 35ch;
+    --sr-pattern-size: 0.6rem;
 
     --sr-ease--1: cubic-bezier(0.25, 0, 0.5, 1);
     --sr-ease--2: cubic-bezier(0.25, 0, 0.4, 1);

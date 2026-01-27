@@ -9,6 +9,11 @@
   .gap--3xl { gap: var(--sr-gap--3xl); }
   .gap--4xl { gap: var(--sr-gap--4xl); }
   .gap--5xl { gap: var(--sr-gap--5xl); }
+  .gap--6xl { gap: var(--sr-gap--6xl); }
+  .gap--7xl { gap: var(--sr-gap--7xl); }
+  .gap--8xl { gap: var(--sr-gap--8xl); }
+  .gap--9xl { gap: var(--sr-gap--9xl); }
+  .gap--10xl { gap: var(--sr-gap--10xl); }
 
   .gap-x--xs { row-gap: var(--sr-gap--xs); }
   .gap-x--sm { row-gap: var(--sr-gap--sm); }
@@ -19,9 +24,14 @@
   .gap-x--3xl { row-gap: var(--sr-gap--3xl); }
   .gap-x--4xl { row-gap: var(--sr-gap--4xl); }
   .gap-x--5xl { row-gap: var(--sr-gap--5xl); }
+  .gap-x--6xl { row-gap: var(--sr-gap--6xl); }
+  .gap-x--7xl { row-gap: var(--sr-gap--7xl); }
+  .gap-x--8xl { row-gap: var(--sr-gap--8xl); }
+  .gap-x--9xl { row-gap: var(--sr-gap--9xl); }
+  .gap-x--10xl { row-gap: var(--sr-gap--10xl); }
 
-  .gap-y--xs { column-gap: var(--sr-gap--xs); }
   .gap-y--sm { column-gap: var(--sr-gap--sm); }
+  .gap-y--xs { column-gap: var(--sr-gap--xs); }
   .gap-y--md { column-gap: var(--sr-gap--md); }
   .gap-y--lg { column-gap: var(--sr-gap--lg); }
   .gap-y--xl { column-gap: var(--sr-gap--xl); }
@@ -29,4 +39,9 @@
   .gap-y--3xl { column-gap: var(--sr-gap--3xl); }
   .gap-y--4xl { column-gap: var(--sr-gap--4xl); }
   .gap-y--5xl { column-gap: var(--sr-gap--5xl); }
+  .gap-y--6xl { column-gap: var(--sr-gap--6xl); }
+  .gap-y--7xl { column-gap: var(--sr-gap--7xl); }
+  .gap-y--8xl { column-gap: var(--sr-gap--8xl); }
+  .gap-y--9xl { column-gap: var(--sr-gap--9xl); }
+  .gap-y--10xl { column-gap: var(--sr-gap--10xl); }
 }

@@ -1,0 +1,17 @@
+<div class="layout-grid-container">
+  <!-- Regular grid items -->
+  @for (item of gridItems(); track item.col + '-' + item.row) {
+    <div class="layout-grid-item">{{ $index + 1 }}</div>
+  }
+
+  <!-- Content box -->
+  <div
+    [style]="{
+      'grid-column': contentBox().colStart + ' / span ' + contentBox().colSpan,
+      'grid-row': contentBox().rowStart + ' / span ' + contentBox().rowSpan
+    }"
+    class="layout-grid-item content-child"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

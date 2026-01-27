@@ -1,6 +1,7 @@
-@import './core-variables.css';
-@import './typography.css';
-@import './supportive-colors.css';
-@import './modified-variables.css';
-@import './common-variable.css';
-
+@layer core, typography, colors, modified, common, components;
+@import './core-variables.css' layer(core);
+@import './typography.css' layer(typography);
+@import './supportive-colors.css' layer(colors);
+@import './modified-variables.css' layer(modified);
+@import './common-variable.css' layer(common);
+@import './components.css' layer(components);

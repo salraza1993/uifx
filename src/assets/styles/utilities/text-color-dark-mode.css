@@ -1,0 +1,315 @@
+@layer utilities {
+  /* System preference */
+  @media (prefers-color-scheme: dark) {
+    /* =======[ Neutral Colors Classes ]======= */
+    .dark\:text-neutral--50,
+    .dark\:hover\:text-neutral--50:hover { color: var(--sr-neutral--50); }
+    .dark\:text-neutral--100,
+    .dark\:hover\:text-neutral--100:hover { color: var(--sr-neutral--100); }
+    .dark\:text-neutral--200,
+    .dark\:hover\:text-neutral--200:hover { color: var(--sr-neutral--200); }
+    .dark\:text-neutral--300,
+    .dark\:hover\:text-neutral--300:hover { color: var(--sr-neutral--300); }
+    .dark\:text-neutral--400,
+    .dark\:hover\:text-neutral--400:hover { color: var(--sr-neutral--400); }
+    .dark\:text-neutral--500,
+    .dark\:hover\:text-neutral--500:hover { color: var(--sr-neutral--500); }
+    .dark\:text-neutral--600,
+    .dark\:hover\:text-neutral--600:hover { color: var(--sr-neutral--600); }
+    .dark\:text-neutral--700,
+    .dark\:hover\:text-neutral--700:hover { color: var(--sr-neutral--700); }
+    .dark\:text-neutral--800,
+    .dark\:hover\:text-neutral--800:hover { color: var(--sr-neutral--800); }
+    .dark\:text-neutral--900,
+    .dark\:hover\:text-neutral--900:hover { color: var(--sr-neutral--900); }
+    .dark\:text-neutral--950,
+    .dark\:hover\:text-neutral--950:hover { color: var(--sr-neutral--950); }
+
+    /* =======[ Surface Colors Classes ]======= */
+    .dark\:text-surface--0,
+    .dark\:hover\:text-surface--0:hover { color: var(--sr-surface--0); }
+    .dark\:text-surface--50,
+    .dark\:hover\:text-surface--50:hover { color: var(--sr-surface--50); }
+    .dark\:text-surface--100,
+    .dark\:hover\:text-surface--100:hover { color: var(--sr-surface--100); }
+    .dark\:text-surface--200,
+    .dark\:hover\:text-surface--200:hover { color: var(--sr-surface--200); }
+    .dark\:text-surface--300,
+    .dark\:hover\:text-surface--300:hover { color: var(--sr-surface--300); }
+    .dark\:text-surface--400,
+    .dark\:hover\:text-surface--400:hover { color: var(--sr-surface--400); }
+    .dark\:text-surface--500,
+    .dark\:hover\:text-surface--500:hover { color: var(--sr-surface--500); }
+    .dark\:text-surface--600,
+    .dark\:hover\:text-surface--600:hover { color: var(--sr-surface--600); }
+    .dark\:text-surface--700,
+    .dark\:hover\:text-surface--700:hover { color: var(--sr-surface--700); }
+    .dark\:text-surface--800,
+    .dark\:hover\:text-surface--800:hover { color: var(--sr-surface--800); }
+    .dark\:text-surface--900,
+    .dark\:hover\:text-surface--900:hover { color: var(--sr-surface--900); }
+    .dark\:text-surface--950,
+    .dark\:hover\:text-surface--950:hover { color: var(--sr-surface--950); }
+
+    /* =======[ Primary Colors Classes ]======= */
+    .dark\:text-primary--0,
+    .dark\:hover\:text-primary--0:hover { color: var(--sr-primary--0); }
+    .dark\:text-primary--50,
+    .dark\:hover\:text-primary--50:hover { color: var(--sr-primary--50); }
+    .dark\:text-primary--100,
+    .dark\:hover\:text-primary--100:hover { color: var(--sr-primary--100); }
+    .dark\:text-primary--200,
+    .dark\:hover\:text-primary--200:hover { color: var(--sr-primary--200); }
+    .dark\:text-primary--300,
+    .dark\:hover\:text-primary--300:hover { color: var(--sr-primary--300); }
+    .dark\:text-primary--400,
+    .dark\:hover\:text-primary--400:hover { color: var(--sr-primary--400); }
+    .dark\:text-primary--500,
+    .dark\:hover\:text-primary--500:hover { color: var(--sr-primary--500); }
+    .dark\:text-primary--600,
+    .dark\:hover\:text-primary--600:hover { color: var(--sr-primary--600); }
+    .dark\:text-primary--700,
+    .dark\:hover\:text-primary--700:hover { color: var(--sr-primary--700); }
+    .dark\:text-primary--800,
+    .dark\:hover\:text-primary--800:hover { color: var(--sr-primary--800); }
+    .dark\:text-primary--900,
+    .dark\:hover\:text-primary--900:hover { color: var(--sr-primary--900); }
+    .dark\:text-primary--950,
+    .dark\:hover\:text-primary--950:hover { color: var(--sr-primary--950); }
+
+    /* =======[ Branding Colors Classes ]======= */
+    .dark\:text-brand--0,
+    .dark\:hover\:text-brand--0:hover { color: var(--sr-brand--0); }
+    .dark\:text-brand--50,
+    .dark\:hover\:text-brand--50:hover { color: var(--sr-brand--50); }
+    .dark\:text-brand--100,
+    .dark\:hover\:text-brand--100:hover { color: var(--sr-brand--100); }
+    .dark\:text-brand--200,
+    .dark\:hover\:text-brand--200:hover { color: var(--sr-brand--200); }
+    .dark\:text-brand--300,
+    .dark\:hover\:text-brand--300:hover { color: var(--sr-brand--300); }
+    .dark\:text-brand--400,
+    .dark\:hover\:text-brand--400:hover { color: var(--sr-brand--400); }
+    .dark\:text-brand--500,
+    .dark\:hover\:text-brand--500:hover { color: var(--sr-brand--500); }
+    .dark\:text-brand--600,
+    .dark\:hover\:text-brand--600:hover { color: var(--sr-brand--600); }
+    .dark\:text-brand--700,
+    .dark\:hover\:text-brand--700:hover { color: var(--sr-brand--700); }
+    .dark\:text-brand--800,
+    .dark\:hover\:text-brand--800:hover { color: var(--sr-brand--800); }
+    .dark\:text-brand--900,
+    .dark\:hover\:text-brand--900:hover { color: var(--sr-brand--900); }
+    .dark\:text-brand--950,
+    .dark\:hover\:text-brand--950:hover { color: var(--sr-brand--950); }
+
+    /* =======[ Brand Secondary Colors Classes ]======= */
+    .dark\:text-brand-secondary--0,
+    .dark\:hover\:text-brand-secondary--0:hover { color: var(--sr-brand-secondary--0); }
+    .dark\:text-brand-secondary--50,
+    .dark\:hover\:text-brand-secondary--50:hover { color: var(--sr-brand-secondary--50); }
+    .dark\:text-brand-secondary--100,
+    .dark\:hover\:text-brand-secondary--100:hover { color: var(--sr-brand-secondary--100); }
+    .dark\:text-brand-secondary--200,
+    .dark\:hover\:text-brand-secondary--200:hover { color: var(--sr-brand-secondary--200); }
+    .dark\:text-brand-secondary--300,
+    .dark\:hover\:text-brand-secondary--300:hover { color: var(--sr-brand-secondary--300); }
+    .dark\:text-brand-secondary--400,
+    .dark\:hover\:text-brand-secondary--400:hover { color: var(--sr-brand-secondary--400); }
+    .dark\:text-brand-secondary--500,
+    .dark\:hover\:text-brand-secondary--500:hover { color: var(--sr-brand-secondary--500); }
+    .dark\:text-brand-secondary--600,
+    .dark\:hover\:text-brand-secondary--600:hover { color: var(--sr-brand-secondary--600); }
+    .dark\:text-brand-secondary--700,
+    .dark\:hover\:text-brand-secondary--700:hover { color: var(--sr-brand-secondary--700); }
+    .dark\:text-brand-secondary--800,
+    .dark\:hover\:text-brand-secondary--800:hover { color: var(--sr-brand-secondary--800); }
+    .dark\:text-brand-secondary--900,
+    .dark\:hover\:text-brand-secondary--900:hover { color: var(--sr-brand-secondary--900); }
+    .dark\:text-brand-secondary--950,
+    .dark\:hover\:text-brand-secondary--950:hover { color: var(--sr-brand-secondary--950); }
+
+    /* =======[ Accent Colors Classes ]======= */
+    .dark\:text-accent--0,
+    .dark\:hover\:text-accent--0:hover { color: var(--sr-accent--0); }
+    .dark\:text-accent--50,
+    .dark\:hover\:text-accent--50:hover { color: var(--sr-accent--50); }
+    .dark\:text-accent--100,
+    .dark\:hover\:text-accent--100:hover { color: var(--sr-accent--100); }
+    .dark\:text-accent--200,
+    .dark\:hover\:text-accent--200:hover { color: var(--sr-accent--200); }
+    .dark\:text-accent--300,
+    .dark\:hover\:text-accent--300:hover { color: var(--sr-accent--300); }
+    .dark\:text-accent--400,
+    .dark\:hover\:text-accent--400:hover { color: var(--sr-accent--400); }
+    .dark\:text-accent--500,
+    .dark\:hover\:text-accent--500:hover { color: var(--sr-accent--500); }
+    .dark\:text-accent--600,
+    .dark\:hover\:text-accent--600:hover { color: var(--sr-accent--600); }
+    .dark\:text-accent--700,
+    .dark\:hover\:text-accent--700:hover { color: var(--sr-accent--700); }
+    .dark\:text-accent--800,
+    .dark\:hover\:text-accent--800:hover { color: var(--sr-accent--800); }
+    .dark\:text-accent--900,
+    .dark\:hover\:text-accent--900:hover { color: var(--sr-accent--900); }
+    .dark\:text-accent--950,
+    .dark\:hover\:text-accent--950:hover { color: var(--sr-accent--950); }
+  }
+
+  /* Manual override */
+  [data-theme='dark'] {
+    /* =======[ Neutral Colors Classes ]======= */
+    .dark\:text-neutral--50,
+    .dark\:hover\:text-neutral--50:hover { color: var(--sr-neutral--50); }
+    .dark\:text-neutral--100,
+    .dark\:hover\:text-neutral--100:hover { color: var(--sr-neutral--100); }
+    .dark\:text-neutral--200,
+    .dark\:hover\:text-neutral--200:hover { color: var(--sr-neutral--200); }
+    .dark\:text-neutral--300,
+    .dark\:hover\:text-neutral--300:hover { color: var(--sr-neutral--300); }
+    .dark\:text-neutral--400,
+    .dark\:hover\:text-neutral--400:hover { color: var(--sr-neutral--400); }
+    .dark\:text-neutral--500,
+    .dark\:hover\:text-neutral--500:hover { color: var(--sr-neutral--500); }
+    .dark\:text-neutral--600,
+    .dark\:hover\:text-neutral--600:hover { color: var(--sr-neutral--600); }
+    .dark\:text-neutral--700,
+    .dark\:hover\:text-neutral--700:hover { color: var(--sr-neutral--700); }
+    .dark\:text-neutral--800,
+    .dark\:hover\:text-neutral--800:hover { color: var(--sr-neutral--800); }
+    .dark\:text-neutral--900,
+    .dark\:hover\:text-neutral--900:hover { color: var(--sr-neutral--900); }
+    .dark\:text-neutral--950,
+    .dark\:hover\:text-neutral--950:hover { color: var(--sr-neutral--950); }
+
+    /* =======[ Surface Colors Classes ]======= */
+    .dark\:text-surface--0,
+    .dark\:hover\:text-surface--0:hover { color: var(--sr-surface--0); }
+    .dark\:text-surface--50,
+    .dark\:hover\:text-surface--50:hover { color: var(--sr-surface--50); }
+    .dark\:text-surface--100,
+    .dark\:hover\:text-surface--100:hover { color: var(--sr-surface--100); }
+    .dark\:text-surface--200,
+    .dark\:hover\:text-surface--200:hover { color: var(--sr-surface--200); }
+    .dark\:text-surface--300,
+    .dark\:hover\:text-surface--300:hover { color: var(--sr-surface--300); }
+    .dark\:text-surface--400,
+    .dark\:hover\:text-surface--400:hover { color: var(--sr-surface--400); }
+    .dark\:text-surface--500,
+    .dark\:hover\:text-surface--500:hover { color: var(--sr-surface--500); }
+    .dark\:text-surface--600,
+    .dark\:hover\:text-surface--600:hover { color: var(--sr-surface--600); }
+    .dark\:text-surface--700,
+    .dark\:hover\:text-surface--700:hover { color: var(--sr-surface--700); }
+    .dark\:text-surface--800,
+    .dark\:hover\:text-surface--800:hover { color: var(--sr-surface--800); }
+    .dark\:text-surface--900,
+    .dark\:hover\:text-surface--900:hover { color: var(--sr-surface--900); }
+    .dark\:text-surface--950,
+    .dark\:hover\:text-surface--950:hover { color: var(--sr-surface--950); }
+
+    /* =======[ Primary Colors Classes ]======= */
+    .dark\:text-primary--0,
+    .dark\:hover\:text-primary--0:hover { color: var(--sr-primary--0); }
+    .dark\:text-primary--50,
+    .dark\:hover\:text-primary--50:hover { color: var(--sr-primary--50); }
+    .dark\:text-primary--100,
+    .dark\:hover\:text-primary--100:hover { color: var(--sr-primary--100); }
+    .dark\:text-primary--200,
+    .dark\:hover\:text-primary--200:hover { color: var(--sr-primary--200); }
+    .dark\:text-primary--300,
+    .dark\:hover\:text-primary--300:hover { color: var(--sr-primary--300); }
+    .dark\:text-primary--400,
+    .dark\:hover\:text-primary--400:hover { color: var(--sr-primary--400); }
+    .dark\:text-primary--500,
+    .dark\:hover\:text-primary--500:hover { color: var(--sr-primary--500); }
+    .dark\:text-primary--600,
+    .dark\:hover\:text-primary--600:hover { color: var(--sr-primary--600); }
+    .dark\:text-primary--700,
+    .dark\:hover\:text-primary--700:hover { color: var(--sr-primary--700); }
+    .dark\:text-primary--800,
+    .dark\:hover\:text-primary--800:hover { color: var(--sr-primary--800); }
+    .dark\:text-primary--900,
+    .dark\:hover\:text-primary--900:hover { color: var(--sr-primary--900); }
+    .dark\:text-primary--950,
+    .dark\:hover\:text-primary--950:hover { color: var(--sr-primary--950); }
+
+    /* =======[ Branding Colors Classes ]======= */
+    .dark\:text-brand--0,
+    .dark\:hover\:text-brand--0:hover { color: var(--sr-brand--0); }
+    .dark\:text-brand--50,
+    .dark\:hover\:text-brand--50:hover { color: var(--sr-brand--50); }
+    .dark\:text-brand--100,
+    .dark\:hover\:text-brand--100:hover { color: var(--sr-brand--100); }
+    .dark\:text-brand--200,
+    .dark\:hover\:text-brand--200:hover { color: var(--sr-brand--200); }
+    .dark\:text-brand--300,
+    .dark\:hover\:text-brand--300:hover { color: var(--sr-brand--300); }
+    .dark\:text-brand--400,
+    .dark\:hover\:text-brand--400:hover { color: var(--sr-brand--400); }
+    .dark\:text-brand--500,
+    .dark\:hover\:text-brand--500:hover { color: var(--sr-brand--500); }
+    .dark\:text-brand--600,
+    .dark\:hover\:text-brand--600:hover { color: var(--sr-brand--600); }
+    .dark\:text-brand--700,
+    .dark\:hover\:text-brand--700:hover { color: var(--sr-brand--700); }
+    .dark\:text-brand--800,
+    .dark\:hover\:text-brand--800:hover { color: var(--sr-brand--800); }
+    .dark\:text-brand--900,
+    .dark\:hover\:text-brand--900:hover { color: var(--sr-brand--900); }
+    .dark\:text-brand--950,
+    .dark\:hover\:text-brand--950:hover { color: var(--sr-brand--950); }
+
+    /* =======[ Brand Secondary Colors Classes ]======= */
+    .dark\:text-brand-secondary--0,
+    .dark\:hover\:text-brand-secondary--0:hover { color: var(--sr-brand-secondary--0); }
+    .dark\:text-brand-secondary--50,
+    .dark\:hover\:text-brand-secondary--50:hover { color: var(--sr-brand-secondary--50); }
+    .dark\:text-brand-secondary--100,
+    .dark\:hover\:text-brand-secondary--100:hover { color: var(--sr-brand-secondary--100); }
+    .dark\:text-brand-secondary--200,
+    .dark\:hover\:text-brand-secondary--200:hover { color: var(--sr-brand-secondary--200); }
+    .dark\:text-brand-secondary--300,
+    .dark\:hover\:text-brand-secondary--300:hover { color: var(--sr-brand-secondary--300); }
+    .dark\:text-brand-secondary--400,
+    .dark\:hover\:text-brand-secondary--400:hover { color: var(--sr-brand-secondary--400); }
+    .dark\:text-brand-secondary--500,
+    .dark\:hover\:text-brand-secondary--500:hover { color: var(--sr-brand-secondary--500); }
+    .dark\:text-brand-secondary--600,
+    .dark\:hover\:text-brand-secondary--600:hover { color: var(--sr-brand-secondary--600); }
+    .dark\:text-brand-secondary--700,
+    .dark\:hover\:text-brand-secondary--700:hover { color: var(--sr-brand-secondary--700); }
+    .dark\:text-brand-secondary--800,
+    .dark\:hover\:text-brand-secondary--800:hover { color: var(--sr-brand-secondary--800); }
+    .dark\:text-brand-secondary--900,
+    .dark\:hover\:text-brand-secondary--900:hover { color: var(--sr-brand-secondary--900); }
+    .dark\:text-brand-secondary--950,
+    .dark\:hover\:text-brand-secondary--950:hover { color: var(--sr-brand-secondary--950); }
+
+    /* =======[ Accent Colors Classes ]======= */
+    .dark\:text-accent--0,
+    .dark\:hover\:text-accent--0:hover { color: var(--sr-accent--0); }
+    .dark\:text-accent--50,
+    .dark\:hover\:text-accent--50:hover { color: var(--sr-accent--50); }
+    .dark\:text-accent--100,
+    .dark\:hover\:text-accent--100:hover { color: var(--sr-accent--100); }
+    .dark\:text-accent--200,
+    .dark\:hover\:text-accent--200:hover { color: var(--sr-accent--200); }
+    .dark\:text-accent--300,
+    .dark\:hover\:text-accent--300:hover { color: var(--sr-accent--300); }
+    .dark\:text-accent--400,
+    .dark\:hover\:text-accent--400:hover { color: var(--sr-accent--400); }
+    .dark\:text-accent--500,
+    .dark\:hover\:text-accent--500:hover { color: var(--sr-accent--500); }
+    .dark\:text-accent--600,
+    .dark\:hover\:text-accent--600:hover { color: var(--sr-accent--600); }
+    .dark\:text-accent--700,
+    .dark\:hover\:text-accent--700:hover { color: var(--sr-accent--700); }
+    .dark\:text-accent--800,
+    .dark\:hover\:text-accent--800:hover { color: var(--sr-accent--800); }
+    .dark\:text-accent--900,
+    .dark\:hover\:text-accent--900:hover { color: var(--sr-accent--900); }
+    .dark\:text-accent--950,
+    .dark\:hover\:text-accent--950:hover { color: var(--sr-accent--950); }
+  }
+}

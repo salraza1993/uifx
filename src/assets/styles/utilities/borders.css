@@ -1,19 +1,26 @@
 @layer utilities {
-  [class*="border"] { border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color); }
+  :where([class*="border"]:not(.border-not--inherit)) {
+    border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
+  }
+  .border-type--dashed { --sr-border-type: dashed; }
+  .border-type--dotted { --sr-border-type: dotted; }
+  .border-type--double { --sr-border-type: double; }
+  .border-not--inherit { border: initial; }
   .border--2 { --sr-border-width: 2px; }
   .border--3 { --sr-border-width: 3px; }
   .border--4 { --sr-border-width: 4px; }
-  .border-transparent { --sr-border-color: transparent; }
-  .border-x--start {
+  :where(.border--none) { --sr-border-width: 0; }
+  :where(.border--transparent) { --sr-border-color: transparent; }
+  :where(.border-x--start, .bx--start) {
     border-inline-start: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
   }
-  .border-x--end {
+  :where(.border-x--end, .bx--end) {
     border-inline-end: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
   }
-  .border-y--start {
+  :where(.border-y--start, .by--start) {
     border-block-start: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
   }
-  .border-y--end {
+  :where(.border-y--end, .by--end) {
     border-block-end: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
   }
 

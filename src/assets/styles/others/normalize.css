@@ -109,8 +109,6 @@
   }
   :where(select) {
     field-sizing: content;
-    /* padding-block: 0.75ch;
-	padding-inline: var(--size-relative-4) 0; */
   }
   :where(textarea, select, input:not([type='button'], [type='submit'], [type='reset'])) {
     background-color: var(--sr-surface--500);
@@ -169,7 +167,6 @@
   }
   :where(p) {
     text-wrap: pretty;
-    max-inline-size: var(--sr-content-size--3);
   }
   :where(dt, summary) {
     font-weight: var(--font-weight-7);

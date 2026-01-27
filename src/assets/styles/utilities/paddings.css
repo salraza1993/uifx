@@ -1,7 +1,7 @@
 @layer utilities {
   /* padding */
   /* =====[ globally (x-start, x-end, y-start, y-end)] ===== */
-  .p-0, .p-none { padding: 0; }
+  .p--0, .p--none { padding: 0; }
   .p--xs { padding: var(--sr-padding--xs); }
   .p--sm { padding: var(--sr-padding--sm); }
   .p--md { padding: var(--sr-padding--md); }

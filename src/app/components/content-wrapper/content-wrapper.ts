@@ -6,13 +6,11 @@ import { Component } from '@angular/core';
   template: `<ng-content>Content Wrapper Placeholder!</ng-content> `,
   styles: `
     :host {
-      display: block;
       max-width: var(--sr-content-wrapper-width);
-      margin-inline: auto;
     }
   `,
   host: {
-    class: 'content-wrapper-host'
+    class: 'content-wrapper-host block w--full mx--auto',
   }
 })
 export class ContentWrapper {}

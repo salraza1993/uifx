@@ -73,6 +73,14 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://salraza1993.github.io/uifx/",
+            "name": "Salman Raza",
+            "email": "salraza1993@gmail.com"
+          }
         }
       }
     }

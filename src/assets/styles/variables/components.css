@@ -1,0 +1,17 @@
+:root, :host {
+  /* divider variables */
+  --divider-border-type: var(--sr-border-type, solid);
+  --divider-border-width: var(--sr-border-width, 1px);
+  --divider-border-color: var(--sr-border-color, currentColor);
+
+  --divider-vertical-margin: 0 var(--sr-spacing--sm);
+  --divider-vertical-padding: var(--sr-padding--xs) 0;
+  --divider-vertical-content-padding: var(--sr-spacing--xs) 0;
+
+  --divider-horizontal-margin: var(--sr-spacing--sm) 0;
+  --divider-horizontal-padding: 0 var(--sr-padding--sm);
+  --divider-horizontal-content-padding: 0 var(--sr-spacing--xs);
+
+  --divider-content-bg: light-dark(var(--sr-surface--100), var(--sr-surface--800));
+  --divider-content-color: light-dark(var(--sr-surface--900), var(--sr-surface--100));
+}

@@ -1,10 +1,17 @@
 @layer utilities {
+  .text {
+    font-size: var(--sr-text-sm);
+    line-height: var(--sr-text-sm--line-height);
+  }
   .text--center { text-align: center; }
   .text--end { text-align: end; }
   .text--justify { text-align: justify; }
   .text--left { text-align: left; }
   .text--right { text-align: right; }
   .text--start { text-align: start; }
+  .text--balance { text-wrap: balance; }
+  .text--pretty { text-wrap: pretty; }
+  .text--muted { color: light-dark(var(--sr-surface--300), var(--sr-surface--700)); }
 
   .hover\:text--no-inherit:hover { color: initial; }
   .hover\:not-active\:text--no-inherit:not(.active):hover { color: initial; }
@@ -20,4 +27,14 @@
   .align--text-bottom { vertical-align: text-bottom; }
   .align--text-top { vertical-align: text-top; }
   .align--top { vertical-align: top; }
+
+
+  .text-decoration--underline { text-decoration: underline; }
+  .hover\:text-decoration--underline:hover {
+    text-decoration: underline;
+  }
+  .text-decoration--none { text-decoration: none; }
+  .hover\:text-decoration--none:hover {
+    text-decoration: none;
+  }
 }

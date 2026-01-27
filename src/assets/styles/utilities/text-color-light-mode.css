@@ -1,0 +1,149 @@
+@layer utilities{
+  /* =======[ Neutral Colors Classes ]======= */
+  .text-neutral--5,
+  .hover\:text-neutral--50:hover { color: var(--sr-neutral--50); }
+  .text-neutral--100,
+  .hover\:text-neutral--100:hover { color: var(--sr-neutral--100); }
+  .text-neutral--200,
+  .hover\:text-neutral--200:hover { color: var(--sr-neutral--200); }
+  .text-neutral--300,
+  .hover\:text-neutral--300:hover { color: var(--sr-neutral--300); }
+  .text-neutral--400,
+  .hover\:text-neutral--400:hover { color: var(--sr-neutral--400); }
+  .text-neutral--500,
+  .hover\:text-neutral--500:hover { color: var(--sr-neutral--500); }
+  .text-neutral--600,
+  .hover\:text-neutral--600:hover { color: var(--sr-neutral--600); }
+  .text-neutral--700,
+  .hover\:text-neutral--700:hover { color: var(--sr-neutral--700); }
+  .text-neutral--800,
+  .hover\:text-neutral--800:hover { color: var(--sr-neutral--800); }
+  .text-neutral--900,
+  .hover\:text-neutral--900:hover { color: var(--sr-neutral--900); }
+  .text-neutral--950,
+  .hover\:text-neutral--950:hover { color: var(--sr-neutral--950); }
+
+  /* =======[ Surface Colors Classes ]======= */
+  .text-surface--0,
+  .hover\:text-surface--0:hover { color: var(--sr-surface--0); }
+  .text-surface--50,
+  .hover\:text-surface--50:hover { color: var(--sr-surface--50); }
+  .text-surface--100,
+  .hover\:text-surface--100:hover { color: var(--sr-surface--100); }
+  .text-surface--200,
+  .hover\:text-surface--200:hover { color: var(--sr-surface--200); }
+  .text-surface--300,
+  .hover\:text-surface--300:hover { color: var(--sr-surface--300); }
+  .text-surface--400,
+  .hover\:text-surface--400:hover { color: var(--sr-surface--400); }
+  .text-surface--500,
+  .hover\:text-surface--500:hover { color: var(--sr-surface--500); }
+  .text-surface--600,
+  .hover\:text-surface--600:hover { color: var(--sr-surface--600); }
+  .text-surface--700,
+  .hover\:text-surface--700:hover { color: var(--sr-surface--700); }
+  .text-surface--800,
+  .hover\:text-surface--800:hover { color: var(--sr-surface--800); }
+  .text-surface--900,
+  .hover\:text-surface--900:hover { color: var(--sr-surface--900); }
+  .text-surface--950,
+  .hover\:text-surface--950:hover { color: var(--sr-surface--950); }
+
+  /* =======[ Primary Colors Classes ]======= */
+  .text-primary--5,
+  .hover\:text-primary--50:hover { color: var(--sr-primary--50); }
+  .text-primary--100,
+  .hover\:text-primary--100:hover { color: var(--sr-primary--100); }
+  .text-primary--200,
+  .hover\:text-primary--200:hover { color: var(--sr-primary--200); }
+  .text-primary--300,
+  .hover\:text-primary--300:hover { color: var(--sr-primary--300); }
+  .text-primary--400,
+  .hover\:text-primary--400:hover { color: var(--sr-primary--400); }
+  .text-primary--500,
+  .hover\:text-primary--500:hover { color: var(--sr-primary--500); }
+  .text-primary--600,
+  .hover\:text-primary--600:hover { color: var(--sr-primary--600); }
+  .text-primary--700,
+  .hover\:text-primary--700:hover { color: var(--sr-primary--700); }
+  .text-primary--800,
+  .hover\:text-primary--800:hover { color: var(--sr-primary--800); }
+  .text-primary--900,
+  .hover\:text-primary--900:hover { color: var(--sr-primary--900); }
+  .text-primary--950,
+  .hover\:text-primary--950:hover { color: var(--sr-primary--950); }
+
+  /* =======[ Brand Colors Classes ]======= */
+  .text-brand--5,
+  .hover\:text-brand--50:hover { color: var(--sr-brand--50); }
+  .text-brand--100,
+  .hover\:text-brand--100:hover { color: var(--sr-brand--100); }
+  .text-brand--200,
+  .hover\:text-brand--200:hover { color: var(--sr-brand--200); }
+  .text-brand--300,
+  .hover\:text-brand--300:hover { color: var(--sr-brand--300); }
+  .text-brand--400,
+  .hover\:text-brand--400:hover { color: var(--sr-brand--400); }
+  .text-brand--500,
+  .hover\:text-brand--500:hover { color: var(--sr-brand--500); }
+  .text-brand--600,
+  .hover\:text-brand--600:hover { color: var(--sr-brand--600); }
+  .text-brand--700,
+  .hover\:text-brand--700:hover { color: var(--sr-brand--700); }
+  .text-brand--800,
+  .hover\:text-brand--800:hover { color: var(--sr-brand--800); }
+  .text-brand--900,
+  .hover\:text-brand--900:hover { color: var(--sr-brand--900); }
+  .text-brand--950,
+  .hover\:text-brand--950:hover { color: var(--sr-brand--950); }
+
+  /* =======[ Brand Secondary Colors Classes ]======= */
+  .text-brand-secondary--5,
+  .hover\:text-brand-secondary--50:hover { color: var(--sr-brand-secondary--50); }
+  .text-brand-secondary--100,
+  .hover\:text-brand-secondary--100:hover { color: var(--sr-brand-secondary--100); }
+  .text-brand-secondary--200,
+  .hover\:text-brand-secondary--200:hover { color: var(--sr-brand-secondary--200); }
+  .text-brand-secondary--300,
+  .hover\:text-brand-secondary--300:hover { color: var(--sr-brand-secondary--300); }
+  .text-brand-secondary--400,
+  .hover\:text-brand-secondary--400:hover { color: var(--sr-brand-secondary--400); }
+  .text-brand-secondary--500,
+  .hover\:text-brand-secondary--500:hover { color: var(--sr-brand-secondary--500); }
+  .text-brand-secondary--600,
+  .hover\:text-brand-secondary--600:hover { color: var(--sr-brand-secondary--600); }
+  .text-brand-secondary--700,
+  .hover\:text-brand-secondary--700:hover { color: var(--sr-brand-secondary--700); }
+  .text-brand-secondary--800,
+  .hover\:text-brand-secondary--800:hover { color: var(--sr-brand-secondary--800); }
+  .text-brand-secondary--900,
+  .hover\:text-brand-secondary--900:hover { color: var(--sr-brand-secondary--900); }
+  .text-brand-secondary--950,
+  .hover\:text-brand-secondary--950:hover { color: var(--sr-brand-secondary--950); }
+
+  /* =======[ Accent Colors Classes ]======= */
+  .text-accent--5,
+  .hover\:text-accent--50:hover { color: var(--sr-accent--50); }
+  .text-accent--100,
+  .hover\:text-accent--100:hover { color: var(--sr-accent--100); }
+  .text-accent--200,
+  .hover\:text-accent--200:hover { color: var(--sr-accent--200); }
+  .text-accent--300,
+  .hover\:text-accent--300:hover { color: var(--sr-accent--300); }
+  .text-accent--400,
+  .hover\:text-accent--400:hover { color: var(--sr-accent--400); }
+  .text-accent--500,
+  .hover\:text-accent--500:hover { color: var(--sr-accent--500); }
+  .text-accent--600,
+  .hover\:text-accent--600:hover { color: var(--sr-accent--600); }
+  .text-accent--700,
+  .hover\:text-accent--700:hover { color: var(--sr-accent--700); }
+  .text-accent--800,
+  .hover\:text-accent--800:hover { color: var(--sr-accent--800); }
+  .text-accent--900,
+  .hover\:text-accent--900:hover { color: var(--sr-accent--900); }
+  .text-accent--950,
+  .hover\:text-accent--950:hover { color: var(--sr-accent--950); }
+  /* @media (prefers-color-scheme: light) {} */
+  /* [data-theme='dark'] {} */
+}

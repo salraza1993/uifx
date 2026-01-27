@@ -33,6 +33,7 @@
   .menu-list-wrapper {
     position-anchor: --menu-anchor;
     display: none;
+    position: fixed;
     inset-block-start: var(--menu-position);
     inset-inline-end: var(--sr-remained-viewport-width--5xl);
     width: 100%;

@@ -25,19 +25,19 @@
     --sr-padding--10xl: calc(var(--sr-base-padding) * 10);
 
     /* spacing */
-    --sr-spacing-xs: calc(var(--sr-base-spacing) * 1);
-    --sr-spacing-sm: calc(var(--sr-base-spacing) * 1.25);
-    --sr-spacing-md: calc(var(--sr-base-spacing) * 1.5);
-    --sr-spacing-lg: calc(var(--sr-base-spacing) * 1.75);
-    --sr-spacing-xl: calc(var(--sr-base-spacing) * 2);
-    --sr-spacing-2xl: calc(var(--sr-base-spacing) * 2.25);
-    --sr-spacing-3xl: calc(var(--sr-base-spacing) * 2.5);
-    --sr-spacing-4xl: calc(var(--sr-base-spacing) * 2.75);
-    --sr-spacing-5xl: calc(var(--sr-base-spacing) * 3);
-    --sr-spacing-6xl: calc(var(--sr-base-spacing) * 4.5);
-    --sr-spacing-7xl: calc(var(--sr-base-spacing) * 6.5);
-    --sr-spacing-9xl: calc(var(--sr-base-spacing) * 8);
-    --sr-spacing-10xl: calc(var(--sr-base-spacing) * 10);
+    --sr-spacing--xs: calc(var(--sr-base-spacing) * 1);
+    --sr-spacing--sm: calc(var(--sr-base-spacing) * 1.25);
+    --sr-spacing--md: calc(var(--sr-base-spacing) * 1.5);
+    --sr-spacing--lg: calc(var(--sr-base-spacing) * 1.75);
+    --sr-spacing--xl: calc(var(--sr-base-spacing) * 2);
+    --sr-spacing--2xl: calc(var(--sr-base-spacing) * 2.25);
+    --sr-spacing--3xl: calc(var(--sr-base-spacing) * 2.5);
+    --sr-spacing--4xl: calc(var(--sr-base-spacing) * 2.75);
+    --sr-spacing--5xl: calc(var(--sr-base-spacing) * 3);
+    --sr-spacing--6xl: calc(var(--sr-base-spacing) * 4.5);
+    --sr-spacing--7xl: calc(var(--sr-base-spacing) * 6.5);
+    --sr-spacing--9xl: calc(var(--sr-base-spacing) * 8);
+    --sr-spacing--10xl: calc(var(--sr-base-spacing) * 10);
 
     /* gaps */
     --sr-gap--xs: calc(var(--sr-base-gap) * 1);
@@ -49,11 +49,17 @@
     --sr-gap--3xl: calc(var(--sr-base-gap) * 2.5);
     --sr-gap--4xl: calc(var(--sr-base-gap) * 2.75);
     --sr-gap--5xl: calc(var(--sr-base-gap) * 3);
+    --sr-gap--6xl: calc(var(--sr-base-gap) * 4.5);
+    --sr-gap--7xl: calc(var(--sr-base-gap) * 5);
+    --sr-gap--8xl: calc(var(--sr-base-gap) * 6);
+    --sr-gap--9xl: calc(var(--sr-base-gap) * 6.5);
+    --sr-gap--10xl: calc(var(--sr-base-gap) * 8);
 
     --sr-shadow-sm: var(--sr-base-shadow-range);
     --sr-shadow-md: calc(var(--sr-base-shadow-range) * 1.5);
     --sr-shadow-lg: calc(var(--sr-base-shadow-range) * 2);
     --sr-border-color: var(--sr-border-default);
+
     /* buttons */
     --sr-button--sm: calc(var(--sr-base-button-size) * 1); /* 32px */
     --sr-button--md: calc(var(--sr-base-button-size) * 1.33); /* 40px */

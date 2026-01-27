@@ -1,70 +1,23 @@
 @layer utilities {
-  .relative { position: relative; }
-  .absolute { position: absolute; }
-  .fixed { position: fixed; }
-  .sticky { position: sticky; }
-
-  .inset--auto { inset: auto; }
-  .inset-x--auto { inset-inline: auto; }
-  .inset-x-start--auto { inset-inline-start: auto; }
-  .inset-x-end--auto { inset-inline-end: auto; }
-  .inset-y--auto { inset-block: auto; }
-  .inset-y-start--auto { inset-block-start: auto; }
-  .inset-y-end--auto { inset-block-end: auto; }
-
-
   .block { display: block; }
-  .grid { display: grid; }
   .inline--block { display: inline-block; }
-  .inline--flex { display: inline-flex; }
-  .inline--grid { display: inline-grid; }
-  .cursor--pointer { cursor: pointer !important; }
-  .pointer-events--none { pointer-events: none !important; }
-  .cursor--default { cursor: default !important; }
-
-  .text {
-    font-size: var(--sr-text-sm);
-    line-height: var(--sr-text-sm--line-height);
-  }
-
-  :where([class|='border']) {
-    border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
-  }
-
-  :where(.w-full) {
-    width: 100%;
-  }
-
-
-  .w-h-auto {
-    width: auto;
-    height: auto;
-  }
-  .w-h-100 {
-    width: 100%;
-    height: 100%;
-  }
-
-
   .aspect-16\/9, .aspect--widescreen { aspect-ratio: 16 / 9; }
   .aspect-9\/16, .aspect--portrait-story { aspect-ratio: 9 / 16; }
   .aspect-21\/9, .aspect--ultrawide { aspect-ratio: 21 / 9; }
   .aspect-1\/1, .aspect--square { aspect-ratio: 1 / 1; }
   .aspect-4\/3, .aspect--standard { aspect-ratio: 4 / 3; }
   .aspect-3\/4, .aspect--portrait { aspect-ratio: 3 / 4; }
-  .aspect-custom {
-    aspect-ratio: var(--sr-aspect-ratio);
-  }
+  .aspect-custom { aspect-ratio: var(--sr-aspect-ratio); }
 
-  .img-fit--contain {
+  [class*="img-fit"], [class*="img--"] {
     img, svg {
       width: 100%;
       height: 100%;
       object-fit: var(--sr-img-fit-type);
     }
   }
-  .img-fit--cover { --sr-img-fit-type: cover; }
-  .img-fit--fill { --sr-img-fit-type: fill; }
+  :where(.img-fit--cover, .img--cover) { --sr-img-fit-type: cover; }
+  :where(.img-fit--fill, .img--fill) { --sr-img-fit-type: fill; }
 
 
   .icon--xs {
@@ -102,20 +55,7 @@
   .transition--opacity { --sr-transition-property: opacity; }
   .transition--width { --sr-transition-property: width; }
   .transition--height { --sr-transition-property: height; }
-
   .bg--transparent { background-color: transparent; }
-
-  .focus\/z-index--1:focus { z-index: 1; }
-  .focus\/z-index--2:focus { z-index: 2; }
-  .focus\/z-index--3:focus { z-index: 3; }
-  .focus\/z-index--4:focus { z-index: 4; }
-  .focus\/z-index--5:focus { z-index: 5; }
-  .focus\/z-index--6:focus { z-index: 6; }
-  .focus\/z-index--7:focus { z-index: 7; }
-  .focus\/z-index--8:focus { z-index: 8; }
-  .focus\/z-index--9:focus { z-index: 9; }
-  .focus\/z-index--max:focus { z-index: var(--sr-max-z-index); }
-
   .focus--none:focus { outline-color: none; }
   .focus-inherit--bg:is(:focus, :focus-within, :focus-visible) {
     --sr-outline-offset--bg: inherit;
@@ -126,12 +66,20 @@
     outline-color: var(--sr-outline-offset--color);
   }
 
-  .text-decoration--underline { text-decoration: underline; }
-  .hover\:text-decoration--underline:hover {
-    text-decoration: underline;
+  :where(.bg-pattern, .bg--pattern) {
+    width: var(--sr-pattern-width);
+    background-image: repeating-linear-gradient(315deg, var(--sr-pattern-foreground) 0, var(--sr-pattern-foreground) 1px, transparent 0, transparent 50%);
+    background-size: var(--sr-pattern-size) var(--sr-pattern-size);
+    isolation: isolate;
   }
-  .text-decoration--none { text-decoration: none; }
-  .hover\:text-decoration--none:hover {
-    text-decoration: none;
-  }
+
+
+  .content-size--1 { max-inline-size: var(--sr-content-size--1); }
+  .content-size--2 { max-inline-size: var(--sr-content-size--2); }
+  .content-size--3 { max-inline-size: var(--sr-content-size--3); }
+  .content-size--4 { max-inline-size: var(--sr-content-size--4); }
+  .content-size--5 { max-inline-size: var(--sr-content-size--5); }
+
+  .content-card--bg { background-color: var(--sr-content-card-bg); }
+
 }

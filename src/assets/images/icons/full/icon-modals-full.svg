@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="169.298" height="169.298" viewBox="0 0 169.298 169.298">
+  <g id="icon-modals-full" transform="translate(0.5 0.5)">
+    <path id="Path_8562" data-name="Path 8562" d="M167.3,63.362v72.774a10.375,10.375,0,0,1-10.375,10.375H32.162a10.375,10.375,0,0,1-10.374-10.375V11.375A10.375,10.375,0,0,1,32.162,1h72.774" fill="none" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <rect id="Rectangle_1238" data-name="Rectangle 1238" width="36.378" height="36.378" transform="translate(130.92 1)" fill="none" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_3" data-name="Line 3" x2="18.189" y2="18.189" transform="translate(140.014 10.095)" fill="none" stroke="#ff6700" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <line id="Line_4" data-name="Line 4" x1="18.189" y2="18.189" transform="translate(140.014 10.095)" fill="none" stroke="#ff6700" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <rect id="Rectangle_1239" data-name="Rectangle 1239" width="62.362" height="20.787" transform="translate(42.574 21.788)" fill="#ff6700" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <rect id="Rectangle_1240" data-name="Rectangle 1240" width="103.936" height="9.094" transform="translate(42.574 54.268)" fill="none" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <rect id="Rectangle_1241" data-name="Rectangle 1241" width="103.936" height="9.094" transform="translate(42.574 75.055)" fill="none" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_8563" data-name="Path 8563" d="M115.33,125.724H52.968a10.394,10.394,0,0,1,0-20.787H115.33a10.394,10.394,0,1,1,0,20.787Z" fill="#ff6700" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+    <path id="Path_8564" data-name="Path 8564" d="M11.394,21.788h-.019A10.375,10.375,0,0,0,1,32.163V156.924A10.375,10.375,0,0,0,11.375,167.3H136.136a10.375,10.375,0,0,0,10.375-10.374V156.9" fill="none" stroke="#141212" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+  </g>
+</svg>
