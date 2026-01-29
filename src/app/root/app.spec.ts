@@ -4,7 +4,7 @@ import { App } from '../root/app';
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [App]
     }).compileComponents();
   });
 
@@ -18,6 +18,6 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ifg-ui');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, UIFX!');
   });
 });
