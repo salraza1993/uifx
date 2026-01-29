@@ -6,12 +6,12 @@
     role="tablist"
     [wrap]="configs().tabsInLoop"
     [(selectedTab)]="selectedTab"
-    [orientation]="configs().orientation"
-    [selectionMode]="configs().selectionMode"
+    [orientation]="orientation()"
+    [selectionMode]="selectionMode()"
     [softDisabled]="configs().softDisabled"
-    [attr.aria-orientation]="configs().orientation"
+    [attr.aria-orientation]="orientation()"
     [attr.aria-wrap]="configs().tabsInLoop"
-    [attr.aria-selection-mode]="configs().selectionMode"
+    [attr.aria-selection-mode]="selectionMode()"
   >
     <div class="tablist flex relative {{ configs().tablistClass }}">
       @for (tab of resolvedTabs(); track tab.id) {
@@ -24,18 +24,38 @@
           class="tablist__item flex {{ configs().tabItemClass }}"
           (click)="onSelectTab(tab)"
         >
-        {{ tab.disabled ? '(Disabled) ' : '' }}
           @if (tabsTemplate(); as template) {
-            @if((configs().showIcon && configs().iconPosition !== 'end') && tab.icon) {
-              <span class="icon">
-                <i class="{{tab.icon}}"></i>
-              </span>
+            <!-- START POSITION ICON -->
+            @if (iconTemplate() || iconStart() || tab.icon) {
+              @if (iconTemplate() || iconStart(); as iconTpl) {
+                <span class="icon icon-start">
+                  <!-- Template-based icon -->
+                  <ng-container *ngTemplateOutlet="iconTpl; context: { tab: tab }"></ng-container>
+                </span>
+              } @else if (tab.icon && configs().showIcon) {
+                <span class="icon icon-start">
+                  <!-- Array-based icon (CSS class) -->
+                  <i class="{{ typeof tab.icon === 'string' ? tab.icon : tab.icon.start }}"></i>
+                </span>
+              }
             }
+
+            <!-- TAB LABEL/CONTENT -->
             <ng-container *ngTemplateOutlet="template; context: { tab: tab }"></ng-container>
-            @if((configs().showIcon && configs().iconPosition === 'end') && tab.icon) {
-              <span class="icon">
-                <i class="{{tab.icon}}"></i>
-              </span>
+
+            <!-- END POSITION ICON -->
+            @if (iconEnd() || (typeof tab.icon !== 'string' && tab.icon?.end)) {
+              @if (iconTemplate() || iconEnd(); as iconTpl) {
+                <span class="icon icon-end">
+                  <!-- Template-based icon -->
+                  <ng-container *ngTemplateOutlet="iconTpl; context: { tab: tab }"></ng-container>
+                </span>
+              } @else if (configs().showIcon && typeof tab.icon !== 'string' && tab.icon?.end) {
+                <span class="icon icon-end">
+                  <!-- Array-based icon (CSS class) -->
+                  <i class="{{ tab.icon?.end }}"></i>
+                </span>
+              }
             }
           } @else {
             <span class="tab-label pointer-events--none">{{ tab.label }}</span>
@@ -54,7 +74,7 @@
         ngTabPanel
         [value]="tab.value"
         role="tabpanel"
-        [preserveContent]="configs().preserveContent"
+        [preserveContent]="preserveContent()"
         class="tab-panel"
       >
         <ng-template ngTabContent>

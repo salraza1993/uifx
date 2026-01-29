@@ -31,6 +31,10 @@ export const routes: Routes = [
     loadComponent: () => import('@app/pages/components/cards/cards').then(m => m.Cards)
   },
   {
+    path: 'components/divider',
+    loadComponent: () => import('@app/pages/components/dividers/dividers').then(m => m.Dividers)
+  },
+  {
     path: '**',
     loadComponent: () => import('@pages/not-found/not-found').then(m => m.NotFound)
   }

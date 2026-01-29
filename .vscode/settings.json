@@ -55,7 +55,8 @@
     "contenteditable",
     "uifx",
     "popovertarget",
-    "ultrawide"
+    "ultrawide",
+    "tabpanels"
   ],
   "cSpell.ignoreRegExpList": ["/\\bprime\\w*/gi"],
   "editor.codeActionsOnSave": {

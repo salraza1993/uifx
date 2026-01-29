@@ -1,5 +1,5 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, input, TemplateRef } from '@angular/core';
+import { Component, contentChild, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'sr-hero-title, hero-title',
@@ -11,5 +11,5 @@ import { Component, input, TemplateRef } from '@angular/core';
   }
 })
 export class HeroTitle {
-  icon = input<TemplateRef<unknown>>();
+  icon = contentChild<TemplateRef<unknown>>('icon');
 }

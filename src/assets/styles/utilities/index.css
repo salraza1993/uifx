@@ -1,4 +1,4 @@
-@layer darkModes, lightModes;
+/* @layer darkModes, lightModes; */
 @import './classes.css';
 @import './font-classes.css';
 @import './gaps.css';
@@ -13,8 +13,7 @@
 @import './cursors.css';
 @import './positions.css';
 
-
-@import './bg-dark-mode.css' layer(darkModes);
-@import './bg-light-mode.css' layer(lightModes);
-@import './text-color-dark-mode.css' layer(darkModes);
-@import './text-color-light-mode.css' layer(lightModes);
+@import './bg-light-mode.css';
+@import './text-color-light-mode.css';
+@import './bg-dark-mode.css';
+@import './text-color-dark-mode.css';

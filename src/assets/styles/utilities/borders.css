@@ -1,10 +1,16 @@
 @layer utilities {
-  :where([class*="border"]:not(.border-not--inherit)) {
+  :where([class*="border"]:not(
+    .border-not--inherit,
+    .border-x--start, .bx--start,
+    .border-x--end, .bx--end,
+    .border-y--start, .by--start,
+    .border-y--end, .by--end
+  )) {
     border: var(--sr-border-width) var(--sr-border-type) var(--sr-border-color);
   }
-  .border-type--dashed { --sr-border-type: dashed; }
-  .border-type--dotted { --sr-border-type: dotted; }
-  .border-type--double { --sr-border-type: double; }
+  .border-type--dashed, .border--dashed { --sr-border-type: dashed; }
+  .border-type--dotted, .border--dotted { --sr-border-type: dotted; }
+  .border-type--double, .border--double { --sr-border-type: double; }
   .border-not--inherit { border: initial; }
   .border--2 { --sr-border-width: 2px; }
   .border--3 { --sr-border-width: 3px; }

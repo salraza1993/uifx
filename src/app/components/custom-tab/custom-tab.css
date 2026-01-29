@@ -36,6 +36,10 @@
       & .tablist__item {
         position: relative;
         cursor: pointer;
+        display: var(--tabs-header-item-display, flex);
+        align-items: var(--tabs-header-item-align, center);
+        justify-content: var(--tabs-header-item-justify, center);
+        gap: var(--tabs-header-item-gap, var(--sr-gap--xs));
         background-color: var(--tab-item-bg, transparent);
         color: var(--tab-item-color, inherit);
         padding-block: var(--tabs-header-item-pad, var(--sr-padding--xs));

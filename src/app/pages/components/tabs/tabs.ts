@@ -1,23 +1,15 @@
 import { Component } from '@angular/core';
 import { CodeSnippetWithTabs } from '@app/components/code-snippet-with-tabs/code-snippet-with-tabs';
 import { CodeSnippet } from '@app/components/code-snippet/code-snippet';
+import { GridContent } from '@app/components/grid-content/grid-content';
 import { HeroTitle } from '@app/components/hero-title/hero-title';
 import { TabsIconFull } from '@app/components/icons/tabs-icon-full/tabs-icon-full';
-import { SectionWrapper } from '@app/components/section-wrapper/section-wrapper';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
-import { Divider } from '../divider/divider';
+import { Divider } from "@app/components/divider/divider";
 
 @Component({
   selector: 'tabs, sr-tabs',
-  imports: [
-    ContentWrapper,
-    CodeSnippet,
-    CodeSnippetWithTabs,
-    HeroTitle,
-    TabsIconFull,
-    SectionWrapper,
-    Divider
-  ],
+  imports: [ContentWrapper, CodeSnippet, CodeSnippetWithTabs, HeroTitle, TabsIconFull, GridContent, Divider],
   templateUrl: './tabs.html',
   styleUrl: './tabs.css',
   host: {

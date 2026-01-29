@@ -58,7 +58,7 @@
   :where(h1, h2, h3, h4, h5, h6) {
     text-wrap: balance;
     &:not(:last-child) {
-      margin-block-end: var(--sr-spacing-md);
+      margin-block-end: var(--sr-spacing--sm);
     }
   }
 

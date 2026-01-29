@@ -15,8 +15,7 @@ export interface TabItem {
   label: string;
   value: string;
   selected?: boolean;
-  icon?: string;
-  iconClass?: string;
+  icon?: string | { start?: string; end?: string };
   disabled?: boolean;
   command?: () => void;
 }
@@ -35,16 +34,15 @@ export interface TabItem {
 export interface TabConfig {
   variant?: 'basic' | 'boxed' | 'underline' | 'pills';
   showIcon?: boolean;
-  iconPosition?: 'start' | 'end';
   tablistClass?: string;
   tabItemClass?: string;
   activeTabClass?: string;
   disabledTabClass?: string;
   tabPanelClass?: string;
-  orientation: 'horizontal' | 'vertical',
-  tabsInLoop?: boolean,
-  selectionMode: 'follow' | 'explicit',
-  softDisabled?: boolean,
-  showDefaultContent?: boolean,
-  preserveContent: boolean,
+  orientation?: 'horizontal' | 'vertical';
+  tabsInLoop?: boolean;
+  selectionMode?: 'follow' | 'explicit';
+  softDisabled?: boolean;
+  showDefaultContent?: boolean;
+  preserveContent?: boolean;
 }

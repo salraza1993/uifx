@@ -79,7 +79,19 @@
   .content-size--3 { max-inline-size: var(--sr-content-size--3); }
   .content-size--4 { max-inline-size: var(--sr-content-size--4); }
   .content-size--5 { max-inline-size: var(--sr-content-size--5); }
-
   .content-card--bg { background-color: var(--sr-content-card-bg); }
+
+  .text--line-through { text-decoration-line: line-through; }
+	.text--no-underline { text-decoration-line: none; }
+	.text--overline { text-decoration-line: overline; }
+	.text--underline { text-decoration-line: underline; }
+
+  .overflow--ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .overflow--hidden { overflow: hidden; }
+  .overflow--visible { overflow: visible; }
 
 }

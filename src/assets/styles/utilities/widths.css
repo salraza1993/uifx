@@ -28,6 +28,13 @@
   :where(.w--\/1\/4) { width: 25%; }
   :where(.w--\/[\10]) { width: 10px; }
 
+  :where(.w--200) { width: 15rem; }
+  :where(.w--250) { width: 17rem; }
+  :where(.w--300) { width: 20rem; }
+  :where(.w--400) { width: 25rem; }
+  :where(.w--500) { width: 30rem; }
+  :where(.w--600) { width: 35rem; }
+
   /* heights */
   :where(.h--full) { height: 100%; }
   :where(.h--95) { height: 95%; }

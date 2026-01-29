@@ -6,7 +6,6 @@
   --line-gap: 5px;
   --line-fade-stop: 93%;
   --line-color: rgba(255, 255, 255, calc(var(--line-opacity) * 3));
-  --divider-content-bg: light-dark(var(--sr-surface--50), var(--sr-surface--700));
 
   .detail-page-wrapper {
     .page-title {

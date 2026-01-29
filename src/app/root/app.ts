@@ -1,15 +1,16 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Footer } from '@app/components/footer/footer';
 import { Header } from '@app/components/header/header';
+import { ScrollProgress } from '@app/components/scroll-progress/scroll-progress';
 import { AppConfigService } from '../stores/browser-store/app-config-service/app-config-service';
-import { ScrollProgress } from "@app/components/scroll-progress/scroll-progress";
 
 @Component({
   selector: 'sr-root',
-  imports: [RouterOutlet, Header, ScrollProgress],
+  imports: [RouterOutlet, Header, Footer, ScrollProgress],
   templateUrl: './app.html',
   styleUrl: './app.css',
-  providers: [AppConfigService],
+  providers: [AppConfigService]
 })
 export class App implements OnInit {
   protected readonly _appConfigService = inject(AppConfigService);

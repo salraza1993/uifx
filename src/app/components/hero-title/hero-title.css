@@ -1,7 +1,7 @@
 :host {
   --sr-hero-grid-size: 2rem;
-  --sr-icon-size: 8rem;
-  
+  --sr-icon-size: calc(5rem + 2vw);
+
   position: relative;
   display: block;
   padding-block: var(--sr-hero-grid-size);
@@ -38,6 +38,7 @@
     padding-inline: calc(var(--sr-hero-grid-size) * 1.25);
     padding-block: calc(var(--sr-hero-grid-size) / 2);
     z-index: 1;
+
     &::after, &::before {
       content: '';
       background-color: var(--sr-border-color);
@@ -46,11 +47,14 @@
       height: var(--sr-border-width);
       inset-inline-start: 0;
     }
+
     &::after { inset-block-start: var(--sr-hero-grid-size);}
     &::before { inset-block-end: var(--sr-hero-grid-size);}
 
     & .content-box__icon {
-      width: var(--sr-icon-size);
+      height: var(--sr-icon-size);
+      width: calc(var(--sr-icon-size) * (4 / 3.15));
+      padding: calc(var(--sr-hero-grid-size) / 4);
     }
 
   }

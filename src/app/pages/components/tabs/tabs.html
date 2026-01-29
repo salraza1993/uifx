@@ -1,5 +1,6 @@
+<!-- https://www.google.com/search?q=how+to+download+a+folder+while+wrapping+in+zip+in+angular+19&oq=how+to+download+a+folder+while+wrapping+in+zip+in+angular&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCTE3NzU5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8 -->
 <content-wrapper>
-  <hero-title class="" [icon]="icon">
+  <hero-title>
     <ng-template #icon>
       <sr-tabs-icon-full class="aspect--standard" />
     </ng-template>
@@ -10,44 +11,23 @@
     </p>
   </hero-title>
 
-  <h6 class="fw--bold content-size--5 my--5xl mx--auto text-surface--500 relative">
-    A flexible and accessible tab component for organizing content into separate views. Switch
-    between different sections with a simple click or keyboard navigation.
-  </h6>
-
-  <sr-section-wrapper>
-    <h6 class="m--0 fw--bold">Basic</h6>
-    <p>
-      Tabs is defined using TabList, Tab, TabPanels and TabPanel components. Tab and TabPanel
-      components are associated with their value properties
-    </p>
-    <divider hMargin="2rem 0rem"></divider>
-  </sr-section-wrapper>
-  <div class="flex gap--xl">
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aperiam fuga! Dolor, libero
-      ipsum? Quidem enim sapiente illo repellat commodi recusandae voluptatem velit veniam
-      praesentium nemo inventore deleniti amet cum quo, rem excepturi fuga perferendis, modi natus
-      iste unde voluptates! Animi deserunt sint natus optio saepe! Tempore distinctio iure
-      cupiditate.
-    </div>
-    <divider orientation="vertical"></divider>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aperiam fuga! Dolor, libero
-      ipsum? Quidem enim sapiente illo repellat commodi recusandae voluptatem velit veniam
-      praesentium nemo inventore deleniti amet cum quo, rem excepturi fuga perferendis, modi natus
-      iste unde voluptates! Animi deserunt sint natus optio saepe! Tempore distinctio iure
-      cupiditate.
-    </div>
-    <divider orientation="vertical"></divider>
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aperiam fuga! Dolor, libero
-      ipsum? Quidem enim sapiente illo repellat commodi recusandae voluptatem velit veniam
-      praesentium nemo inventore deleniti amet cum quo, rem excepturi fuga perferendis, modi natus
-      iste unde voluptates! Animi deserunt sint natus optio saepe! Tempore distinctio iure
-      cupiditate.
-    </div>
+  <div class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg">
+    <h6 class="fw--bold">
+      A flexible and accessible tab component for organizing content into separate views. Switch
+      between different sections with a simple click or keyboard navigation.
+    </h6>
   </div>
+  <grid-content padding="xl">
+    <div>
+      <h6 class="m--0 fw--bold">Basic</h6>
+      <p>
+        Tabs is defined using TabList, Tab, TabPanels and TabPanel components. Tab and TabPanel
+        components are associated with their value properties
+      </p>
+    </div>
+    <divider />
+    <div class="grid p--5xl radius border bg-surface--0 dark:bg-surface--800"></div>
+  </grid-content>
 
   <br />
   <br />

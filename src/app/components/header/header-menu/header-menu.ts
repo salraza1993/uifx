@@ -40,6 +40,12 @@ export class HeaderMenu {
       iconName: 'tabs'
     },
     {
+      label: 'Divider',
+      link: '/components/divider',
+      description: 'Divider is a container component to group content with tabs.',
+      iconName: 'divider'
+    },
+    {
       label: 'Buttons',
       link: '/components/buttons',
       description: 'Buttons allow users to take actions with a single tap.',

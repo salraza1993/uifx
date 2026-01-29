@@ -21,11 +21,10 @@ import { TabConfig, TabItem } from './custom-tab-model';
   styleUrl: './custom-tab.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'custom-tab-host',
-  },
+    class: 'custom-tab-host'
+  }
 })
 export class CustomTab {
-
   private TAB_PLACEHOLDER = signal<TabItem[]>(TAB_PLACEHOLDER);
   private DEFAULT_CONFIGS = signal<TabConfig>(DEFAULT_CONFIGS);
 
@@ -35,10 +34,15 @@ export class CustomTab {
   selectedTab = model<string | undefined>();
   tabsTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabs');
   tabsContentTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabsContent');
+  iconTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('icon');
+  iconStart = contentChild<TemplateRef<{ tab: TabItem }>>('iconStart');
+  iconEnd = contentChild<TemplateRef<{ tab: TabItem }>>('iconEnd');
 
-  protected configs = computed(() => {
-    return this.tabConfigs() || this.DEFAULT_CONFIGS();
-  });
+  protected configs = computed(() => this.tabConfigs() || this.DEFAULT_CONFIGS());
+  protected selectionMode = computed(() => this.configs().selectionMode || 'follow');
+  protected orientation = computed(() => this.configs().orientation || 'horizontal');
+  protected preserveContent = computed(() => this.configs().preserveContent || false);
+
   protected resolvedTabs = computed(() => {
     const tabsList = this.tabs();
     if (tabsList?.length) {
@@ -48,7 +52,7 @@ export class CustomTab {
   });
 
   protected defaultActiveTab = computed(() => {
-    const active = this.selectedTab() || this.tabs()?.find((tab) => tab.selected)?.value;
+    const active = this.selectedTab() || this.tabs()?.find(tab => tab.selected)?.value;
     if (active) return active;
 
     const tabs = this.resolvedTabs();
@@ -56,7 +60,7 @@ export class CustomTab {
   });
 
   protected onSelectTab(tabItem: TabItem): void {
-    if(this.configs().selectionMode === 'explicit' && !tabItem.disabled) {
+    if (this.configs().selectionMode === 'explicit' && !tabItem.disabled) {
       this.selectedTab.set(tabItem.value);
     }
   }
@@ -73,7 +77,7 @@ export class CustomTab {
       'tab-variant--box': this.configs().variant === 'boxed',
       'tab-variant--underline': this.configs().variant === 'underline',
       'tab-variant--pill': this.configs().variant === 'pills',
-      'tab-variant--basic': this.configs().variant === 'basic',
+      'tab-variant--basic': this.configs().variant === 'basic'
     };
   }
 
@@ -85,7 +89,7 @@ export class CustomTab {
       'tab-item--basic': this.configs().variant === 'basic',
       'tab-item--selected': this.selectedTab() === tab.value,
       [this.configs().activeTabClass || '']: this.selectedTab() === tab.value,
-      [this.configs().disabledTabClass || '']: !!tab.disabled,
+      [this.configs().disabledTabClass || '']: !!tab.disabled
     };
   }
 }

@@ -33,7 +33,8 @@
       "@layouts/*": ["./src/app/shared/layouts/*"],
       "@services/*": ["./src/app/shared/services/*"],
       "@client/*": ["./src/client-configs/*"],
-      "@stores/*": ["./src/stores/*"]
+      "@stores/*": ["./src/stores/*"],
+      "@libs/*": ["./src/libs/*"]
     }
   },
   "angularCompilerOptions": {

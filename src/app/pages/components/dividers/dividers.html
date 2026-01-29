@@ -1,0 +1,247 @@
+<content-wrapper>
+  <hero-title>
+    <ng-template #icon>
+      <sr-icon-divider-full />
+    </ng-template>
+    <h1 class="fs--h3 text-primary--500 dark:text-surface--100">Divider Component</h1>
+    <p class="content-size--5">Divider is used to separate contents.</p>
+  </hero-title>
+
+  <!-- basic -->
+  <div
+    class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg content-size--3"
+  >
+    <h5 class="fw--bold m--0">Basic</h5>
+    <p>Divider is basically placed between the items to separate.</p>
+  </div>
+  <grid-content padding="xl">
+    <div class="grid p--5xl radius border bg-surface--0 dark:bg-surface--800">
+      <p class="fw--bold my-end--sm">1. Title goes here</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <divider />
+      <p class="fw--bold my-end--sm">2. Title goes here</p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+      </p>
+      <divider />
+      <p class="fw--bold my-end--sm">3. Title goes here</p>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+        libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+      </p>
+    </div>
+  </grid-content>
+
+  <!-- Type -->
+  <div class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg">
+    <h5 class="m--0">
+      <strong>Type &nbsp;-&nbsp;</strong>
+      'solid' | 'dashed' | 'dotted'
+    </h5>
+    <p>
+      Style of the border is configured with the
+      <strong>type:</strong>
+      property that can either be
+      <strong class="text--underline">solid</strong>
+      ,
+      <strong class="text--underline">dashed</strong>
+      , or
+      <strong class="text--underline">dotted</strong>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div class="grid p--5xl radius border bg-surface--0 dark:bg-surface--800">
+      <p class="fw--bold">1. Title goes here (type: 'solid' is as default)</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <divider [borderWidth]="2" />
+      <p class="fw--bold">2. Title goes here (type: 'dashed')</p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+      </p>
+      <divider borderType="dashed" [borderWidth]="2" />
+      <p class="fw--bold">3. Title goes here (type: 'dotted')</p>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+        libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+      </p>
+      <divider borderType="dotted" [borderWidth]="2" />
+      <p class="fw--bold">3. Title goes here</p>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+        libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+      </p>
+    </div>
+  </grid-content>
+
+  <!-- Orientation -->
+  <div class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg">
+    <h5 class="m--0">
+      <strong>Orientation &nbsp;-&nbsp;</strong>
+      'horizontal' | 'vertical'
+    </h5>
+    <p>
+      Vertical divider is enabled by setting the
+      <strong>orientation:</strong>
+      property as
+      <strong class="text--underline">vertical</strong>
+      .
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div class="flex p--5xl gap--2xl radius border bg-surface--0 dark:bg-surface--800">
+      <div>
+        <p class="fw--bold">1. Title goes here (type: 'solid' is as default)</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </p>
+      </div>
+      <divider orientation="vertical" />
+      <div>
+        <p class="fw--bold">2. Title goes here (type: 'dashed')</p>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+          voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+        </p>
+      </div>
+      <divider orientation="vertical" />
+      <div>
+        <p class="fw--bold">3. Title goes here (type: 'dotted')</p>
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+          voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+          est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+          libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+        </p>
+      </div>
+    </div>
+  </grid-content>
+
+  <!-- Content -->
+  <div class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg">
+    <h5 class="m--0">
+      <strong>Content &nbsp;-&nbsp;</strong>
+      'start' | 'end' | 'center'
+    </h5>
+    <p>
+      Children are rendered within the boundaries of the divider where location of the content is
+      configured with the align property.
+      <br />
+      Alignment
+      <strong>(key: contentAlign)</strong>
+      options are
+      <strong class="text--underline">start</strong>
+      ,
+      <strong class="text--underline">center</strong>
+      and
+      <strong class="text--underline">end</strong>
+      .
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div class="grid p--5xl radius border bg-surface--0 dark:bg-surface--800">
+      <p class="fw--bold my-end--sm">1. Title goes here</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <divider contentAlign="start"><strong>Start Text</strong></divider>
+      <p class="fw--bold my-end--sm">2. Title goes here</p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.
+      </p>
+      <divider contentAlign="center"><strong>Center Text</strong></divider>
+      <p class="fw--bold my-end--sm">3. Title goes here</p>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+        libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+      </p>
+      <divider contentAlign="end"><strong>End Text</strong></divider>
+      <p class="fw--bold my-end--sm">3. Title goes here</p>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+        est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+        libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
+      </p>
+    </div>
+  </grid-content>
+
+  <!-- Vertical Content Projection -->
+  <div class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg">
+    <h5 class="m--0"><strong>Login</strong></h5>
+    <p>
+      Sample implementation of a login form using a
+      <strong>divider</strong>
+      component that supports both
+      <strong class="text--underline">horizontal</strong>
+      and
+      <strong class="text--underline">vertical</strong>
+      orientations.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div class="flex p--5xl gap--7xl radius--xl border bg-surface--0 dark:bg-surface--800">
+      <div class="w--full flex--center bg-surface--500 img-fit radius overflow--hidden">
+        <img src="https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525" alt="" />
+      </div>
+      <divider contentAlign="center" orientation="vertical"><strong>OR</strong></divider>
+      <div class="w--full flex flex--column justify--center">
+        <h3 class="fs--h4 fw--bold mb--lg">This is a heading</h3>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+          architecto beatae vitae dicta sunt explicabo.
+        </p>
+      </div>
+    </div>
+  </grid-content>
+</content-wrapper>
