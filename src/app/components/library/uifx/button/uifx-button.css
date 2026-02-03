@@ -2,7 +2,7 @@
   display: inline-block;
   vertical-align: middle;
 }
-.uifx-button:not(.uifx-btn-host) {
+.uifx-button:not(.uifx-button-host) {
   background-color: var(--btn-bg, inherit);
   color: var(--btn-color, inherit);
   gap: var(--btn-gap, var(--sr-gap--sm));

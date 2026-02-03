@@ -4,11 +4,10 @@ import {
   UifxButtonSize,
   UifxButtonType,
   UifxButtonVariant
-} from '../helpers/uifx-button-models'; // Direct path
+} from '../helpers/uifx-button-models';
 
 @Directive({
   selector: '[uifxButton]',
-  standalone: true, // Must be standalone
   exportAs: 'uifxButton',
   host: {
     '[class]': 'hostClasses()',
@@ -33,13 +32,11 @@ export class UifxButtonDirective {
     }
   }
 
-  protected hostClasses = computed(() => {
-    return {
-      'uifx-button': true,
-      [`uifx-button-${this.severity()}`]: true,
-      [`uifx-button-${this.variant()}`]: true,
-      [`uifx-button-${this.size()}`]: true,
-      'uifx-state-disabled': this.disabled() || this.loading()
-    };
-  });
+  protected hostClasses = computed(() => ({
+    'uifx-button': true,
+    [`uifx-button-${this.severity()}`]: true,
+    [`uifx-button-${this.variant()}`]: true,
+    [`uifx-button-${this.size()}`]: true,
+    'uifx-state-disabled': this.disabled() || this.loading()
+  }));
 }

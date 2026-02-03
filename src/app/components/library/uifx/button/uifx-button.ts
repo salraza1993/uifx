@@ -6,17 +6,16 @@ import {
   contentChild,
   input,
   output,
-  TemplateRef
+  TemplateRef,
+  ViewEncapsulation
 } from '@angular/core';
 
-// IMPORT DIRECTLY FROM SOURCE FILES TO AVOID NG8002 CIRCULAR DEPS
 import {
   UifxEndIconDirective,
   UifxLabelDirective,
   UifxStartIconDirective
 } from './directives/helper-directives';
 import { UifxButtonDirective } from './directives/uifx-button-directive';
-import { hostClassBindingHelper } from './helpers/host-class-binding';
 import {
   UifxButtonIcon,
   UifxButtonLabel,
@@ -30,14 +29,7 @@ import {
 @Component({
   selector: 'uifx-button',
   standalone: true,
-  imports: [
-    NgTemplateOutlet,
-    UifxButtonDirective, // Registers [uifxButton]
-    UifxStartIconDirective, // Registers [uifxStartIcon]
-    UifxEndIconDirective,
-    UifxLabelDirective
-  ],
-  // hostDirectives ensures the <uifx-button> tag itself gets the styles
+  imports: [NgTemplateOutlet, UifxButtonDirective],
   hostDirectives: [
     {
       directive: UifxButtonDirective,
@@ -46,12 +38,14 @@ import {
   ],
   templateUrl: './uifx-button.html',
   styleUrl: './uifx-button.css',
+  encapsulation: ViewEncapsulation.None,
   host: {
-    '[class]': 'hostClassBinding()',
-    class: 'uifx-btn-host'
+    '[class]': 'hostClasses()',
+    class: 'uifx-button-host'
   }
 })
 export class UifxButton {
+  // Input properties
   label = input<UifxButtonLabel>(null);
   iconOnly = input(false, { transform: booleanAttribute });
   iconStart = input<UifxButtonIcon>(null);
@@ -63,30 +57,33 @@ export class UifxButton {
   disabled = input(false);
   loading = input<boolean>(false);
 
-  // Queries for TemplateRef usage (e.g., <ng-template uifxStartIcon>)
+  // Content queries for templates and directives
   tplStart = contentChild(UifxStartIconDirective, { read: TemplateRef });
   tplEnd = contentChild(UifxEndIconDirective, { read: TemplateRef });
   tplLabel = contentChild(UifxLabelDirective, { read: TemplateRef });
 
-  // Fallback queries for pure component icon props
+  protected hasDirectiveStart = contentChild(UifxStartIconDirective);
+  protected hasDirectiveEnd = contentChild(UifxEndIconDirective);
+  protected hasDirectiveLabel = contentChild(UifxLabelDirective);
+
   _startIcon = contentChild<UifxTplRef>('startIcon');
   _endIcon = contentChild<UifxTplRef>('endIcon');
 
   onClick = output<MouseEvent>();
 
-  protected hostClassBinding = computed(() => {
-    return hostClassBindingHelper({
-      label: this.label,
-      iconOnly: this.iconOnly,
-      severity: this.severity,
-      variant: this.variant,
-      size: this.size,
-      disabled: this.disabled,
-      iconStart: this.iconStart,
-      type: this.type,
-      _startIcon: this._startIcon,
-      iconEnd: this.iconEnd,
-      _endIcon: this._endIcon
-    });
-  });
+  // Computed icon detection
+  protected hasStartIcon = computed(
+    () => !!this.iconStart() || !!this._startIcon() || !!this.hasDirectiveStart()
+  );
+
+  protected hasEndIcon = computed(
+    () => !!this.iconEnd() || !!this._endIcon() || !!this.hasDirectiveEnd()
+  );
+
+  // Host classes
+  protected hostClasses = computed(() => ({
+    'uifx-button-icon--start': this.hasStartIcon(),
+    'uifx-button-icon--end': this.hasEndIcon(),
+    'uifx-button-icon-only': this.iconOnly()
+  }));
 }

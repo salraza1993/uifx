@@ -44,12 +44,12 @@
         (onClick)="handleSave()"
       />
 
-      <button uifxButton severity="danger" [disabled]="!isValid()">
+      <uifx-button severity="danger" [disabled]="!isValid()">
         <ng-template uifxStartIcon>
           <i class="fa-solid fa-trash-can"></i>
         </ng-template>
         <ng-template uifxLabel>Delete Record</ng-template>
-      </button>
+      </uifx-button>
 
       <button uifxButton variant="outlined">
         <i uifxStartIcon class="fa-solid fa-user"></i>

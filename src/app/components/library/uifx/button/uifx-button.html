@@ -8,12 +8,14 @@
   [loading]="loading()"
   (click)="onClick.emit($event)"
 >
-  @if (loading() || tplStart() || _startIcon() || iconStart()) {
-    <span uifxStartIcon [class.uifx-spin]="loading()">
+  @if (loading() || tplStart() || hasDirectiveStart() || _startIcon() || iconStart()) {
+    <span [class.uifx-spin]="loading()" class="uifx-icon--start">
       @if (loading()) {
         <i class="fa-solid fa-spinner"></i>
       } @else if (tplStart()) {
         <ng-container *ngTemplateOutlet="tplStart()!"></ng-container>
+      } @else if (hasDirectiveStart()) {
+        <ng-content select="[uifxStartIcon]"></ng-content>
       } @else if (_startIcon()) {
         <ng-container *ngTemplateOutlet="_startIcon()!"></ng-container>
       } @else {
@@ -23,9 +25,11 @@
   }
 
   @if (!iconOnly()) {
-    <span uifxLabel>
+    <span class="uifx-label">
       @if (tplLabel()) {
         <ng-container *ngTemplateOutlet="tplLabel()!"></ng-container>
+      } @else if (hasDirectiveLabel()) {
+        <ng-content select="[uifxLabel]"></ng-content>
       } @else if (label()) {
         {{ label() }}
       } @else {
@@ -34,10 +38,12 @@
     </span>
   }
 
-  @if (!loading() && (tplEnd() || _endIcon() || iconEnd())) {
-    <span uifxEndIcon>
+  @if (!loading() && (tplEnd() || hasDirectiveEnd() || _endIcon() || iconEnd())) {
+    <span class="uifx-icon--end">
       @if (tplEnd()) {
         <ng-container *ngTemplateOutlet="tplEnd()!"></ng-container>
+      } @else if (hasDirectiveEnd()) {
+        <ng-content select="[uifxEndIcon]"></ng-content>
       } @else if (_endIcon()) {
         <ng-container *ngTemplateOutlet="_endIcon()!"></ng-container>
       } @else {
