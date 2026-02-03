@@ -1,18 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { UifxDivider } from './uifx-divider';
 
-import { Divider } from './divider';
-
-describe('Divider', () => {
-  let component: Divider;
-  let fixture: ComponentFixture<Divider>;
-
+describe('UifxDivider', () => {
+  let component: UifxDivider;
+  let fixture: ComponentFixture<UifxDivider>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Divider]
-    })
-    .compileComponents();
+      imports: [UifxDivider]
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(Divider);
+    fixture = TestBed.createComponent(UifxDivider);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

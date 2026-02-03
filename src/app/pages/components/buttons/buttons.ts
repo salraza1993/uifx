@@ -1,25 +1,42 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { GridContent } from '@app/components/grid-content/grid-content';
 import { ButtonsIconFull } from '@app/components/icons/buttons-icon-full/buttons-icon-full';
-import { Divider } from '@app/components/library/divider/divider';
-import { UifxButtonModule } from '@app/components/library/uifx/button';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
 import { HeroTitle } from '@components/hero-title/hero-title';
+import { UIFX_BUTTON } from '@uifx/button';
+import { UifxDivider } from '@uifx/divider';
 
 @Component({
   selector: 'buttons',
-  imports: [HeroTitle, ContentWrapper, ButtonsIconFull, UifxButtonModule, GridContent, Divider],
+  imports: [
+    HeroTitle,
+    ContentWrapper,
+    ButtonsIconFull,
+    UIFX_BUTTON,
+    GridContent,
+    UifxDivider,
+    RouterLink
+  ],
   templateUrl: './buttons.html',
-  styleUrl: './buttons.css'
+  styleUrls: ['./buttons.css']
 })
 export class Buttons {
   isSaving = signal(false);
-  isValid = signal(true);
+  saveChange = signal(false);
+  isValid = signal(false);
   handleSave() {
     this.isSaving.set(true);
     alert('Save button clicked!');
     setTimeout(() => {
       this.isSaving.set(false);
+    }, 2000);
+  }
+
+  handleValidate() {
+    this.saveChange.set(true);
+    setTimeout(() => {
+      this.saveChange.set(false);
     }, 2000);
   }
 }

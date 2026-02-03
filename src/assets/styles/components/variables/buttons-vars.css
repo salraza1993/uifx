@@ -2,7 +2,7 @@
   /* button variables */
   --btn-bg: light-dark(var(--sr-surface--50), var(--sr-surface--600));
   --btn-color: inherit;
-  --btn-gap: var(--sr-gap--sm);
+  --btn-gap: var(--sr-gap--md);
   --btn-pad-x-start: 0.85rem;
   --btn-pad-x-end: 0.85rem;
   --btn-pad-y-start: 0.5rem;

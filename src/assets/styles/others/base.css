@@ -29,6 +29,7 @@
       width: 50%;
       height: 100%;
       pointer-events: none;
+      z-index: -1;
       background:
         linear-gradient(90deg, var(--sr-grid-colors) 1px, transparent 1px var(--sr-grid-size)) 50% 50% / var(--sr-grid-size)
           var(--sr-grid-size),

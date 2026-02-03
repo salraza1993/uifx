@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: space-between;
   z-index: var(--sr-max-z-index);
+  padding-inline: calc(var(--sr-padding--xs) + 1vw);
 
   .sub-header {
     height: clamp(3rem,var(--sr-header-height), 4rem);

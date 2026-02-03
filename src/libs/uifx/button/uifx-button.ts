@@ -24,11 +24,12 @@ import {
   UifxButtonType,
   UifxButtonVariant,
   UifxTplRef
-} from './helpers/uifx-button-models';
+} from './modals/uifx-button-models';
 
 @Component({
   selector: 'uifx-button',
   standalone: true,
+  // eslint-disable-next-line @angular-eslint/no-unused-components
   imports: [NgTemplateOutlet, UifxButtonDirective],
   hostDirectives: [
     {
@@ -40,7 +41,6 @@ import {
   styleUrl: './uifx-button.css',
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class]': 'hostClasses()',
     class: 'uifx-button-host'
   }
 })
@@ -48,6 +48,7 @@ export class UifxButton {
   // Input properties
   label = input<UifxButtonLabel>(null);
   iconOnly = input(false, { transform: booleanAttribute });
+  icon = input<UifxButtonIcon>(null);
   iconStart = input<UifxButtonIcon>(null);
   iconEnd = input<UifxButtonIcon>(null);
   type = input<UifxButtonType>('button');
@@ -71,19 +72,10 @@ export class UifxButton {
 
   onClick = output<MouseEvent>();
 
-  // Computed icon detection
-  protected hasStartIcon = computed(
+  // Computed icon detection (exposed for hostDirectives binding)
+  hasStartIcon = computed(
     () => !!this.iconStart() || !!this._startIcon() || !!this.hasDirectiveStart()
   );
 
-  protected hasEndIcon = computed(
-    () => !!this.iconEnd() || !!this._endIcon() || !!this.hasDirectiveEnd()
-  );
-
-  // Host classes
-  protected hostClasses = computed(() => ({
-    'uifx-button-icon--start': this.hasStartIcon(),
-    'uifx-button-icon--end': this.hasEndIcon(),
-    'uifx-button-icon-only': this.iconOnly()
-  }));
+  hasEndIcon = computed(() => !!this.iconEnd() || !!this._endIcon() || !!this.hasDirectiveEnd());
 }

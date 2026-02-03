@@ -8,8 +8,8 @@ import { TabItem } from '@app/components/custom-tab/models/custom-tab-model';
 import { GridContent } from '@app/components/grid-content/grid-content';
 import { HeroTitle } from '@app/components/hero-title/hero-title';
 import { TabsIconFull } from '@app/components/icons/tabs-icon-full/tabs-icon-full';
-import { Divider } from '@app/components/library/divider/divider';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
+import { UifxDivider } from '@uifx/divider';
 
 @Component({
   selector: 'tabs, sr-tabs',
@@ -18,7 +18,7 @@ import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
     HeroTitle,
     TabsIconFull,
     GridContent,
-    Divider,
+    UifxDivider,
     CustomTab,
     CustomTabPanels,
     CustomTabPanel,

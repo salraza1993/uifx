@@ -34,8 +34,11 @@
       "@services/*": ["./src/app/shared/services/*"],
       "@client/*": ["./src/client-configs/*"],
       "@stores/*": ["./src/stores/*"],
+
+      // =======[ libs aliases ]======= //
       "@uifx/*": ["./src/libs/uifx/*"],
-      "@uifx/button": ["./src/app/components/library/uifx/button/index.ts"]
+      "@uifx/button": ["./src/libs/uifx/button"],
+      "@uifx/divider": ["./src/libs/uifx/divider"]
     }
   },
   "angularCompilerOptions": {

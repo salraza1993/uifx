@@ -7,48 +7,28 @@ import {
   signal,
   viewChild
 } from '@angular/core';
+import {
+  Alignment,
+  BorderType,
+  DividerHostConfigs,
+  DividerSettings,
+  MarginPaddingAxis,
+  Orientation
+} from '../models/uifx-divider-model';
 
-type Orientation = 'horizontal' | 'vertical';
-type Alignment = 'start' | 'center' | 'end' | 'left' | 'right' | 'top' | 'bottom';
-type BorderType = 'solid' | 'dashed' | 'dotted';
-type MarginPaddingAxis = { x?: number; y?: number };
-interface DividerHostConfigs {
-  vMargin?: MarginPaddingAxis;
-  vPadding?: MarginPaddingAxis;
-  contentVPadding?: MarginPaddingAxis;
-  hMargin?: MarginPaddingAxis;
-  hPadding?: MarginPaddingAxis;
-  contentHPadding?: MarginPaddingAxis;
-  align?: Alignment;
-  orientation?: Orientation;
-  borderType?: BorderType;
-  noLine?: boolean;
-  borderWidth?: number;
-  borderColor?: string;
-}
-interface DividerSettings {
-  v_margin_y: number | null;
-  v_margin_x: number | null;
-  v_padding_y: number | null;
-  v_padding_x: number | null;
-  h_margin_y: number | null;
-  h_margin_x: number | null;
-  h_padding_y: number | null;
-  h_padding_x: number | null;
-  content_v_padding_y: number | null;
-  content_v_padding_x: number | null;
-  content_h_padding_y: number | null;
-  content_h_padding_x: number | null;
-  borderWidth?: number | null;
-  borderType?: BorderType | null;
-  borderColor?: string | null;
-  noLine?: boolean | null;
-}
 @Component({
-  selector: 'divider',
+  selector: 'uifx-divider',
   imports: [],
-  templateUrl: './divider.html',
-  styleUrl: './divider.css',
+  template: `
+    <div
+      class="divider-content divider-{{ contentAlign() }} divider-content-orientation-{{
+        orientation()
+      }}"
+    >
+      <ng-content></ng-content>
+    </div>
+  `,
+  styleUrl: './uifx-divider.css',
   host: {
     '[attr.aria-orientation]': 'orientation()',
     '[attr.role]': `'separator'`,
@@ -77,7 +57,7 @@ interface DividerSettings {
       '(contentHPadding()?.y || setConfigs()?.content_h_padding_y) ?? null'
   }
 })
-export class Divider {
+export class UifxDivider {
   slot = viewChild<ElementRef<HTMLSlotElement>>('slot');
   hasContent = signal<boolean>(false);
 
@@ -162,4 +142,3 @@ export class Divider {
     };
   });
 }
-// <p-divider role="separator" aria-orientation="horizontal" data-p="horizontal solid" class="p-component p-divider p-divider-horizontal p-divider-left p-divider-solid" pc16="" data-pc-section="root" data-pc-name="t" style="justify-content: center;"><div class="p-divider-content" data-pc-section="content"></div></p-divider>

@@ -1,0 +1,70 @@
+:host, .uifx-button-host {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[uifxButton] {
+  display: var(--btn-display, flex);
+  background-color: var(--btn-bg, inherit);
+  color: var(--btn-color, inherit);
+  gap: var(--btn-gap, 0.5rem);
+  padding-inline-start: var(--btn-pad-x-start, 0.65rem);
+  padding-inline-end: var(--btn-pad-x-end, 0.65rem);
+  padding-block-start: var(--btn-pad-y-start, 0.35rem);
+  padding-block-end: var(--btn-pad-y-end, 0.35rem);
+  border-radius: var(--btn-radius, 0.35rem);
+  border: var(--btn-border-width, 1) var(--btn-border-type, solid)
+    var(--btn-border-color, currentColor);
+  align-items: center;
+  justify-content: center;
+  cursor: var(--btn-cursor, pointer);
+  font-family: var(--btn-ff, inherit);
+  font-weight: var(--btn-fw, 600);
+  font-size: var(--btn-fs, inherit);
+  line-height: var(--btn-lh, 1.25);
+  transition: var(--btn-transition, initial);
+
+  &:is(.uifx-btn-icon-only) {
+    width: var(--btn-icon-only-width, 2.38rem);
+    height: var(--btn-icon-only-height, 2.38rem);
+    justify-content: center;
+    padding-inline: 0;
+    padding-block: 0;
+  }
+
+  &[data-btn-type="link"] {
+    --btn-bg: transparent;
+    --btn-border-color: transparent;
+    --btn-border-color-hover: transparent;
+    &:hover {
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    background-color: var(--btn-bg-hover, var(--btn-bg));
+    color: var(--btn-color-hover, var(--btn-color));
+    border-color: var(--btn-border-color-hover, var(--btn-border-color));
+  }
+  &:has(.uifx-btn-icon--start):not(.uifx-btn-icon-only) {
+    padding-inline-start: calc(var(--btn-pad-x-start, 0.65rem) / 1.5);
+  }
+  &:has(.uifx-btn-icon--end):not(.uifx-btn-icon-only) {
+    padding-inline-end: calc(var(--btn-pad-x-start, 0.65rem) / 1.5);
+  }
+
+  &:is([disabled="true"], .uifx-btn-state--disabled) {
+    background-color: var(--btn-bg-disabled, var(--btn-bg));
+    color: var(--btn-color-disabled, var(--btn-color));
+    border-color: var(--btn-border-color-disabled, var(--btn-border-color));
+    opacity: var(--btn-opacity-disabled, 0.6);
+    cursor: not-allowed;
+  }
+}
+a[uifxButton] {
+  text-decoration: none;
+  &:is([data-btn-type="link"]):hover {
+    text-decoration: underline;
+  }
+}

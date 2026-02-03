@@ -25,45 +25,53 @@
         property.
       </p>
     </div>
-    <divider />
+    <uifx-divider />
     <div
-      class="flex p--4xl gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+      class="flex flex--wrap p--4xl gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
     >
       <!-- with pure component -->
+      <uifx-button label="I am simple" />
       <uifx-button
-        label="I am a component"
-        iconStart="fa-solid fa-star"
-        iconEnd="fa-solid fa-angle-down"
-      />
-      <uifx-button
-        label="Save Changes"
+        label="Icon with Start"
         severity="primary"
         variant="solid"
         iconStart="fa-solid fa-floppy-disk"
-        [loading]="isSaving()"
-        (onClick)="handleSave()"
       />
+      <uifx-button
+        label="Icon with End"
+        severity="primary"
+        variant="solid"
+        iconEnd="fa-solid fa-ellipsis-v"
+      />
+      <uifx-button
+        label="Icon with Both-sides"
+        iconStart="fa-solid fa-list"
+        iconEnd="fa-solid fa-angle-down"
+      />
+      <uifx-button iconOnly icon="fa-solid fa-star" />
 
-      <uifx-button severity="danger" [disabled]="!isValid()">
-        <ng-template uifxStartIcon>
-          <i class="fa-solid fa-trash-can"></i>
-        </ng-template>
-        <ng-template uifxLabel>Delete Record</ng-template>
-      </uifx-button>
-
-      <button uifxButton variant="outlined">
-        <i uifxStartIcon class="fa-solid fa-user"></i>
+      <a href="#" uifxButton type="link" target="_blank" rel="noopener noreferrer">
+        <span uifxLabel>I am simple Link</span>
+      </a>
+      <a href="https://angular.dev/" uifxButton target="_blank" rel="noopener noreferrer">
+        <span uifxLabel>Angular Website</span>
+      </a>
+      <a routerLink="/components/tabs" uifxButton>
+        <span uifxLabel>Router Link</span>
+      </a>
+      <button uifxButton variant="outlined" (click)="handleValidate()">
+        <span uifxStartIcon>
+          @if (saveChange()) {
+            <i class="fa-solid fa-spinner fa-spin"></i>
+          } @else {
+            <i class="fa-solid fa-user"></i>
+          }
+        </span>
         <span uifxLabel>View Profile</span>
-        <i uifxEndIcon class="fa-solid fa-chevron-right"></i>
+        <span uifxEndIcon>
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
       </button>
-      <!-- <uifx-button>Click Me</uifx-button>
-      <button uifxButton>
-        Click Me
-        <ng-template #endIcon><i class="fa-solid fa-home"></i></ng-template>
-        <ng-template #startIcon><i class="fa-solid fa-home"></i></ng-template>
-      </button>
-      <a href="#" type="link" class="uifxButton">Click Me</a>
-      <uifx-button icon="fa-solid fa-home" iconOnly /> -->
     </div>
   </grid-content>
 </content-wrapper>
