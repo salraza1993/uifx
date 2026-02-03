@@ -79,6 +79,13 @@
   .content-size--3 { max-inline-size: var(--sr-content-size--3); }
   .content-size--4 { max-inline-size: var(--sr-content-size--4); }
   .content-size--5 { max-inline-size: var(--sr-content-size--5); }
+  .content-size--6 { max-inline-size: var(--sr-content-size--6); }
+  .content-size--7 { max-inline-size: var(--sr-content-size--7); }
+  .content-size--8 { max-inline-size: var(--sr-content-size--8); }
+  .content-size--9 { max-inline-size: var(--sr-content-size--9); }
+  .content-size--10 { max-inline-size: var(--sr-content-size--10); }
+
+
   .content-card--bg { background-color: var(--sr-content-card-bg); }
 
   .text--line-through { text-decoration-line: line-through; }

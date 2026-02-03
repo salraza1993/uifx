@@ -7,17 +7,22 @@
 
   display: block;
   width: max-content;
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  display: grid;
+
+  &:is(.custom-tab--fluid) {
+    width: 100%;
+    & .tabs-header {
+      width: 100%;
+      & .tablist {
+        width: 100%;
+        & .tablist__item {
+          width: 100%;
+          min-width: auto;
+        }
+      }
+    }
   }
+
   & .tabs-header {
     position: relative;
     background-color: var(--tabs-header-bg, var(--tabHeaderBg));
@@ -80,6 +85,7 @@
         }
       }
     }
+
     .bubble {
       top: anchor(top);
       right: anchor(right);
@@ -104,8 +110,19 @@
         background-color: var(--tab-hover-bg, var(--hoverTabBg));
       }
     }
+
     .tab-panels {
       position: relative;
+    }
+  }
+
+  & .tabs-wrapper {
+    display: grid;
+    gap: var(--tabs-wrapper-gap, var(--sr-gap--md));
+
+    .tab-panels {
+      position: relative;
+      background-color: green;
     }
   }
 }

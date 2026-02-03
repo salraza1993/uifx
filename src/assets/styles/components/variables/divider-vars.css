@@ -1,0 +1,22 @@
+:root {
+  /* divider variables */
+  --divider-border-type: var(--sr-border-type, solid);
+  --divider-border-width: var(--sr-border-width, 1px);
+  --divider-border-color: var(--sr-border-color, currentColor);
+
+  --divider-v-mar--x: 0;
+  --divider-v-mar--y: var(--sr-padding--lg);
+  --divider-v-pad--x: 0;
+  --divider-v-pad--y: 0;
+  --divider-v-content-pad--x: 0;
+  --divider-v-content-pad--y: var(--sr-padding--sm);
+
+  --divider-h-mar--x: 0;
+  --divider-h-mar--y: var(--sr-padding--lg);
+  --divider-h-pad--x: 0;
+  --divider-h-pad--y: 0;
+  --divider-h-content-pad--x: var(--sr-padding--sm);
+  --divider-h-content-pad--y: 0;
+  --divider-content-bg: transparent;
+  --divider-content-color: inherit;
+}

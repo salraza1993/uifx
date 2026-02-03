@@ -1,4 +1,4 @@
-import { TabConfig, TabItem } from './custom-tab-model';
+import { TabConfig, TabItem } from '../models/custom-tab-model';
 
 export const DEFAULT_CONFIGS: TabConfig = {
   variant: 'basic',

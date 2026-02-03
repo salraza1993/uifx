@@ -8,7 +8,7 @@
     --sr-border-default: light-dark(var(--sr-surface--200), var(--sr-surface--600));
 
     --sr-header-height: 3.5rem; /* 3.5rem * 16px = 56px */
-    --sr-base-radius: 0.25rem; /* 0.25rem * 16px = 4px */
+    --sr-base-radius: 0.3rem; /* 0.25rem * 16px = 4px */
     --sr-base-padding: 0.5rem; /* 0.5rem * 16px = 8px */
     --sr-base-margin: 0.5rem; /* 0.5rem * 16px = 8px */
     --sr-base-spacing: 0.5rem; /* 0.5rem * 16px = 8px */

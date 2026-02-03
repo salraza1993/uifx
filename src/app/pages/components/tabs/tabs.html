@@ -11,22 +11,155 @@
     </p>
   </hero-title>
 
-  <div class="my--2xl bg-surface--100 border-x--start border--4 border-primary--500 mx--xl px--lg">
+  <div class="my--2xl border-x--start border--4 border-primary--500 mx--xl px--lg">
     <h6 class="fw--bold">
       A flexible and accessible tab component for organizing content into separate views. Switch
       between different sections with a simple click or keyboard navigation.
     </h6>
   </div>
+
   <grid-content padding="xl">
     <div>
-      <h6 class="m--0 fw--bold">Basic</h6>
+      <h6 class="m--0 fw--bold">Pattern 1: Declarative (Without Array)</h6>
       <p>
-        Tabs is defined using TabList, Tab, TabPanels and TabPanel components. Tab and TabPanel
-        components are associated with their value properties
+        Simple declarative tabs defined directly in template. Best for static tabs with fixed
+        content.
       </p>
     </div>
     <divider />
-    <div class="grid p--5xl radius border bg-surface--0 dark:bg-surface--800"></div>
+    <div class="grid p--5xl radius border bg-surface--100 dark:bg-surface--800">
+      <custom-tab fluid>
+        <custom-tablist>
+          <custom-tab-item value="home">
+            <ng-template #iconStart></ng-template>
+            <i class="fa-solid fa-home"></i>
+
+            Home Tab
+          </custom-tab-item>
+          <custom-tab-item value="profile">Profile Tab</custom-tab-item>
+          <custom-tab-item value="messages">Messages Tab</custom-tab-item>
+        </custom-tablist>
+        <custom-tab-panels>
+          <custom-tab-panel value="home">
+            <div class="tab-panel-content" animate.enter="enter-animation">
+              <h3>Welcome Home!</h3>
+              <p>This is your home dashboard with an overview of your account.</p>
+              <ul>
+                <li>Total visits: 1,234</li>
+                <li>Last login: Today at 9:30 AM</li>
+              </ul>
+            </div>
+          </custom-tab-panel>
+          <custom-tab-panel value="profile">
+            <div class="tab-panel-content" animate.enter="enter-animation">
+              <h3>User Profile</h3>
+              <p>Manage your personal information and settings.</p>
+              <form>
+                <label>
+                  Name:
+                  <input type="text" value="John Doe" />
+                </label>
+                <label>
+                  Email:
+                  <input type="email" value="john@example.com" />
+                </label>
+              </form>
+            </div>
+          </custom-tab-panel>
+          <custom-tab-panel value="messages">
+            <div class="tab-panel-content" animate.enter="enter-animation">
+              <h3>Messages</h3>
+              <p>You have 3 unread messages.</p>
+              <ul>
+                <li>Message from Alice - "Hey, how are you?"</li>
+                <li>Message from Bob - "Meeting at 3 PM"</li>
+                <li>Message from Carol - "Check out this link"</li>
+              </ul>
+            </div>
+          </custom-tab-panel>
+        </custom-tab-panels>
+      </custom-tab>
+    </div>
+  </grid-content>
+
+  <grid-content padding="xl">
+    <div>
+      <h6 class="m--0 fw--bold">Pattern 2: Data-Driven with &#64;for Loop</h6>
+      <p>Dynamic tabs generated from an array. Perfect for tabs driven by API data or signals.</p>
+    </div>
+    <divider />
+    <div class="grid p--5xl radius border bg-surface--200 dark:bg-surface--800">
+      <custom-tab>
+        <custom-tablist>
+          @for (tab of tabs(); track tab.value) {
+            <custom-tab-item [value]="tab.value">{{ tab.title }}</custom-tab-item>
+          }
+        </custom-tablist>
+        <custom-tab-panels>
+          @for (tab of tabs(); track tab.value) {
+            <custom-tab-panel [value]="tab.value">
+              <div class="tab-panel-content">
+                <p class="m-0">{{ tab.content }}</p>
+              </div>
+            </custom-tab-panel>
+          }
+        </custom-tab-panels>
+      </custom-tab>
+    </div>
+  </grid-content>
+
+  <grid-content padding="xl">
+    <div>
+      <h6 class="m--0 fw--bold">Pattern 3: Rich Content with Custom Templates</h6>
+      <p>
+        Tabs with complex content like avatars, badges, icons. Supports any HTML in tab headers and
+        panels.
+      </p>
+    </div>
+    <divider />
+    <div class="grid p--5xl radius border bg-surface--200 dark:bg-surface--800">
+      <custom-tab>
+        <custom-tablist>
+          @for (person of people(); track person.id) {
+            <custom-tab-item [value]="person.value" class="flex items-center gap-2">
+              <img
+                [src]="person.avatar"
+                [alt]="person.name"
+                class="w--8 h--8 rounded--full object--cover"
+              />
+              <span class="font-bold whitespace-nowrap">{{ person.name }}</span>
+              @if (person.badge) {
+                <span
+                  class="badge bg-primary--500 text-surface--0 px--2 py--1 rounded--full text--xs"
+                >
+                  {{ person.badge }}
+                </span>
+              }
+            </custom-tab-item>
+          }
+        </custom-tablist>
+        <custom-tab-panels>
+          @for (person of people(); track person.id) {
+            <custom-tab-panel [value]="person.value">
+              <div class="tab-panel-content">
+                <div class="flex items-center gap-4 mb--4">
+                  <img
+                    [src]="person.avatar"
+                    [alt]="person.name"
+                    class="w--16 h--16 rounded--full object--cover"
+                  />
+                  <div>
+                    <h3 class="m--0">{{ person.name }}</h3>
+                    <p class="m--0 text--muted">Profile Details</p>
+                  </div>
+                </div>
+                <p class="m-0">{{ person.content }}</p>
+              </div>
+            </custom-tab-panel>
+          }
+        </custom-tab-panels>
+      </custom-tab>
+    </div>
   </grid-content>
 
   <br />
@@ -36,298 +169,59 @@
   <br />
   <br />
   <br />
+  <grid-content padding="xl">
+    <custom-tab>
+      <custom-tablist>
+        <custom-tab-item value="0" class="flex items-center gap-2">
+          <img src="https://primefaces.org/.../amyelsner.png" shape="circle" />
+          <span class="font-bold whitespace-nowrap">Amy Elsner</span>
+        </custom-tab-item>
+        <custom-tab-item value="1" class="flex items-center gap-2">
+          <img src="https://primefaces.org/.../onyamalimba.png" shape="circle" />
+          <span class="font-bold whitespace-nowrap">Onyama Limba</span>
+        </custom-tab-item>
+        <custom-tab-item value="2" class="flex items-center gap-2">
+          <img src="https://primefaces.org/.../ionibowcher.png" shape="circle" />
+          <span class="font-bold whitespace-nowrap">Ioni Bowcher</span>
+        </custom-tab-item>
+      </custom-tablist>
+      <custom-tab-panels>
+        <custom-tab-panel value="0">
+          <p class="m-0">Lorem ipsum...</p>
+        </custom-tab-panel>
+        <custom-tab-panel value="1">
+          <p class="m-0">Sed ut perspiciatis...</p>
+        </custom-tab-panel>
+        <custom-tab-panel value="2">
+          <p class="m-0">At vero eos...</p>
+        </custom-tab-panel>
+      </custom-tab-panels>
+    </custom-tab>
+  </grid-content>
   <br />
   <br />
   <section class="detail-page-wrapper dark:bg-surface--800 bg-surface--50 p--6xl border">
-    <div class="page-title">
-      <p class="mb--xl text-muted">
-        A flexible and accessible tab component for organizing content into separate views. Switch
-        between different sections with a simple click or keyboard navigation.
-      </p>
+    <div class="grid p--5xl radius border bg-surface--200 dark:bg-surface--800">
+      <custom-tab>
+        <custom-tablist>
+          <custom-tab-item value="0">Header I</custom-tab-item>
+          <custom-tab-item value="1">Header II</custom-tab-item>
+          <custom-tab-item value="2">Header III</custom-tab-item>
+        </custom-tablist>
+        <custom-tab-panels>
+          <custom-tab-panel value="0">
+            <p class="m-0">Lorem ipsum dolor sit amet...</p>
+          </custom-tab-panel>
+          <custom-tab-panel value="1">
+            <p class="m-0">Sed ut perspiciatis unde omnis...</p>
+          </custom-tab-panel>
+          <custom-tab-panel value="2">
+            <ng-template #content>
+              Complex components that should only be initialized when active
+            </ng-template>
+          </custom-tab-panel>
+        </custom-tab-panels>
+      </custom-tab>
     </div>
-    <code-snippet [code]="editorCode"></code-snippet>
-    <code-snippet-with-tabs
-      [html]="'<div>Hello</div>'"
-      [ts]="'const x = 10;'"
-      [css]="'.text { color: red; }'"
-    />
-    <div #editorContainer style="display: grid; height: 300px"></div>
-    <section class="mb--2xl">
-      <h2 class="mb--lg">Getting Started</h2>
-
-      <h3 class="mb--md">Installation</h3>
-      <p class="mb--md">Import the CustomTab component in your Angular component:</p>
-      <pre class="code-block mb--xl">
-        <code>
-          import {{ '{' }} CustomTab {{ '}' }} from '@components/custom-tab/custom-tab';
-          @Component({{ '{' }}
-            selector: 'my-component',
-            imports: [CustomTab],
-            template: `...`
-          {{ '}' }})
-        </code>
-      </pre>
-
-      <h3 class="mb--md">Basic Usage</h3>
-      <p class="mb--md">Create a simple tab component with basic configuration:</p>
-      <pre class="code-block mb--md"><code>&lt;custom-tab [tabs]="tabItems" /&gt;</code></pre>
-
-      <p class="mb--md">Define your tab items in the component:</p>
-      <pre class="code-block mb--xl"><code>import {{ '{' }} signal {{ '}' }} from '@angular/core';
-      import {{ '{' }} TabItem {{ '}' }} from '@components/custom-tab/custom-tab-model';
-
-      tabItems = signal&lt;TabItem[]&gt;([
-        {{ '{' }} id: 1, label: 'Overview', value: 'overview' {{ '}' }},
-        {{ '{' }} id: 2, label: 'Details', value: 'details' {{ '}' }},
-        {{ '{' }} id: 3, label: 'Settings', value: 'settings' {{ '}' }}
-      ]);</code></pre>
-    </section>
-
-    <section class="mb--2xl">
-      <h2 class="mb--lg">Configuration Options</h2>
-
-      <h3 class="mb--md">Tab Variants</h3>
-      <p class="mb--md">The component supports multiple visual styles:</p>
-      <ul class="mb--xl">
-        <li>
-          <strong>basic</strong>
-          - Simple text-based tabs
-        </li>
-        <li>
-          <strong>boxed</strong>
-          - Tabs with box-style containers
-        </li>
-        <li>
-          <strong>underline</strong>
-          - Tabs with bottom border indicator
-        </li>
-        <li>
-          <strong>pills</strong>
-          - Rounded pill-style tabs
-        </li>
-      </ul>
-
-      <h3 class="mb--md">Tab Configuration</h3>
-      <pre class="code-block mb--xl"><code>tabConfig = signal&lt;TabConfig&gt;({{ '{' }}
-        variant: 'underline',
-        orientation: 'horizontal',
-        selectionMode: 'explicit',
-        showIcon: true,
-        iconPosition: 'start',
-        tabsInLoop: true,
-        preserveContent: true
-      {{ '}' }});</code></pre>
-    </section>
-
-    <section class="mb--2xl">
-      <h2 class="mb--lg">Component Properties</h2>
-
-      <div class="property-table mb--md">
-        <h3 class="mb--md">Inputs</h3>
-        <table class="w-full mb--xl">
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>tabs</code></td>
-              <td>TabItem[]</td>
-              <td>required</td>
-              <td>Array of tab items to display</td>
-            </tr>
-            <tr>
-              <td><code>tabConfigs</code></td>
-              <td>TabConfig</td>
-              <td>DEFAULT_CONFIGS</td>
-              <td>Configuration object for tab behavior and styling</td>
-            </tr>
-            <tr>
-              <td><code>selectedTab</code></td>
-              <td>string</td>
-              <td>undefined</td>
-              <td>Two-way binding for selected tab value</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="property-table">
-        <h3 class="mb--md">TabItem Interface</h3>
-        <table class="w-full">
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Required</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>id</code></td>
-              <td>any</td>
-              <td>Yes</td>
-              <td>Unique identifier for the tab</td>
-            </tr>
-            <tr>
-              <td><code>label</code></td>
-              <td>string</td>
-              <td>Yes</td>
-              <td>Display text for the tab</td>
-            </tr>
-            <tr>
-              <td><code>value</code></td>
-              <td>string</td>
-              <td>Yes</td>
-              <td>Unique value identifier</td>
-            </tr>
-            <tr>
-              <td><code>selected</code></td>
-              <td>boolean</td>
-              <td>No</td>
-              <td>Initially selected state</td>
-            </tr>
-            <tr>
-              <td><code>icon</code></td>
-              <td>string</td>
-              <td>No</td>
-              <td>Icon name or path</td>
-            </tr>
-            <tr>
-              <td><code>iconClass</code></td>
-              <td>string</td>
-              <td>No</td>
-              <td>CSS class for icon styling</td>
-            </tr>
-            <tr>
-              <td><code>disabled</code></td>
-              <td>boolean</td>
-              <td>No</td>
-              <td>Disabled state of the tab</td>
-            </tr>
-            <tr>
-              <td><code>command</code></td>
-              <td>() => void</td>
-              <td>No</td>
-              <td>Callback function on tab click</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="mb--2xl">
-      <h2 class="mb--lg">Advanced Usage</h2>
-
-      <h3 class="mb--md">Custom Templates</h3>
-      <p class="mb--md">Use custom templates for tab headers and content:</p>
-      <pre
-        class="code-block mb--xl"
-      ><code>&lt;custom-tab [tabs]="tabItems" [(selectedTab)]="activeTab"&gt;
-      &lt;ng-template #tabs let-tab="tab"&gt;
-        &lt;span class="custom-tab-header"&gt;
-          &lt;i [class]="tab.iconClass"&gt;&lt;/i&gt;
-          {{ '{{' }} tab.label {{ '}}' }}
-        &lt;/span&gt;
-      &lt;/ng-template&gt;
-
-  &lt;ng-template #tabsContent let-tab="tab"&gt;
-    &lt;div class="custom-content"&gt;
-      &lt;h3&gt;{{ '{{' }} tab.label {{ '}}' }}&lt;/h3&gt;
-      &lt;p&gt;Custom content for {{ '{{' }} tab.value {{ '}}' }}&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/ng-template&gt;
-&lt;/custom-tab&gt;</code></pre>
-
-      <h3 class="mb--md">Selection Modes</h3>
-      <p class="mb--md">Control how tab selection works:</p>
-      <ul class="mb--md">
-        <li>
-          <strong>explicit</strong>
-          - Requires click to change tabs (default)
-        </li>
-        <li>
-          <strong>follow</strong>
-          - Changes on keyboard focus
-        </li>
-      </ul>
-
-      <h3 class="mb--md">Orientation</h3>
-      <p class="mb--md">Tabs can be displayed horizontally or vertically:</p>
-      <pre class="code-block mb--xl"><code>tabConfig = signal&lt;TabConfig&gt;({{ '{' }}
-  orientation: 'vertical',
-  variant: 'pills'
-{{ '}' }});</code></pre>
-    </section>
-
-    <section class="mb--2xl">
-      <h2 class="mb--lg">Accessibility</h2>
-      <p class="mb--md">The component follows ARIA best practices:</p>
-      <ul class="mb--md">
-        <li>Built on Angular's ARIA tabs primitives</li>
-        <li>Full keyboard navigation support (Arrow keys, Home, End)</li>
-        <li>Proper ARIA attributes (role, aria-selected, aria-controls)</li>
-        <li>Focus management and visual indicators</li>
-        <li>Screen reader announcements</li>
-      </ul>
-
-      <h3 class="mb--md">Keyboard Navigation</h3>
-      <table class="w-full">
-        <thead>
-          <tr>
-            <th>Key</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><kbd>Arrow Right/Down</kbd></td>
-            <td>Navigate to next tab</td>
-          </tr>
-          <tr>
-            <td><kbd>Arrow Left/Up</kbd></td>
-            <td>Navigate to previous tab</td>
-          </tr>
-          <tr>
-            <td><kbd>Home</kbd></td>
-            <td>Navigate to first tab</td>
-          </tr>
-          <tr>
-            <td><kbd>End</kbd></td>
-            <td>Navigate to last tab</td>
-          </tr>
-          <tr>
-            <td><kbd>Enter/Space</kbd></td>
-            <td>Activate focused tab (explicit mode)</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="mb--2xl">
-      <h2 class="mb--lg">Best Practices</h2>
-      <ul>
-        <li>Keep tab labels short and descriptive (1-2 words)</li>
-        <li>Use 3-7 tabs for optimal usability</li>
-        <li>Don't nest tabs within tabs</li>
-        <li>Use icons to enhance recognition, not replace labels</li>
-        <li>Maintain consistent tab order across page loads</li>
-        <li>
-          Consider using
-          <code>preserveContent: true</code>
-          for forms to prevent data loss
-        </li>
-        <li>
-          Set meaningful default selection using
-          <code>selected</code>
-          property
-        </li>
-      </ul>
-    </section>
   </section>
 </content-wrapper>

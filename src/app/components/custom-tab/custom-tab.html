@@ -1,10 +1,10 @@
-<div class="tabs-wrapper flex flex--column" ngTabs role="tablist-container">
+<div class="tabs-wrapper" ngTabs role="tablist-container">
   <!-- TAB HEADERS -->
   <div
     ngTabList
     class="tabs-header flex {{ configs().tablistClass }}"
     role="tablist"
-    [wrap]="configs().tabsInLoop"
+    [wrap]="tabsInLoop()"
     [(selectedTab)]="selectedTab"
     [orientation]="orientation()"
     [selectionMode]="selectionMode()"
@@ -57,6 +57,9 @@
                 </span>
               }
             }
+          } @else if (tab.templateRef) {
+            <!-- Custom tab-item template -->
+            <ng-container *ngTemplateOutlet="tab.templateRef"></ng-container>
           } @else {
             <span class="tab-label pointer-events--none">{{ tab.label }}</span>
           }
@@ -80,6 +83,10 @@
         <ng-template ngTabContent>
           @if (tabsContentTemplate(); as template) {
             <ng-container *ngTemplateOutlet="template; context: { tab: tab }"></ng-container>
+          } @else if (panelFor(tab.value); as panel) {
+            <ng-container
+              *ngTemplateOutlet="panel.templateRef(); context: { tab: tab }"
+            ></ng-container>
           } @else {
             @if (configs().showDefaultContent) {
               <div class="tab-default-content" role="tabpanel">{{ tab.label }} Content</div>

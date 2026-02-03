@@ -1,0 +1,22 @@
+:root {
+  /* button variables */
+  --btn-bg: light-dark(var(--sr-surface--50), var(--sr-surface--600));
+  --btn-color: inherit;
+  --btn-gap: var(--sr-gap--sm);
+  --btn-pad-x-start: 0.85rem;
+  --btn-pad-x-end: 0.85rem;
+  --btn-pad-y-start: 0.5rem;
+  --btn-pad-y-end: 0.5rem;
+  --btn-radius: var(--sr-radius--xs);
+  --btn-border-width: var(--sr-border-width);
+  --btn-border-type: var(--sr-border-type);
+  --btn-border-color: var(--sr-border-color);
+  --btn-fw: 500;
+  --btn-fs: inherit;
+  --btn-lh: 1.25;
+  --btn-transition: background-color var(--sr-transition-duration, 0.2s) ease, color var(--sr-transition-duration, 0.2s) ease, border-color var(--sr-transition-duration, 0.2s) ease;
+
+  --btn-bg-hover: light-dark(var(--sr-surface--200), var(--sr-surface--500));
+  --btn-color-hover: inherit;
+  --btn-border-color-hover: light-dark(var(--sr-surface--300), var(--sr-surface--600));
+}

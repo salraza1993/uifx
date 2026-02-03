@@ -4,4 +4,3 @@
 @import './supportive-colors.css' layer(colors);
 @import './modified-variables.css' layer(modified);
 @import './common-variable.css' layer(common);
-@import './components.css' layer(components);

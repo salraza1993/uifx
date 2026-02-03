@@ -34,7 +34,8 @@
       "@services/*": ["./src/app/shared/services/*"],
       "@client/*": ["./src/client-configs/*"],
       "@stores/*": ["./src/stores/*"],
-      "@libs/*": ["./src/libs/*"]
+      "@uifx/*": ["./src/libs/uifx/*"],
+      "@uifx/button": ["./src/app/components/library/uifx/button/index.ts"]
     }
   },
   "angularCompilerOptions": {

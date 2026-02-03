@@ -1,3 +1,5 @@
+import { TemplateRef } from '@angular/core';
+
 /**
  * Custom Tab Component Models
  * Defines the structure and configuration for tab items and tab settings.
@@ -18,6 +20,7 @@ export interface TabItem {
   icon?: string | { start?: string; end?: string };
   disabled?: boolean;
   command?: () => void;
+  templateRef?: TemplateRef<any>;
 }
 
 /**
@@ -45,4 +48,5 @@ export interface TabConfig {
   softDisabled?: boolean;
   showDefaultContent?: boolean;
   preserveContent?: boolean;
+  fluid?: boolean;
 }

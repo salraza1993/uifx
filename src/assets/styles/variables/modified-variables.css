@@ -3,11 +3,11 @@
     /* radius */
     --sr-radius-none: 0;
     --sr-radius--xs: calc(var(--sr-base-radius) * 1);
-    --sr-radius--sm: calc(var(--sr-base-radius) * 2);
-    --sr-radius--md: calc(var(--sr-base-radius) * 3);
-    --sr-radius--lg: calc(var(--sr-base-radius) * 4);
-    --sr-radius--xl: calc(var(--sr-base-radius) * 6);
-    --sr-radius--2xl: calc(var(--sr-base-radius) * 8);
+    --sr-radius--sm: calc(var(--sr-base-radius) * 1.75);
+    --sr-radius--md: calc(var(--sr-base-radius) * 2.5);
+    --sr-radius--lg: calc(var(--sr-base-radius) * 3.25);
+    --sr-radius--xl: calc(var(--sr-base-radius) * 4);
+    --sr-radius--2xl: calc(var(--sr-base-radius) * 4.5);
 
     /* padding */
     --sr-padding--xs: calc(var(--sr-base-padding) * 1);

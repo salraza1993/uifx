@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
+import { TabConfig, TabItem } from '@app/components/custom-tab/models/custom-tab-model';
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
 import { CustomTab } from '@components/custom-tab/custom-tab';
-import { TabConfig, TabItem } from '@components/custom-tab/custom-tab-model';
 
 @Component({
   selector: 'sr-home',

@@ -1,6 +1,7 @@
 import { Tab, TabContent, TabList, TabPanel, Tabs } from '@angular/aria/tabs';
 import { NgTemplateOutlet } from '@angular/common';
 import {
+  booleanAttribute,
   ChangeDetectionStrategy,
   Component,
   computed,
@@ -11,8 +12,11 @@ import {
   signal,
   TemplateRef
 } from '@angular/core';
-import { DEFAULT_CONFIGS, TAB_PLACEHOLDER } from './custom-tab-helper';
-import { TabConfig, TabItem } from './custom-tab-model';
+import { CustomTabPanel } from './custom-tab-panel';
+import { CustomTabPanels } from './custom-tab-panels';
+import { CustomTablist } from './custom-tablist';
+import { DEFAULT_CONFIGS, TAB_PLACEHOLDER } from './helpers/custom-tab-helper';
+import { TabConfig, TabItem } from './models/custom-tab-model';
 
 @Component({
   selector: 'custom-tab',
@@ -21,7 +25,8 @@ import { TabConfig, TabItem } from './custom-tab-model';
   styleUrl: './custom-tab.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'custom-tab-host'
+    class: 'custom-tab-host',
+    '[class.custom-tab--fluid]': 'fluid()'
   }
 })
 export class CustomTab {
@@ -30,20 +35,31 @@ export class CustomTab {
 
   // -------- Inputs from parent -------- //
   tabConfigs = input<TabConfig>();
-  tabs = input.required<TabItem[]>();
+  tabs = input<TabItem[]>([]);
   selectedTab = model<string | undefined>();
   tabsTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabs');
   tabsContentTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('tabsContent');
   iconTemplate = contentChild<TemplateRef<{ tab: TabItem }>>('icon');
   iconStart = contentChild<TemplateRef<{ tab: TabItem }>>('iconStart');
   iconEnd = contentChild<TemplateRef<{ tab: TabItem }>>('iconEnd');
+  tabPanels = contentChild(CustomTabPanels);
+  customTablist = contentChild(CustomTablist);
+  fluid = input(false, { transform: booleanAttribute });
 
   protected configs = computed(() => this.tabConfigs() || this.DEFAULT_CONFIGS());
+  protected tabsInLoop = computed(() => this.configs().tabsInLoop || false);
   protected selectionMode = computed(() => this.configs().selectionMode || 'follow');
   protected orientation = computed(() => this.configs().orientation || 'horizontal');
   protected preserveContent = computed(() => this.configs().preserveContent || false);
 
   protected resolvedTabs = computed(() => {
+    const tablist = this.customTablist();
+    if (tablist) {
+      const items = tablist.getTabItems();
+      if (items.length) {
+        return items;
+      }
+    }
     const tabsList = this.tabs();
     if (tabsList?.length) {
       return tabsList;
@@ -91,5 +107,10 @@ export class CustomTab {
       [this.configs().activeTabClass || '']: this.selectedTab() === tab.value,
       [this.configs().disabledTabClass || '']: !!tab.disabled
     };
+  }
+
+  protected panelFor(value: string): CustomTabPanel | undefined {
+    const panels = this.tabPanels();
+    return panels ? panels.panelFor(value) : undefined;
   }
 }

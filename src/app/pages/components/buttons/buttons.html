@@ -1,1 +1,69 @@
-<p>buttons works!</p>
+<content-wrapper>
+  <hero-title>
+    <ng-template #icon>
+      <sr-buttons-icon-full class="aspect--standard" />
+    </ng-template>
+    <h1 class="fs--h3 text-primary--500 dark:text-surface--100">Button Component</h1>
+    <p class="content-size--7">
+      Create interactive and visually appealing buttons with our customizable Button component.
+      <br />
+      Enhance user engagement with a variety of
+      <strong>styles</strong>
+      ,
+      <strong>sizes</strong>
+      , and
+      <strong>states</strong>
+      to suit any application need.
+    </p>
+  </hero-title>
+  <grid-content padding="xl">
+    <div>
+      <h6 class="m--0 fw--bold">Basic</h6>
+      <p>
+        Text to display on a button is defined with the
+        <strong>label</strong>
+        property.
+      </p>
+    </div>
+    <divider />
+    <div
+      class="flex p--4xl gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <!-- with pure component -->
+      <uifx-button
+        label="I am a component"
+        iconStart="fa-solid fa-star"
+        iconEnd="fa-solid fa-angle-down"
+      />
+      <uifx-button
+        label="Save Changes"
+        severity="primary"
+        variant="solid"
+        iconStart="fa-solid fa-floppy-disk"
+        [loading]="isSaving()"
+        (onClick)="handleSave()"
+      />
+
+      <button uifxButton severity="danger" [disabled]="!isValid()">
+        <ng-template uifxStartIcon>
+          <i class="fa-solid fa-trash-can"></i>
+        </ng-template>
+        <ng-template uifxLabel>Delete Record</ng-template>
+      </button>
+
+      <button uifxButton variant="outlined">
+        <i uifxStartIcon class="fa-solid fa-user"></i>
+        <span uifxLabel>View Profile</span>
+        <i uifxEndIcon class="fa-solid fa-chevron-right"></i>
+      </button>
+      <!-- <uifx-button>Click Me</uifx-button>
+      <button uifxButton>
+        Click Me
+        <ng-template #endIcon><i class="fa-solid fa-home"></i></ng-template>
+        <ng-template #startIcon><i class="fa-solid fa-home"></i></ng-template>
+      </button>
+      <a href="#" type="link" class="uifxButton">Click Me</a>
+      <uifx-button icon="fa-solid fa-home" iconOnly /> -->
+    </div>
+  </grid-content>
+</content-wrapper>

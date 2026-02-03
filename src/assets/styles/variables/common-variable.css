@@ -42,16 +42,22 @@
     --sr-content-card-bg: light-dark(var(--sr-surface--50), var(--sr-surface--700));
     --sr-pattern-foreground: color-mix(in oklab, var(--sr-border-color), transparent);
     --sr-pattern-width: auto;
+    --sr-pattern-size: 0.5rem;
 
     --sr-content-size--1: 18ch;
     --sr-content-size--2: 30ch;
     --sr-content-size--3: 45ch;
     --sr-content-size--4: 55ch;
     --sr-content-size--5: 70ch;
+    --sr-content-size--6: 80ch;
+    --sr-content-size--7: 90ch;
+    --sr-content-size--8: 100ch;
+    --sr-content-size--9: 110ch;
+    --sr-content-size--10: 120ch;
+
     --sr-header-size--1: 20ch;
     --sr-header-size--2: 25ch;
     --sr-header-size--3: 35ch;
-    --sr-pattern-size: 0.6rem;
 
     --sr-ease--1: cubic-bezier(0.25, 0, 0.5, 1);
     --sr-ease--2: cubic-bezier(0.25, 0, 0.4, 1);

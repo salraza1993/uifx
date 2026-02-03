@@ -17,25 +17,25 @@
   }
 
   &.divider--horizontal {
-    margin-block: var(--divider-h-margin--y);
-    margin-inline: var(--divider-h-margin--x);
-    padding-block: var(--divider-h-padding--y);
-    padding-inline: var(--divider-h-padding--x);
+    margin-block: var(--divider-h-mar--y);
+    margin-inline: var(--divider-h-mar--x);
+    padding-block: var(--divider-h-pad--y);
+    padding-inline: var(--divider-h-pad--x);
 
     &:before {
-      margin-inline-start: calc(-0rem - var(--divider-h-margin--x));
+      margin-inline-start: calc(-0rem - var(--divider-h-mar--x));
     }
     &:after {
-      margin-inline-end: calc(-0rem - var(--divider-h-margin--x));
+      margin-inline-end: calc(-0rem - var(--divider-h-mar--x));
     }
   }
 
   &.divider--vertical {
     flex-direction: column;
-    margin-block: var(--divider-v-margin--y);
-    margin-inline: var(--divider-v-margin--x);
-    padding-block: var(--divider-v-padding--y);
-    padding-inline: var(--divider-v-padding--x);
+    margin-block: var(--divider-v-mar--y);
+    margin-inline: var(--divider-v-mar--x);
+    padding-block: var(--divider-v-pad--y);
+    padding-inline: var(--divider-v-pad--x);
 
     &:before, &:after {
       width: var(--line-size);
@@ -44,10 +44,10 @@
       border-inline-start: var(--divider-border-width) var(--divider-border-type) var(--divider-border-color);
     }
     &:before {
-      margin-block-start: calc(-0rem - var(--divider-v-margin--y));
+      margin-block-start: calc(-0rem - var(--divider-v-mar--y));
     }
     &:after {
-      margin-block-end: calc(-0rem - var(--divider-v-margin--y));
+      margin-block-end: calc(-0rem - var(--divider-v-mar--y));
     }
   }
 
@@ -57,7 +57,7 @@
     justify-content: start;
     &:before {
       flex-grow: 0;
-      flex-basis: var(--divider-h-content-padding--x);
+      flex-basis: var(--divider-h-content-pad--x);
     }
   }
   &.divider-content-align--center {
@@ -67,7 +67,7 @@
     justify-content: end;
     &:after {
       flex-grow: 0;
-      flex-basis: var(--divider-h-content-padding--x);
+      flex-basis: var(--divider-h-content-pad--x);
     }
   }
 
@@ -84,12 +84,12 @@
     }
 
     &.divider-content-orientation-horizontal {
-      padding-inline: var(--divider-h-content-padding--x);
-      padding-block: var(--divider-h-content-padding--y);
+      padding-inline: var(--divider-h-content-pad--x);
+      padding-block: var(--divider-h-content-pad--y);
     }
     &.divider-content-orientation-vertical {
-      padding-inline: var(--divider-v-content-padding--x);
-      padding-block: var(--divider-v-content-padding--y);
+      padding-inline: var(--divider-v-content-pad--x);
+      padding-block: var(--divider-v-content-pad--y);
     }
   }
 }

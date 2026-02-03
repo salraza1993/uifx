@@ -4,12 +4,7 @@ import { Component } from '@angular/core';
   selector: 'sr-icon-divider-full, icon-divider-full',
   imports: [],
   template: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="171.565"
-      height="88.136"
-      viewBox="0 0 171.565 88.136"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.565 88.136">
       <g id="icon-divider" transform="translate(0 0)">
         <line
           id="Line_11"
@@ -45,6 +40,8 @@ import { Component } from '@angular/core';
       </g>
     </svg>
   `,
-  styleUrl: './icon-divider-full.css'
+  host: {
+    class: 'icon-divider-full-host wh--full img--fit'
+  }
 })
 export class IconDividerFull {}

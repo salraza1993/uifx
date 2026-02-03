@@ -1,0 +1,48 @@
+<button
+  uifxButton
+  [type]="type()"
+  [severity]="severity()"
+  [variant]="variant()"
+  [size]="size()"
+  [disabled]="disabled()"
+  [loading]="loading()"
+  (click)="onClick.emit($event)"
+>
+  @if (loading() || tplStart() || _startIcon() || iconStart()) {
+    <span uifxStartIcon [class.uifx-spin]="loading()">
+      @if (loading()) {
+        <i class="fa-solid fa-spinner"></i>
+      } @else if (tplStart()) {
+        <ng-container *ngTemplateOutlet="tplStart()!"></ng-container>
+      } @else if (_startIcon()) {
+        <ng-container *ngTemplateOutlet="_startIcon()!"></ng-container>
+      } @else {
+        <i [class]="iconStart()!"></i>
+      }
+    </span>
+  }
+
+  @if (!iconOnly()) {
+    <span uifxLabel>
+      @if (tplLabel()) {
+        <ng-container *ngTemplateOutlet="tplLabel()!"></ng-container>
+      } @else if (label()) {
+        {{ label() }}
+      } @else {
+        <ng-content></ng-content>
+      }
+    </span>
+  }
+
+  @if (!loading() && (tplEnd() || _endIcon() || iconEnd())) {
+    <span uifxEndIcon>
+      @if (tplEnd()) {
+        <ng-container *ngTemplateOutlet="tplEnd()!"></ng-container>
+      } @else if (_endIcon()) {
+        <ng-container *ngTemplateOutlet="_endIcon()!"></ng-container>
+      } @else {
+        <i [class]="iconEnd()!"></i>
+      }
+    </span>
+  }
+</button>

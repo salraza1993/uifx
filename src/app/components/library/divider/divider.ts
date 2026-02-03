@@ -1,4 +1,12 @@
-import { Component, computed, ElementRef, input, signal, viewChild } from '@angular/core';
+import {
+  booleanAttribute,
+  Component,
+  computed,
+  ElementRef,
+  input,
+  signal,
+  viewChild
+} from '@angular/core';
 
 type Orientation = 'horizontal' | 'vertical';
 type Alignment = 'start' | 'center' | 'end' | 'left' | 'right' | 'top' | 'bottom';
@@ -50,22 +58,22 @@ interface DividerSettings {
     '[style.--divider-border-type]': '(borderType() || setConfigs()?.borderType) ?? null',
     '[style.--divider-border-color]': '(borderColor() || setConfigs()?.borderColor) ?? null',
 
-    '[style.--divider-v-margin--x.rem]': '(vMargin()?.x || setConfigs()?.v_margin_x) ?? null',
-    '[style.--divider-v-margin--y.rem]': '(vMargin()?.y || setConfigs()?.v_margin_y) ?? null',
-    '[style.--divider-v-padding--x.rem]': '(vPadding()?.x || setConfigs()?.v_padding_x) ?? null',
-    '[style.--divider-v-padding--y.rem]': '(vPadding()?.y || setConfigs()?.v_padding_y) ?? null',
-    '[style.--divider-v-content-padding--x.rem]':
+    '[style.--divider-v-mar--x.rem]': '(vMargin()?.x || setConfigs()?.v_margin_x) ?? null',
+    '[style.--divider-v-mar--y.rem]': '(vMargin()?.y || setConfigs()?.v_margin_y) ?? null',
+    '[style.--divider-v-pad--x.rem]': '(vPadding()?.x || setConfigs()?.v_padding_x) ?? null',
+    '[style.--divider-v-pad--y.rem]': '(vPadding()?.y || setConfigs()?.v_padding_y) ?? null',
+    '[style.--divider-v-content-pad--x.rem]':
       '(contentVPadding()?.x || setConfigs()?.content_v_padding_x) ?? null',
-    '[style.--divider-v-content-padding--y.rem]':
+    '[style.--divider-v-content-pad--y.rem]':
       '(contentVPadding()?.y || setConfigs()?.content_v_padding_y) ?? null',
 
-    '[style.--divider-h-margin--x.rem]': '(hMargin()?.x || setConfigs()?.h_margin_x) ?? null',
-    '[style.--divider-h-margin--y.rem]': '(hMargin()?.y || setConfigs()?.h_margin_y) ?? null',
-    '[style.--divider-h-padding--x.rem]': '(hPadding()?.x || setConfigs()?.h_padding_x) ?? null',
-    '[style.--divider-h-padding--y.rem]': '(hPadding()?.y || setConfigs()?.h_padding_y) ?? null',
-    '[style.--divider-h-content-padding--x.rem]':
+    '[style.--divider-h-mar--x.rem]': '(hMargin()?.x || setConfigs()?.h_margin_x) ?? null',
+    '[style.--divider-h-mar--y.rem]': '(hMargin()?.y || setConfigs()?.h_margin_y) ?? null',
+    '[style.--divider-h-pad--x.rem]': '(hPadding()?.x || setConfigs()?.h_padding_x) ?? null',
+    '[style.--divider-h-pad--y.rem]': '(hPadding()?.y || setConfigs()?.h_padding_y) ?? null',
+    '[style.--divider-h-content-pad--x.rem]':
       '(contentHPadding()?.x || setConfigs()?.content_h_padding_x) ?? null',
-    '[style.--divider-h-content-padding--y.rem]':
+    '[style.--divider-h-content-pad--y.rem]':
       '(contentHPadding()?.y || setConfigs()?.content_h_padding_y) ?? null'
   }
 })
@@ -78,7 +86,7 @@ export class Divider {
   borderWidth = input<number | null>(null);
   borderColor = input<string | null>(null);
   contentAlign = input<Alignment>('start');
-  noLine = input<boolean>(false);
+  noLine = input(false, { transform: booleanAttribute });
   hMargin = input<MarginPaddingAxis | null>(null);
   hPadding = input<MarginPaddingAxis | null>(null);
   contentHPadding = input<MarginPaddingAxis | null>(null);
@@ -136,19 +144,19 @@ export class Divider {
       '--divider-border-type': (this.borderType() || this.setConfigs()?.borderType) ?? null,
       '--divider-border-color': (this.borderColor() || this.setConfigs()?.borderColor) ?? null,
 
-      '--divider-v-margin--x': `${(this.vMargin()?.x || this.setConfigs()?.v_margin_x) ?? null}rem`,
-      '--divider-v-margin--y': `${(this.vMargin()?.y || this.setConfigs()?.v_margin_y) ?? null}rem`,
-      '--divider-v-padding--x': `${(this.vPadding()?.x || this.setConfigs()?.v_padding_x) ?? null}rem`,
-      '--divider-v-padding--y': `${(this.vPadding()?.y || this.setConfigs()?.v_padding_y) ?? null}rem`,
-      '--divider-v-content-padding--x': `${(this.contentVPadding()?.x || this.setConfigs()?.content_v_padding_x) ?? null}rem`,
-      '--divider-v-content-padding--y': `${(this.contentVPadding()?.y || this.setConfigs()?.content_v_padding_y) ?? null}rem`,
+      '--divider-v-mar--x': `${(this.vMargin()?.x || this.setConfigs()?.v_margin_x) ?? null}rem`,
+      '--divider-v-mar--y': `${(this.vMargin()?.y || this.setConfigs()?.v_margin_y) ?? null}rem`,
+      '--divider-v-pad--x': `${(this.vPadding()?.x || this.setConfigs()?.v_padding_x) ?? null}rem`,
+      '--divider-v-pad--y': `${(this.vPadding()?.y || this.setConfigs()?.v_padding_y) ?? null}rem`,
+      '--divider-v-content-pad--x': `${(this.contentVPadding()?.x || this.setConfigs()?.content_v_padding_x) ?? null}rem`,
+      '--divider-v-content-pad--y': `${(this.contentVPadding()?.y || this.setConfigs()?.content_v_padding_y) ?? null}rem`,
 
-      '--divider-h-margin--x': `${(this.hMargin()?.x || this.setConfigs()?.h_margin_x) ?? null}rem`,
-      '--divider-h-margin--y': `${(this.hMargin()?.y || this.setConfigs()?.h_margin_y) ?? null}rem`,
-      '--divider-h-padding--x': `${(this.hPadding()?.x || this.setConfigs()?.h_padding_x) ?? null}rem`,
-      '--divider-h-padding--y': `${(this.hPadding()?.y || this.setConfigs()?.h_padding_y) ?? null}rem`,
-      '--divider-h-content-padding--x': `${(this.contentHPadding()?.x || this.setConfigs()?.content_h_padding_x) ?? null}rem`,
-      '--divider-h-content-padding--y': `${(this.contentHPadding()?.y || this.setConfigs()?.content_h_padding_y) ?? null}rem`,
+      '--divider-h-mar--x': `${(this.hMargin()?.x || this.setConfigs()?.h_margin_x) ?? null}rem`,
+      '--divider-h-mar--y': `${(this.hMargin()?.y || this.setConfigs()?.h_margin_y) ?? null}rem`,
+      '--divider-h-pad--x': `${(this.hPadding()?.x || this.setConfigs()?.h_padding_x) ?? null}rem`,
+      '--divider-h-pad--y': `${(this.hPadding()?.y || this.setConfigs()?.h_padding_y) ?? null}rem`,
+      '--divider-h-content-pad--x': `${(this.contentHPadding()?.x || this.setConfigs()?.content_h_padding_x) ?? null}rem`,
+      '--divider-h-content-pad--y': `${(this.contentHPadding()?.y || this.setConfigs()?.content_h_padding_y) ?? null}rem`,
       '--divider-content-bg': 'transparent',
       '--divider-content-color': 'inherit'
     };
