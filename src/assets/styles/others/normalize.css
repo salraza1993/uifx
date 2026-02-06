@@ -141,10 +141,17 @@
     writing-mode: lr;
   }
   :where(:not(pre) > code) {
-    background: var(--surface-2);
-    border-radius: var(--radius-2);
-    padding: var(--size-1) var(--size-2);
+    background-color: light-dark(var(--sr-surface--200), var(--sr-surface--950));
+    box-shadow: 0 0 0  1px light-dark(var(--sr-surface--300), var(--sr-surface--700));
+    border-radius: calc(var(--sr-radius--xs) / 1.5);
+    padding-block: calc(var(--sr-padding--xs) / 1.5);
+    padding-inline: var(--sr-padding--xs);
+    margin-inline: calc(var(--sr-spacing--xs) / 2);
     writing-mode: lr;
+    font-size: var(--sr-fs--sm);
+    line-height: normal;
+    font-weight: var(--sr-fw--600);
+    font-family: monospace;
   }
   :where(kbd, var) {
     border-color: var(--surface-4);

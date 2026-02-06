@@ -1,14 +1,16 @@
 <button
   uifxButton
   [type]="type()"
-  [severity]="severity()"
-  [variant]="variant()"
-  [size]="size()"
+  [severity]="effectiveSeverity()"
+  [variant]="effectiveVariant()"
+  [size]="effectiveSize()"
   [disabled]="disabled()"
   [loading]="loading()"
   [hasStartIcon]="hasStartIcon()"
   [hasEndIcon]="hasEndIcon()"
   [iconOnly]="iconOnly()"
+  [rounded]="effectiveRounded()"
+  [badge]="badge()"
   (click)="onClick.emit($event)"
 >
   @if (loading() || tplStart() || hasDirectiveStart() || _startIcon() || iconStart() || icon()) {
@@ -18,7 +20,7 @@
       } @else if (tplStart()) {
         <ng-container *ngTemplateOutlet="tplStart()!"></ng-container>
       } @else if (hasDirectiveStart()) {
-        <ng-content select="[uifxStartIcon]"></ng-content>
+        <ng-content select="[uifxButtonIconStart]"></ng-content>
       } @else if (_startIcon()) {
         <ng-container *ngTemplateOutlet="_startIcon()!"></ng-container>
       } @else {
@@ -28,30 +30,47 @@
   }
 
   @if (!iconOnly()) {
-    <span class="uifx-btn--label">
-      @if (tplLabel()) {
-        <ng-container *ngTemplateOutlet="tplLabel()!"></ng-container>
-      } @else if (hasDirectiveLabel()) {
-        <ng-content select="[uifxLabel]"></ng-content>
-      } @else if (label()) {
+    @if (tplLabel()) {
+      <ng-container *ngTemplateOutlet="tplLabel()!"></ng-container>
+    } @else if (_label()) {
+      <ng-container *ngTemplateOutlet="_label()!"></ng-container>
+    } @else if (hasDirectiveLabel()) {
+      <ng-content select="[uifxButtonLabel]"></ng-content>
+    } @else if (label()) {
+      <span class="uifx-btn--label">
         {{ label() }}
-      } @else {
+      </span>
+    } @else {
+      <span class="uifx-btn--label">
         <ng-content></ng-content>
-      }
-    </span>
+      </span>
+    }
+  }
+  @if (badge() || tplBadge() || hasDirectiveBadge() || _badge()) {
+    @if (tplBadge()) {
+      <ng-container *ngTemplateOutlet="tplBadge()!"></ng-container>
+    } @else if (_badge()) {
+      <ng-container *ngTemplateOutlet="_badge()!"></ng-container>
+    } @else if (hasDirectiveBadge()) {
+      <ng-content select="[uifxButtonBadge]"></ng-content>
+    } @else {
+      <span class="uifx-btn--badge">
+        {{ badge() }}
+      </span>
+    }
   }
 
   @if (!loading() && (tplEnd() || hasDirectiveEnd() || _endIcon() || iconEnd())) {
-    <span class="uifx-btn-icon--end">
-      @if (tplEnd()) {
-        <ng-container *ngTemplateOutlet="tplEnd()!"></ng-container>
-      } @else if (hasDirectiveEnd()) {
-        <ng-content select="[uifxEndIcon]"></ng-content>
-      } @else if (_endIcon()) {
-        <ng-container *ngTemplateOutlet="_endIcon()!"></ng-container>
-      } @else {
+    @if (tplEnd()) {
+      <ng-container *ngTemplateOutlet="tplEnd()!"></ng-container>
+    } @else if (hasDirectiveEnd()) {
+      <ng-content select="[uifxButtonIconEnd]"></ng-content>
+    } @else if (_endIcon()) {
+      <ng-container *ngTemplateOutlet="_endIcon()!"></ng-container>
+    } @else {
+      <span class="uifx-btn-icon--end">
         <i [class]="iconEnd()!"></i>
-      }
-    </span>
+      </span>
+    }
   }
 </button>

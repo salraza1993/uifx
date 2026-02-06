@@ -1,7 +1,8 @@
 import {
-  UifxEndIconDirective,
-  UifxLabelDirective,
-  UifxStartIconDirective
+  uifxButtonBadgeDirective,
+  uifxButtonIconEndDirective,
+  uifxButtonIconStartDirective,
+  uifxButtonLabelDirective
 } from './directives/helper-directives';
 import { UifxButtonDirective } from './directives/uifx-button-directive';
 import { UifxButton } from './uifx-button';
@@ -15,16 +16,18 @@ export * from './uifx-button';
 export const UIFX_BUTTON = [
   UifxButton,
   UifxButtonDirective,
-  UifxStartIconDirective,
-  UifxEndIconDirective,
-  UifxLabelDirective
+  uifxButtonIconStartDirective,
+  uifxButtonIconEndDirective,
+  uifxButtonLabelDirective,
+  uifxButtonBadgeDirective
 ] as const;
 
 // Still export individual items for advanced use cases
 export {
   UifxButton,
+  uifxButtonBadgeDirective,
   UifxButtonDirective,
-  UifxEndIconDirective,
-  UifxLabelDirective,
-  UifxStartIconDirective
+  uifxButtonIconEndDirective,
+  uifxButtonIconStartDirective,
+  uifxButtonLabelDirective
 };

@@ -38,6 +38,7 @@
       // =======[ libs aliases ]======= //
       "@uifx/*": ["./src/libs/uifx/*"],
       "@uifx/button": ["./src/libs/uifx/button"],
+      "@uifx/buttonGroup": ["./src/libs/uifx/button-group"],
       "@uifx/divider": ["./src/libs/uifx/divider"]
     }
   },

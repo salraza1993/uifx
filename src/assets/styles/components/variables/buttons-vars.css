@@ -1,7 +1,5 @@
 :root {
   /* button variables */
-  --btn-bg: light-dark(var(--sr-surface--50), var(--sr-surface--600));
-  --btn-color: inherit;
   --btn-gap: var(--sr-gap--md);
   --btn-pad-x-start: 0.85rem;
   --btn-pad-x-end: 0.85rem;
@@ -10,13 +8,209 @@
   --btn-radius: var(--sr-radius--xs);
   --btn-border-width: var(--sr-border-width);
   --btn-border-type: var(--sr-border-type);
-  --btn-border-color: var(--sr-border-color);
   --btn-fw: 500;
   --btn-fs: inherit;
   --btn-lh: 1.25;
-  --btn-transition: background-color var(--sr-transition-duration, 0.2s) ease, color var(--sr-transition-duration, 0.2s) ease, border-color var(--sr-transition-duration, 0.2s) ease;
+  --btn-transition: all var(--sr-transition-duration, 0.35s) ease-in-out;
 
-  --btn-bg-hover: light-dark(var(--sr-surface--200), var(--sr-surface--500));
-  --btn-color-hover: inherit;
-  --btn-border-color-hover: light-dark(var(--sr-surface--300), var(--sr-surface--600));
+  --btn-bg: light-dark(var(--sr-surface--600), var(--sr-surface--100));
+  --btn-color: light-dark(var(--sr-surface--50), var(--sr-surface--900));
+  --btn-border: var(--btn-bg);
+  --btn-bg-hover: light-dark(var(--sr-surface--950), var(--sr-surface--950));
+  --btn-color-hover: light-dark(var(--sr-surface--50), var(--sr-surface--100));
+  --btn-border-hover: var(--btn-bg-hover);
+
+  --btn-disabled-bg: light-dark(var(--sr-surface--200), var(--sr-surface--700));
+  --btn-disabled-color: light-dark(var(--sr-surface--400), var(--sr-surface--500));
+  --btn-disabled-border: light-dark(var(--sr-surface--300), var(--sr-surface--600));
+
+  --btn-link-bg: transparent;
+  --btn-link-color: light-dark(var(--sr-surface--800), var(--sr-surface--100));
+  --btn-link-border: transparent;
+  --btn-link-bg-hover: transparent;
+  --btn-link-color-hover: light-dark(var(--sr-surface--800), var(--sr-surface--100));
+  --btn-link-border-hover: transparent;
+
+  /* ======[ auto button ]====== */
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-auto-color: light-dark(var(--sr-surface--700), var(--sr-surface--100));
+  --btn-outlined-auto-border: light-dark(var(--sr-surface--500), var(--sr-surface--400));
+  --btn-outlined-auto-bg-hover: light-dark(var(--sr-surface--200), var(--sr-surface--200));
+  --btn-outlined-auto-color-hover: light-dark(var(--sr-surface--950), var(--sr-surface--800));
+  --btn-outlined-auto-border-hover: light-dark(var(--sr-surface--300), var(--sr-surface--300));
+  /* ======[ type: text ]====== */
+  --btn-text-color: light-dark(var(--sr-surface--700), var(--sr-surface--100));
+  --btn-text-bg-hover: light-dark(var(--sr-surface--200), var(--sr-surface--950));
+  --btn-text-color-hover: light-dark(var(--sr-surface--950), var(--sr-surface--100));
+
+  /* ======[ primary button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-primary-bg: light-dark(var(--sr-brand--600), var(--sr-brand--500));
+  --btn-primary-color: light-dark(var(--sr-brand--50), var(--sr-brand--50));
+  --btn-primary-border: light-dark(var(--sr-brand--600), var(--sr-brand--500));
+  --btn-primary-bg-hover: light-dark(var(--sr-brand--800), var(--sr-brand--500));
+  --btn-primary-color-hover: light-dark(var(--sr-brand--50), var(--sr-brand--50));
+  --btn-primary-border-hover: light-dark(var(--sr-brand--700), var(--sr-brand--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-primary-color: light-dark(var(--sr-brand--600), var(--sr-brand--400));
+  --btn-outlined-primary-border: light-dark(var(--sr-brand--600), var(--sr-brand--500));
+  --btn-outlined-primary-bg-hover: light-dark(var(--sr-brand--100), var(--sr-brand--800));
+  --btn-outlined-primary-color-hover: light-dark(var(--sr-brand--600), var(--sr-brand--50));
+  --btn-outlined-primary-border-hover: light-dark(var(--sr-brand--400), var(--sr-brand--600));
+  /* ======[ type: text ]====== */
+  --btn-text-primary-color: light-dark(var(--sr-brand--600), var(--sr-brand--400));
+  --btn-text-primary-bg-hover: light-dark(var(--sr-brand--100), var(--sr-brand--800));
+  --btn-text-primary-color-hover: light-dark(var(--sr-brand--600), var(--sr-brand--400));
+
+  /* ======[ secondary button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-secondary-bg: light-dark(var(--sr-brand-secondary--500), var(--sr-brand-secondary--500));
+  --btn-secondary-color: light-dark(var(--sr-brand-secondary--50), var(--sr-brand-secondary--50));
+  --btn-secondary-border: light-dark(var(--sr-brand-secondary--500), var(--sr-brand-secondary--500));
+  --btn-secondary-bg-hover: light-dark(var(--sr-brand-secondary--700), var(--sr-brand-secondary--500));
+  --btn-secondary-color-hover: light-dark(var(--sr-brand-secondary--50), var(--sr-brand-secondary--50));
+  --btn-secondary-border-hover: light-dark(var(--sr-brand-secondary--700), var(--sr-brand-secondary--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-secondary-color: light-dark(var(--sr-brand-secondary--600), var(--sr-brand-secondary--400));
+  --btn-outlined-secondary-border: light-dark(var(--sr-brand-secondary--600), var(--sr-brand-secondary--500));
+  --btn-outlined-secondary-bg-hover: light-dark(var(--sr-brand-secondary--100), var(--sr-brand-secondary--800));
+  --btn-outlined-secondary-color-hover: light-dark(var(--sr-brand-secondary--600), var(--sr-brand-secondary--50));
+  --btn-outlined-secondary-border-hover: light-dark(var(--sr-brand-secondary--400), var(--sr-brand-secondary--600));
+  /* ======[ type: text ]====== */
+  --btn-text-secondary-color: light-dark(var(--sr-brand-secondary--600), var(--sr-brand-secondary--400));
+  --btn-text-secondary-bg-hover: light-dark(var(--sr-brand-secondary--100), var(--sr-brand-secondary--800));
+  --btn-text-secondary-color-hover: light-dark(var(--sr-brand-secondary--600), var(--sr-brand-secondary--400));
+
+  /* ======[ danger button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-danger-bg: light-dark(var(--sr-red--500), var(--sr-red--500));
+  --btn-danger-color: light-dark(var(--sr-red--50), var(--sr-red--50));
+  --btn-danger-border: light-dark(var(--sr-red--500), var(--sr-red--500));
+  --btn-danger-bg-hover: light-dark(var(--sr-red--700), var(--sr-red--500));
+  --btn-danger-color-hover: light-dark(var(--sr-surface--0), var(--sr-surface--0));
+  --btn-danger-border-hover: light-dark(var(--sr-red--700), var(--sr-red--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-danger-color: light-dark(var(--sr-red--600), var(--sr-red--400));
+  --btn-outlined-danger-border: light-dark(var(--sr-red--600), var(--sr-red--500));
+  --btn-outlined-danger-bg-hover: light-dark(var(--sr-red--100), var(--sr-red--800));
+  --btn-outlined-danger-color-hover: light-dark(var(--sr-red--600), var(--sr-red--50));
+  --btn-outlined-danger-border-hover: light-dark(var(--sr-red--400), var(--sr-red--600));
+  /* ======[ type: text ]====== */
+  --btn-text-danger-color: light-dark(var(--sr-red--600), var(--sr-red--400));
+  --btn-text-danger-bg-hover: light-dark(var(--sr-red--100), var(--sr-red--800));
+  --btn-text-danger-color-hover: light-dark(var(--sr-red--600), var(--sr-red--400));
+
+  /* ======[ Success button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-success-bg: light-dark(var(--sr-green--500), var(--sr-green--500));
+  --btn-success-color: light-dark(var(--sr-green--50), var(--sr-green--50));
+  --btn-success-border: light-dark(var(--sr-green--500), var(--sr-green--500));
+  --btn-success-bg-hover: light-dark(var(--sr-green--700), var(--sr-green--500));
+  --btn-success-color-hover: light-dark(var(--sr-surface--0), var(--sr-surface--0));
+  --btn-success-border-hover: light-dark(var(--sr-green--700), var(--sr-green--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-success-color: light-dark(var(--sr-green--600), var(--sr-green--400));
+  --btn-outlined-success-border: light-dark(var(--sr-green--600), var(--sr-green--500));
+  --btn-outlined-success-bg-hover: light-dark(var(--sr-green--100), var(--sr-green--800));
+  --btn-outlined-success-color-hover: light-dark(var(--sr-green--600), var(--sr-green--50));
+  --btn-outlined-success-border-hover: light-dark(var(--sr-green--400), var(--sr-green--600));
+  /* ======[ type: text ]====== */
+  --btn-text-success-color: light-dark(var(--sr-green--600), var(--sr-green--400));
+  --btn-text-success-bg-hover: light-dark(var(--sr-green--100), var(--sr-green--800));
+  --btn-text-success-color-hover: light-dark(var(--sr-green--600), var(--sr-green--400));
+
+  /* ======[ Warning button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-warning-bg: light-dark(var(--sr-yellow--500), var(--sr-yellow--500));
+  --btn-warning-color: light-dark(var(--sr-yellow--50), var(--sr-yellow--50));
+  --btn-warning-border: light-dark(var(--sr-yellow--500), var(--sr-yellow--500));
+  --btn-warning-bg-hover: light-dark(var(--sr-yellow--700), var(--sr-yellow--500));
+  --btn-warning-color-hover: light-dark(var(--sr-surface--0), var(--sr-surface--0));
+  --btn-warning-border-hover: light-dark(var(--sr-yellow--700), var(--sr-yellow--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-warning-color: light-dark(var(--sr-yellow--600), var(--sr-yellow--400));
+  --btn-outlined-warning-border: light-dark(var(--sr-yellow--600), var(--sr-yellow--500));
+  --btn-outlined-warning-bg-hover: light-dark(var(--sr-yellow--100), var(--sr-yellow--800));
+  --btn-outlined-warning-color-hover: light-dark(var(--sr-yellow--600), var(--sr-yellow--50));
+  --btn-outlined-warning-border-hover: light-dark(var(--sr-yellow--400), var(--sr-yellow--600));
+  /* ======[ type: text ]====== */
+  --btn-text-warning-color: light-dark(var(--sr-yellow--600), var(--sr-yellow--400));
+  --btn-text-warning-bg-hover: light-dark(var(--sr-yellow--100), var(--sr-yellow--800));
+  --btn-text-warning-color-hover: light-dark(var(--sr-yellow--600), var(--sr-yellow--400));
+
+  /* ======[ Info button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-info-bg: light-dark(var(--sr-blue--500), var(--sr-blue--500));
+  --btn-info-color: light-dark(var(--sr-blue--50), var(--sr-blue--50));
+  --btn-info-border: light-dark(var(--sr-blue--500), var(--sr-blue--500));
+  --btn-info-bg-hover: light-dark(var(--sr-blue--700), var(--sr-blue--500));
+  --btn-info-color-hover: light-dark(var(--sr-blue--0), var(--sr-blue--0));
+  --btn-info-border-hover: light-dark(var(--sr-blue--700), var(--sr-blue--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-info-color: light-dark(var(--sr-blue--600), var(--sr-blue--400));
+  --btn-outlined-info-border: light-dark(var(--sr-blue--600), var(--sr-blue--500));
+  --btn-outlined-info-bg-hover: light-dark(var(--sr-blue--100), var(--sr-blue--800));
+  --btn-outlined-info-color-hover: light-dark(var(--sr-blue--600), var(--sr-blue--50));
+  --btn-outlined-info-border-hover: light-dark(var(--sr-blue--400), var(--sr-blue--600));
+  /* ======[ type: text ]====== */
+  --btn-text-info-color: light-dark(var(--sr-blue--600), var(--sr-blue--400));
+  --btn-text-info-bg-hover: light-dark(var(--sr-blue--100), var(--sr-blue--800));
+  --btn-text-info-color-hover: light-dark(var(--sr-blue--600), var(--sr-blue--400));
+
+  /* ======[ Light button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-light-bg: light-dark(var(--sr-surface--100), var(--sr-surface--300));
+  --btn-light-color: light-dark(var(--sr-surface--800), var(--sr-surface--800));
+  --btn-light-border: light-dark(var(--sr-surface--100), var(--sr-surface--300));
+  --btn-light-bg-hover: light-dark(var(--sr-surface--700), var(--sr-surface--500));
+  --btn-light-color-hover: light-dark(var(--sr-surface--0), var(--sr-surface--0));
+  --btn-light-border-hover: light-dark(var(--sr-surface--700), var(--sr-surface--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-light-color: light-dark(var(--sr-surface--50), var(--sr-surface--100));
+  --btn-outlined-light-border: light-dark(var(--sr-surface--100), var(--sr-surface--200));
+  --btn-outlined-light-bg-hover: light-dark(var(--sr-surface--100), var(--sr-surface--500));
+  --btn-outlined-light-color-hover: light-dark(var(--sr-surface--700), var(--sr-surface--50));
+  --btn-outlined-light-border-hover: light-dark(var(--sr-surface--200), var(--sr-surface--300));
+  /* ======[ type: text ]====== */
+  --btn-text-light-color: light-dark(var(--sr-surface--100), var(--sr-surface--100));
+  --btn-text-light-bg-hover: light-dark(var(--sr-surface--100), var(--sr-surface--600));
+  --btn-text-light-color-hover: light-dark(var(--sr-surface--800), var(--sr-surface--50));
+
+  /* ======[ Gray button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-gray-bg: light-dark(var(--sr-surface--300), var(--sr-surface--400));
+  --btn-gray-color: light-dark(var(--sr-surface--800), var(--sr-surface--800));
+  --btn-gray-border: light-dark(var(--sr-surface--300), var(--sr-surface--400));
+  --btn-gray-bg-hover: light-dark(var(--sr-surface--500), var(--sr-surface--500));
+  --btn-gray-color-hover: light-dark(var(--sr-surface--50), var(--sr-surface--0));
+  --btn-gray-border-hover: light-dark(var(--sr-surface--500), var(--sr-surface--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-gray-color: light-dark(var(--sr-surface--600), var(--sr-surface--400));
+  --btn-outlined-gray-border: light-dark(var(--sr-surface--400), var(--sr-surface--500));
+  --btn-outlined-gray-bg-hover: light-dark(var(--sr-surface--100), var(--sr-surface--800));
+  --btn-outlined-gray-color-hover: light-dark(var(--sr-surface--600), var(--sr-surface--50));
+  --btn-outlined-gray-border-hover: light-dark(var(--sr-surface--200), var(--sr-surface--600));
+  /* ======[ type: text ]====== */
+  --btn-text-gray-color: light-dark(var(--sr-surface--500), var(--sr-surface--400));
+  --btn-text-gray-bg-hover: light-dark(var(--sr-surface--200), var(--sr-surface--700));
+  --btn-text-gray-color-hover: light-dark(var(--sr-surface--700), var(--sr-surface--400));
+
+  /* ======[ Dark button ]====== */
+  /* ======[ type: solid ]====== */
+  --btn-dark-bg: light-dark(var(--sr-surface--950), var(--sr-surface--950));
+  --btn-dark-color: light-dark(var(--sr-surface--50), var(--sr-surface--100));
+  --btn-dark-border: light-dark(var(--sr-surface--950), var(--sr-surface--950));
+  --btn-dark-bg-hover: light-dark(var(--sr-surface--600), var(--sr-surface--500));
+  --btn-dark-color-hover: light-dark(var(--sr-surface--0), var(--sr-surface--0));
+  --btn-dark-border-hover: light-dark(var(--sr-surface--600), var(--sr-surface--500));
+  /* ======[ type: outlined ]====== */
+  --btn-outlined-dark-color: light-dark(var(--sr-surface--900), var(--sr-surface--950));
+  --btn-outlined-dark-border: light-dark(var(--sr-surface--800), var(--sr-surface--950));
+  --btn-outlined-dark-bg-hover: light-dark(var(--sr-surface--300), var(--sr-surface--950));
+  --btn-outlined-dark-color-hover: light-dark(var(--sr-surface--950), var(--sr-surface--50));
+  --btn-outlined-dark-border-hover: light-dark(var(--sr-surface--400), var(--sr-surface--950));
+  /* ======[ type: text ]====== */
+  --btn-text-dark-color: light-dark(var(--sr-surface--950), var(--sr-surface--950));
+  --btn-text-dark-bg-hover: light-dark(var(--sr-surface--300), var(--sr-surface--950));
+  --btn-text-dark-color-hover: light-dark(var(--sr-surface--900), var(--sr-surface--100));
 }

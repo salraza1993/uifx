@@ -5,6 +5,7 @@ import { ButtonsIconFull } from '@app/components/icons/buttons-icon-full/buttons
 import { ContentWrapper } from '@components/content-wrapper/content-wrapper';
 import { HeroTitle } from '@components/hero-title/hero-title';
 import { UIFX_BUTTON } from '@uifx/button';
+import { UifxButtonGroup, UifxButtonGroupDirective } from '@uifx/button-group';
 import { UifxDivider } from '@uifx/divider';
 
 @Component({
@@ -16,7 +17,9 @@ import { UifxDivider } from '@uifx/divider';
     UIFX_BUTTON,
     GridContent,
     UifxDivider,
-    RouterLink
+    RouterLink,
+    UifxButtonGroup,
+    UifxButtonGroupDirective
   ],
   templateUrl: './buttons.html',
   styleUrls: ['./buttons.css']
@@ -27,10 +30,7 @@ export class Buttons {
   isValid = signal(false);
   handleSave() {
     this.isSaving.set(true);
-    alert('Save button clicked!');
-    setTimeout(() => {
-      this.isSaving.set(false);
-    }, 2000);
+    setTimeout(() => this.isSaving.set(false), 5000);
   }
 
   handleValidate() {

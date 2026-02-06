@@ -28,9 +28,13 @@
   :where(.w--\/1\/4) { width: 25%; }
   :where(.w--\/[\10]) { width: 10px; }
 
-  :where(.w--200) { width: 15rem; }
-  :where(.w--250) { width: 17rem; }
-  :where(.w--300) { width: 20rem; }
+  :where(.w--50) { width: 3.25rem; }
+  :where(.w--80) { width: 5rem; }
+  :where(.w--100) { width: 6rem; }
+  :where(.w--150) { width: 9.5rem; }
+  :where(.w--200) { width: 12rem; }
+  :where(.w--250) { width: 15.6rem; }
+  :where(.w--300) { width: 18.75rem; }
   :where(.w--400) { width: 25rem; }
   :where(.w--500) { width: 30rem; }
   :where(.w--600) { width: 35rem; }

@@ -9,6 +9,7 @@ import {
 @Directive({
   selector: '[uifxButton]',
   exportAs: 'uifxButton',
+  standalone: true,
   host: {
     '[class]': 'hostClasses()',
     '[attr.disabled]': 'disabled() || loading() ? true : null',
@@ -21,16 +22,20 @@ import {
     '[attr.data-btn-size]': 'size()',
     '[attr.data-btn-icon-start]': '(hasStartIcon() || detectedStartIcon()) ? "true" : "false"',
     '[attr.data-btn-icon-end]': '(hasEndIcon() || detectedEndIcon()) ? "true" : "false"',
-    '[attr.data-btn-icon-only]': 'iconOnly() ? "true" : "false"'
+    '[attr.data-btn-icon-only]': 'iconOnly() ? "true" : "false"',
+    '[attr.data-btn-rounded]': 'rounded() ? "true" : "false"',
+    '[attr.data-btn-badge]': 'badge() ? "true" : "false"'
   }
 })
 export class UifxButtonDirective {
   type = input<UifxButtonType>('button');
-  size = input<UifxButtonSize>('medium');
-  severity = input<UifxButtonSeverity>('primary');
+  size = input<UifxButtonSize>('standard');
+  severity = input<UifxButtonSeverity>('auto');
   variant = input<UifxButtonVariant>('solid');
   disabled = input<boolean>(false);
   loading = input<boolean>(false);
+  rounded = input<boolean>(false);
+  badge = input<number>(0);
 
   // Icon detection inputs (manual - user can still override)
   hasStartIcon = input<boolean>(false);
@@ -66,6 +71,8 @@ export class UifxButtonDirective {
     'uifx-btn-state--disabled': this.disabled() || this.loading(),
     'uifx-btn-has-icon--start': this.hasStartIcon() || this.detectedStartIcon(),
     'uifx-btn-has-icon--end': this.hasEndIcon() || this.detectedEndIcon(),
-    'uifx-btn-icon-only': this.iconOnly()
+    'uifx-btn-icon-only': this.iconOnly(),
+    'uifx-btn-rounded': this.rounded(),
+    'uifx-btn-badge': this.badge()
   }));
 }

@@ -18,7 +18,6 @@
     padding-block: var(--sr-header-padding);
     padding-inline: var(--sr-header-padding);
     padding-inline-end: calc(var(--sr-header-padding) * 1.25);
-    border-radius: var(--sr-radius--md);
     border: var(--sr-border-width) var(--sr-border-type) var(--sr-header-border);
     background-color: light-dark(oklch(from var(--sr-surface--0) l c h / 0.5), oklch(from var(--sr-surface--800) l c h / 0.75));
     backdrop-filter: brightness(500%) blur(0.5rem);

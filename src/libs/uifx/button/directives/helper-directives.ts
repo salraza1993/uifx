@@ -2,11 +2,10 @@ import { Directive, Optional } from '@angular/core';
 import { UifxButtonDirective } from './uifx-button-directive';
 
 @Directive({
-  selector: '[uifxStartIcon], [uifx-start-icon], ng-template[uifxStartIcon]',
-  standalone: true,
+  selector: '[uifxButtonIconStart], [uifx-button-icon-start], ng-template[uifxButtonIconStart]',
   host: { class: 'uifx-btn-icon--start' }
 })
-export class UifxStartIconDirective {
+export class uifxButtonIconStartDirective {
   constructor(@Optional() buttonDirective: UifxButtonDirective) {
     // Register with button directive when instantiated
     if (buttonDirective) {
@@ -16,11 +15,10 @@ export class UifxStartIconDirective {
 }
 
 @Directive({
-  selector: '[uifxEndIcon], [uifx-end-icon], ng-template[uifxEndIcon]',
-  standalone: true,
+  selector: '[uifxButtonIconEnd], [uifx-button-icon-end], ng-template[uifxButtonIconEnd]',
   host: { class: 'uifx-btn-icon--end' }
 })
-export class UifxEndIconDirective {
+export class uifxButtonIconEndDirective {
   constructor(@Optional() buttonDirective: UifxButtonDirective) {
     // Register with button directive when instantiated
     if (buttonDirective) {
@@ -30,8 +28,13 @@ export class UifxEndIconDirective {
 }
 
 @Directive({
-  selector: '[uifxLabel], [uifx-label], ng-template[uifxLabel]',
-  standalone: true,
+  selector: '[uifxButtonLabel], [uifx-button-label], ng-template[uifxButtonLabel]',
   host: { class: 'uifx-btn--label' }
 })
-export class UifxLabelDirective {}
+export class uifxButtonLabelDirective {}
+
+@Directive({
+  selector: '[uifxButtonBadge], [uifx-button-badge], ng-template[uifxButtonBadge]',
+  host: { class: 'uifx-btn--badge' }
+})
+export class uifxButtonBadgeDirective {}

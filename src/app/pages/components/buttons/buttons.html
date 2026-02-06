@@ -16,62 +16,548 @@
       to suit any application need.
     </p>
   </hero-title>
+  <!-- basic -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Basic</h5>
+    <p>
+      Text to display on a button is defined with the
+      <code>label</code>
+      property.
+    </p>
+  </div>
   <grid-content padding="xl">
-    <div>
-      <h6 class="m--0 fw--bold">Basic</h6>
-      <p>
-        Text to display on a button is defined with the
-        <strong>label</strong>
-        property.
-      </p>
-    </div>
-    <uifx-divider />
+    <!-- <uifx-divider /> -->
     <div
-      class="flex flex--wrap p--4xl gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
     >
       <!-- with pure component -->
-      <uifx-button label="I am simple" />
-      <uifx-button
-        label="Icon with Start"
-        severity="primary"
-        variant="solid"
-        iconStart="fa-solid fa-floppy-disk"
-      />
-      <uifx-button
-        label="Icon with End"
-        severity="primary"
-        variant="solid"
-        iconEnd="fa-solid fa-ellipsis-v"
-      />
-      <uifx-button
-        label="Icon with Both-sides"
-        iconStart="fa-solid fa-list"
-        iconEnd="fa-solid fa-angle-down"
-      />
-      <uifx-button iconOnly icon="fa-solid fa-star" />
+      <uifx-button label="I am simple button" />
+    </div>
+  </grid-content>
 
-      <a href="#" uifxButton type="link" target="_blank" rel="noopener noreferrer">
-        <span uifxLabel>I am simple Link</span>
+  <!-- Directive -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Directive</h5>
+    <p class="text--balanced">
+      Button can also be used as directive using
+      <code>uifxButton</code>
+      along with
+      <code>uifxButtonLabel</code>
+      helper directives.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <button uifxButton>
+        <span uifxButtonLabel>Button with Directive</span>
+      </button>
+    </div>
+  </grid-content>
+
+  <!-- Link / Router Link -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Link / Router Link</h5>
+    <p class="text--pretty">
+      A button can be rendered as a link when
+      <code>type="link"</code>
+      or
+      <code>severity="link"</code>
+      property is present, while the
+      <code>uifxButton</code>
+      directive can be applied on an anchor element to style the link as a button.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <a
+        href="https://angular.dev/"
+        severity="link"
+        uifxButton
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span uifxButtonLabel>Anchor Link</span>
       </a>
       <a href="https://angular.dev/" uifxButton target="_blank" rel="noopener noreferrer">
-        <span uifxLabel>Angular Website</span>
+        <span uifxButtonLabel>External Link</span>
+        <span uifxButtonIconEnd><i class="fa-solid fa-up-right-from-square"></i></span>
       </a>
-      <a routerLink="/components/tabs" uifxButton>
-        <span uifxLabel>Router Link</span>
+      <a routerLink="/components/buttons" uifxButton>
+        <span uifxButtonLabel>Router Link</span>
       </a>
-      <button uifxButton variant="outlined" (click)="handleValidate()">
-        <span uifxStartIcon>
-          @if (saveChange()) {
-            <i class="fa-solid fa-spinner fa-spin"></i>
-          } @else {
-            <i class="fa-solid fa-user"></i>
-          }
-        </span>
-        <span uifxLabel>View Profile</span>
-        <span uifxEndIcon>
-          <i class="fa-solid fa-chevron-right"></i>
-        </span>
+    </div>
+  </grid-content>
+
+  <!-- Button with Icon / Icon-only -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Button with Icon</h5>
+    <p class="text--pretty my-end--md">
+      Buttons can include icons using as props
+      <code>iconStart</code>
+      and
+      <code>iconEnd</code>
+      or can be rendered as icon-only buttons using the
+      <code>iconOnly</code>
+      property.
+    </p>
+    <p class="text--pretty">
+      Also, icons can be added using helper directives
+      <code>uifxButtonIconStart</code>
+      and
+      <code>uifxButtonIconEnd</code>
+      or by using ng-templates / any tag with the same names. can be added both side as well.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button [iconOnly]="true" icon="fa-solid fa-home" />
+      <uifx-button label="Button with Icon - start" iconStart="fa-solid fa-list" />
+      <uifx-button label="Button with Icon - end" iconEnd="fa-solid fa-angle-down" />
+      <uifx-button label="Profile" iconStart="fa-solid fa-user" iconEnd="fa-solid fa-ellipsis-v" />
+    </div>
+  </grid-content>
+
+  <!-- Button with Loading -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Loading State</h5>
+    <p class="text--pretty my-end--md">
+      Busy state is controlled with the
+      <code>[loading]="booleanValue"</code>
+      property.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button
+        label="Button with loading state"
+        iconStart="fa-solid fa-save"
+        [loading]="isSaving()"
+        (onClick)="handleSave()"
+      />
+    </div>
+  </grid-content>
+
+  <!-- Button with Disabled state -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Disabled</h5>
+    <p class="text--pretty my-end--md">
+      When
+      <code>disabled</code>
+      is present, the element cannot be edited and focused.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button
+        [disabled]="true"
+        label="Button with disabled state"
+        iconStart="fa-solid fa-save"
+      />
+    </div>
+  </grid-content>
+
+  <!-- Button with Severity -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Severity</h5>
+    <p class="text--pretty line-height--xl my-end--md">
+      Severity defines the type of button. Property as
+      <code>severity="value"</code>
+    </p>
+    <p>
+      Available severity values are
+      <code>primary</code>
+      <code>secondary</code>
+      <code>danger</code>
+      <code>success</code>
+      <code>warning</code>
+      <code>info</code>
+      <code>light</code>
+      <code>dark</code>
+      <code>gray</code>
+      <code>text</code>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button severity="primary" label="Primary" />
+      <uifx-button severity="secondary" label="Secondary" />
+      <uifx-button severity="danger" label="Danger" />
+      <uifx-button severity="success" label="Success" />
+      <uifx-button severity="warning" label="Warning" />
+      <uifx-button severity="info" label="Info" />
+      <uifx-button severity="light" label="Light" />
+      <uifx-button severity="gray" label="Gray" />
+      <uifx-button severity="dark" label="Dark" />
+      <uifx-button label="Auto (dark/light)" />
+    </div>
+  </grid-content>
+
+  <!-- Button Rounded -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Rounded</h5>
+    <p class="text--pretty line-height--xl my-end--md">
+      Rounded buttons have a circular border radius as property
+      <code>[rounded]="booleanValue"</code>
+      .
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button [rounded]="true" severity="primary" label="Primary" />
+      <uifx-button [rounded]="true" severity="secondary" label="Secondary" />
+      <uifx-button [rounded]="true" severity="danger" label="Danger" />
+      <uifx-button [rounded]="true" severity="success" label="Success" />
+      <uifx-button [rounded]="true" severity="warning" label="Warning" />
+      <uifx-button [rounded]="true" severity="info" label="Info" />
+      <uifx-button [rounded]="true" severity="light" label="Light" />
+      <uifx-button [rounded]="true" severity="gray" label="Gray" />
+      <uifx-button [rounded]="true" severity="dark" label="Dark" />
+      <uifx-button [rounded]="true" label="Auto (dark/light)" />
+    </div>
+  </grid-content>
+
+  <!-- Button as Text -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Text</h5>
+    <p class="text--pretty line-height--xl my-end--md">
+      Text buttons are displayed as textual elements. Property as
+      <code>[variant]="text"</code>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button variant="text" severity="primary" label="Primary" />
+      <uifx-button variant="text" severity="secondary" label="Secondary" />
+      <uifx-button variant="text" severity="danger" label="Danger" />
+      <uifx-button variant="text" severity="success" label="Success" />
+      <uifx-button variant="text" severity="warning" label="Warning" />
+      <uifx-button variant="text" severity="info" label="Info" />
+      <uifx-button variant="text" severity="light" label="Light" />
+      <uifx-button variant="text" severity="gray" label="Gray" />
+      <uifx-button variant="text" severity="dark" label="Dark" />
+      <uifx-button variant="text" label="Auto (dark/light)" />
+    </div>
+  </grid-content>
+  <!-- Button as Outlined -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Outlined</h5>
+    <p class="text--pretty line-height--xl my-end--md">
+      Outlined buttons are displayed as outlined elements. Property as
+      <code>[variant]="outlined"</code>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button variant="outlined" severity="primary" label="Primary" />
+      <uifx-button variant="outlined" severity="secondary" label="Secondary" />
+      <uifx-button variant="outlined" severity="danger" label="Danger" />
+      <uifx-button variant="outlined" severity="success" label="Success" />
+      <uifx-button variant="outlined" severity="warning" label="Warning" />
+      <uifx-button variant="outlined" severity="info" label="Info" />
+      <uifx-button variant="outlined" severity="light" label="Light" />
+      <uifx-button variant="outlined" severity="gray" label="Gray" />
+      <uifx-button variant="outlined" severity="dark" label="Dark" />
+      <uifx-button variant="outlined" label="Auto (dark/light)" />
+    </div>
+  </grid-content>
+
+  <!-- Button as Icon Only -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Icon Only</h5>
+    <p class="text--pretty line-height--xl my-end--md">
+      Buttons can have icons without labels.
+      <code>[iconOnly]="true"</code>
+      and
+      <code>[icon]="iconName"</code>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="grid p--md gap--xl radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <div class="flex items--center gap--md flex--wrap">
+        <p class="fw--bold w--80">Default</p>
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-user" severity="primary" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-user-tie" severity="secondary" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-trash-can" severity="danger" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-circle-check" severity="success" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-bell" severity="warning" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-circle-exclamation" severity="info" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-star" severity="light" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-ellipsis" severity="gray" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-ellipsis-v" severity="dark" />
+        <uifx-button [iconOnly]="true" icon="fa-solid fa-heart" />
+      </div>
+      <div class="flex items--center gap--md flex--wrap">
+        <p class="fw--bold w--80">Rounded</p>
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-user"
+          severity="primary"
+        />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-user-tie"
+          severity="secondary"
+        />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-trash-can"
+          severity="danger"
+        />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-circle-check"
+          severity="success"
+        />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-bell"
+          severity="warning"
+        />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-circle-exclamation"
+          severity="info"
+        />
+        <uifx-button [rounded]="true" [iconOnly]="true" icon="fa-solid fa-star" severity="light" />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-ellipsis"
+          severity="gray"
+        />
+        <uifx-button
+          [rounded]="true"
+          [iconOnly]="true"
+          icon="fa-solid fa-ellipsis-v"
+          severity="dark"
+        />
+        <uifx-button [rounded]="true" [iconOnly]="true" icon="fa-solid fa-heart" />
+      </div>
+      <div class="flex items--center gap--md flex--wrap">
+        <p class="fw--bold w--80">Outlined</p>
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-user"
+          severity="primary"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-user-tie"
+          severity="secondary"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-trash-can"
+          severity="danger"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-circle-check"
+          severity="success"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-bell"
+          severity="warning"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-circle-exclamation"
+          severity="info"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-star"
+          severity="light"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-ellipsis"
+          severity="gray"
+        />
+        <uifx-button
+          variant="outlined"
+          [iconOnly]="true"
+          icon="fa-solid fa-ellipsis-v"
+          severity="dark"
+        />
+        <uifx-button variant="outlined" [iconOnly]="true" icon="fa-solid fa-heart" />
+      </div>
+      <div class="flex items--center gap--md flex--wrap">
+        <p class="fw--bold w--80">Text</p>
+        <uifx-button variant="text" [iconOnly]="true" icon="fa-solid fa-user" severity="primary" />
+        <uifx-button
+          variant="text"
+          [iconOnly]="true"
+          icon="fa-solid fa-user-tie"
+          severity="secondary"
+        />
+        <uifx-button
+          variant="text"
+          [iconOnly]="true"
+          icon="fa-solid fa-trash-can"
+          severity="danger"
+        />
+        <uifx-button
+          variant="text"
+          [iconOnly]="true"
+          icon="fa-solid fa-circle-check"
+          severity="success"
+        />
+        <uifx-button variant="text" [iconOnly]="true" icon="fa-solid fa-bell" severity="warning" />
+        <uifx-button
+          variant="text"
+          [iconOnly]="true"
+          icon="fa-solid fa-circle-exclamation"
+          severity="info"
+        />
+        <uifx-button variant="text" [iconOnly]="true" icon="fa-solid fa-star" severity="light" />
+        <uifx-button variant="text" [iconOnly]="true" icon="fa-solid fa-ellipsis" severity="gray" />
+        <uifx-button
+          variant="text"
+          [iconOnly]="true"
+          icon="fa-solid fa-ellipsis-v"
+          severity="dark"
+        />
+        <uifx-button variant="text" [iconOnly]="true" icon="fa-solid fa-heart" />
+      </div>
+    </div>
+  </grid-content>
+
+  <!-- Button with Badge -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Badge</h5>
+    <p class="text--pretty my-end--md">
+      Buttons have built-in badge support with
+      <code>[badge]="numberValue"</code>
+      property.
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button label="Button with badge" [badge]="1" />
+      <button uifxButton>
+        <span uifxButtonLabel>Directive Button with badge</span>
+        <!-- <span uifxButtonIconEnd><i class="fa-solid fa-bell"></i></span> -->
+        <span uifxButtonBadge>5</span>
       </button>
+    </div>
+  </grid-content>
+
+  <!-- Button Sizes -->
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Sizes</h5>
+    <p class="text--pretty my-end--md">
+      Button provides
+      <code>'ex-small' | 'small' | 'large' | 'ex-large'</code>
+      sizes as alternatives to the standard. Property as
+      <code>size="ex-small"</code>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex items--center flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button label="Extra Small Button" size="ex-small" />
+      <uifx-button label="Small Button" size="small" />
+      <uifx-button label="Standard Button" />
+      <uifx-button label="Large Button" size="large" />
+      <uifx-button label="Extra Large Button" size="ex-large" />
+    </div>
+  </grid-content>
+  <div
+    class="my--2xl bg-surface--100 dark:bg-surface--800 border-x--start border--4 border-primary--500 mx--xl px--lg"
+  >
+    <h5 class="fw--bold m--0">Button Group</h5>
+    <p class="text--pretty my-end--md">
+      Multiple buttons are grouped when wrapped inside an element with ButtonGroup component.
+      <code>'ex-small' | 'small' | 'large' | 'ex-large'</code>
+      sizes as alternatives to the standard. Property as
+      <code>size="ex-small"</code>
+    </p>
+  </div>
+  <grid-content padding="xl">
+    <div
+      class="flex items--center flex--wrap p--md gap--md radius border justify--center bg-surface--0 dark:bg-surface--800"
+    >
+      <uifx-button-group size="ex-large">
+        <uifx-button label="Profile" />
+        <uifx-button label="Settings" />
+        <uifx-button label="Actions" />
+      </uifx-button-group>
+      <div uifxButtonGroup size="large" severity="primary" orientation="vertical">
+        <button uifxButton><span uifxButtonLabel>Profile</span></button>
+        <button uifxButton><span uifxButtonLabel>Settings</span></button>
+        <button uifxButton><span uifxButtonLabel>Actions</span></button>
+      </div>
+      <uifx-button-group severity="primary">
+        <uifx-button label="Profile" severity="success" />
+        <uifx-button label="Delete" severity="danger" />
+        <!-- Overrides group -->
+        <uifx-button label="Settings" severity="info" [badge]="3" />
+      </uifx-button-group>
     </div>
   </grid-content>
 </content-wrapper>

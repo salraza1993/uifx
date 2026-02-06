@@ -9,7 +9,7 @@
   .text--left { text-align: left; }
   .text--right { text-align: right; }
   .text--start { text-align: start; }
-  .text--balance { text-wrap: balance; }
+  .text--balance, .text--balanced { text-wrap: balance; }
   .text--pretty { text-wrap: pretty; }
   .text--muted { color: light-dark(var(--sr-surface--300), var(--sr-surface--700)); }
 
